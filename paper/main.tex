@@ -43,8 +43,8 @@ hidden state, (2)~an exact deterministic computation (e.g., DSCR = NOI /
 Annual Debt Service), and (3)~a learned projection that re-injects the
 result into the residual stream. Using OpenAI's gpt-oss-20b (21B parameters,
 32 experts per layer) as the base model, we extend the router to select
-from 36~experts (32~frozen neural + 4~deterministic) with only ${\sim}5$M
-trainable parameters. On a commercial real estate underwriting benchmark
+from 36~experts (32~frozen neural + 4~deterministic) with
+${\sim}$1.5M parameters per extraction probe (${\sim}$12M total). On a commercial real estate underwriting benchmark
 (3{,}000 training, 200 evaluation scenarios), we show that:
 (i)~financial values encoded in hidden states can be recovered with
 5-fold cross-validated $R^2 = 0.98 \pm 0.002$ using mean-pooled

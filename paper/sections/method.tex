@@ -101,7 +101,7 @@ computation result back to the hidden dimension:
 where $\alpha$ is a learnable scalar initialized to $0.01$ that
 controls the initial contribution of the deterministic expert to the
 residual stream. The projection MLP uses the architecture
-$q \to 256 \to 512 \to d$.
+$q \to 128 \to 512 \to d$.
 
 \subsection{CRE Computation Experts}
 \label{sec:method:cre}
@@ -153,5 +153,6 @@ over 300 epochs.
 to detect whether a given input requires deterministic computation,
 trained with BCE loss for 30 epochs.
 
-The total training involves ${\sim}5$M parameters and completes in
-under 3 minutes on a single GPU.
+Each extraction probe contains ${\sim}$1.5M parameters; 8 input
+probes plus a router signal classifier total ${\sim}$12M trainable
+parameters. Training completes in under 3 minutes on a single GPU.

@@ -22,7 +22,7 @@ Linear(512, 128)  -> SiLU -> Dropout(0.05)
 Linear(128, 1)
 \end{verbatim}
 Total parameters per probe: $2880 \times 512 + 512 + 512 \times 128 +
-128 + 128 \times 1 + 1 = 1{,}541{,}121$.
+128 + 128 \times 1 + 1 = 1{,}540{,}865$.
 Training: AdamW optimizer, learning rate $10^{-3}$, weight decay 0.01,
 cosine annealing schedule, 300 epochs, batch size 64, Huber loss on
 log-scaled targets. 5-fold cross-validation with 3 seeds per fold;
@@ -46,14 +46,17 @@ Achieves 100\% accuracy on held-out validation.
 Training and evaluation scenarios are generated procedurally with the
 following distributions:
 \begin{itemize}
-\item \textbf{Property types}: Office (20\%), Multifamily (20\%),
-Retail (15\%), Industrial (15\%), Hotel (10\%), Mixed-Use (8\%),
-Self-Storage (7\%), Medical Office (5\%)
-\item \textbf{Price range}: \$1M -- \$200M (log-uniform)
-\item \textbf{Cap rate range}: 3\% -- 12\%
-\item \textbf{LTV range}: 50\% -- 85\%
-\item \textbf{Interest rate range}: 4\% -- 9\%
-\item \textbf{Term}: 5, 7, 10, 15, 20, 25, or 30 years
+\item \textbf{Property types}: 8 types sampled uniformly
+(${\sim}$12.5\% each): office, multifamily, retail, industrial,
+hotel, mixed-use, self-storage, medical office.
+\item \textbf{Price range}: \$1M -- \$200M (discrete tiers: \$1--10M,
+\$10--50M, \$50--200M, uniformly selected)
+\item \textbf{Cap rate range}: 4\% -- 10\% (uniform)
+\item \textbf{LTV range}: 55\% -- 80\% (target; actual LTV rounded to
+nearest \$100K loan increment)
+\item \textbf{Interest rate range}: 4.5\% -- 8.5\% (uniform, rounded to
+4 decimal places)
+\item \textbf{Amortization}: 25 or 30 years (uniformly selected)
 \end{itemize}
 
 Each scenario includes an input prompt phrased as a natural language

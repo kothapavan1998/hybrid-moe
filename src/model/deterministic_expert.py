@@ -38,16 +38,18 @@ class DeterministicExpert(nn.Module):
         self.param_extractor = nn.Sequential(
             nn.Linear(hidden_dim, intermediate_dim),
             nn.SiLU(),
-            nn.Linear(intermediate_dim, intermediate_dim // 2),
+            nn.Dropout(0.1),
+            nn.Linear(intermediate_dim, intermediate_dim // 4),
             nn.SiLU(),
-            nn.Linear(intermediate_dim // 2, n_input_params),
+            nn.Dropout(0.05),
+            nn.Linear(intermediate_dim // 4, n_input_params),
         )
 
         # Stage 3: Project computation result back to hidden_dim
         self.result_projector = nn.Sequential(
-            nn.Linear(n_output_params, intermediate_dim // 2),
+            nn.Linear(n_output_params, intermediate_dim // 4),
             nn.SiLU(),
-            nn.Linear(intermediate_dim // 2, intermediate_dim),
+            nn.Linear(intermediate_dim // 4, intermediate_dim),
             nn.SiLU(),
             nn.Linear(intermediate_dim, hidden_dim),
         )

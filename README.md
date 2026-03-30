@@ -53,7 +53,7 @@ Each deterministic expert has three stages:
 2. **Deterministic function** (exact): computes the financial formula in PyTorch
 3. **Projection MLP** (learned): maps the result back to hidden dimension
 
-Only ~5M parameters are trainable. The entire 21B base model stays frozen.
+Each extraction probe has ~1.5M parameters (~12M total across 8 input probes + router). The entire 21B base model stays frozen.
 
 ## CRE Underwriting Experts
 

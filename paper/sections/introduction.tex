@@ -62,8 +62,9 @@ parameter MoE model with 32 experts per layer and top-4 routing. We
 extend the router from 32 to 36 experts by adding 4 deterministic
 experts for commercial real estate (CRE) underwriting metrics:
 DSCR, LTV, Capitalization Rate, and Debt Yield. The entire modification
-adds approximately 5 million trainable parameters while the base model
-remains fully frozen.
+adds approximately 1.5 million parameters per extraction probe
+(approximately 12 million total) while the base model remains fully
+frozen.
 
 Our contributions are:
 \begin{enumerate}

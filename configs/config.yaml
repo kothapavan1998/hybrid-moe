@@ -25,7 +25,7 @@ hybrid_moe:
 
 training:
   extractor_lr: 1e-3
-  extractor_epochs: 200
+  extractor_epochs: 300
   extractor_batch_size: 64
   router_lr: 1e-3
   router_epochs: 30
