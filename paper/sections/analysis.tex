@@ -50,8 +50,10 @@ despite both input probes achieving $R^2 > 0.88$.
 
 Direct output probes, which predict the final metric value directly
 from hidden states bypassing the deterministic computation, achieve
-lower median errors (12.3\% vs.\ 15.5\% for DSCR) despite their
-lower $R^2$ (${\sim}$0.56 vs.\ ${\sim}$0.98). This suggests that
+lower median errors (12.3\% vs.\ 15.5\% for DSCR) despite
+substantially lower $R^2$ ($0.46$--$0.56$ for DSCR, Cap Rate, and
+Debt Yield; LTV direct output $R^2$ is negative, yet still matches
+the ensemble pipeline at 86.5\% accuracy). This suggests that
 for division-based metrics, the ``extract-then-compute'' pipeline
 is suboptimal compared to direct prediction, and that the hidden
 state encodes the \emph{answer} (not just the inputs) at a moderate
@@ -141,4 +143,14 @@ specific numbers appear in the input.
 \item \textbf{Limited expert set.} We evaluate four CRE metrics. The
 architecture supports arbitrary Python functions, but generalization
 to more complex formulas was not validated.
+
+\item \textbf{Standalone probes, not integrated forward pass.} Our
+experiments train extraction MLPs on cached hidden states and use a
+separate binary classifier for routing, rather than running the
+extended router end-to-end within the MoE layer. This validates
+that the required information is extractable and the components
+work, but does not test the fully integrated architecture
+(including projection back into the residual stream and router
+competition between neural and deterministic experts). End-to-end
+integration is future work.
 \end{enumerate}

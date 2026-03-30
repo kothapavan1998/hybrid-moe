@@ -3,8 +3,8 @@
 
 Large language models (LLMs) have achieved remarkable capabilities across
 language understanding, generation, and reasoning tasks. However, they
-fundamentally struggle with \emph{deterministic numerical computation}
-, specifically the reliable execution of mathematical formulas that require exact
+fundamentally struggle with \emph{deterministic numerical computation},
+specifically the reliable execution of mathematical formulas that require exact
 arithmetic on multi-digit numbers
 \citep{dziri2023faith}. This limitation is
 particularly consequential in professional domains such as financial
@@ -81,7 +81,7 @@ achieves 100\% accuracy in detecting computation-requiring inputs
 (40\,ms vs.\ 7{,}000\,ms per scenario), achieving 60--87\%
 accuracy within 20\% error across all four experts with guaranteed
 coverage ($N{=}200$), while generation baselines produce parseable
-answers for only 1--94\% of scenarios (\Cref{sec:experiments}).
+answers for only 0--94\% of scenarios (\Cref{sec:experiments}).
 \item \textbf{Analysis of extraction robustness}, demonstrating that
 probe training instability (not hidden state quality) causes
 extraction failures on small datasets, and that 5-fold CV

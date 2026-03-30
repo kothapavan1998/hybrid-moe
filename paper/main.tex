@@ -47,14 +47,14 @@ from 36~experts (32~frozen neural + 4~deterministic) with
 ${\sim}$1.5M parameters per extraction probe (${\sim}$12M total). On a commercial real estate underwriting benchmark
 (3{,}000 training, 200 evaluation scenarios), we show that:
 (i)~financial values encoded in hidden states can be recovered with
-5-fold cross-validated $R^2 = 0.98 \pm 0.002$ using mean-pooled
-representations, (ii)~the routing signal achieves 100\% accuracy in
+5-fold cross-validated $R^2$ up to $0.98$ using mean-pooled
+representations (7 of 8 probes above 0.97), (ii)~the routing signal achieves 100\% accuracy in
 detecting computation-requiring inputs, and (iii)~Hybrid MoE produces
 results \textbf{173$\times$ faster} (40\,ms vs.\ 7{,}000\,ms) than
 single-sample generation. Hybrid MoE achieves 60--87\% accuracy within
 20\% error across all four experts with \emph{guaranteed coverage}
 ($N{=}200$ for every metric), whereas generation-based baselines parse
-answers for only 1--94\% of scenarios depending on metric and prompt
+answers for only 0--94\% of scenarios depending on metric and prompt
 format. We analyze which numerical quantities are extractable from MoE
 hidden states, identify extraction quality as the primary bottleneck,
 and show that 5-fold cross-validated ensembles resolve probe training

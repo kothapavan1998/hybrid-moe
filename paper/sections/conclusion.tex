@@ -5,8 +5,9 @@ We introduced Hybrid MoE, a novel architecture that integrates
 deterministic computation experts into the routing mechanism of sparse
 Mixture-of-Experts transformers. By replacing neural FFN experts with a
 three-stage pipeline (learned extraction, exact computation, learned
-projection), we enable guaranteed-correct calculations within a single
-forward pass.
+projection), we enable exact computation within a single forward pass,
+with accuracy bounded by extraction quality rather than neural
+approximation.
 
 Our experiments on gpt-oss-20b demonstrate that: (1)~financial values
 are recoverable from transformer hidden states with 5-fold

@@ -82,7 +82,7 @@ LTV        & Property Value & $0.983 \pm 0.001$ & 3{,}000 \\
 Debt Yield & Loan Amount    & $0.983 \pm 0.001$ & 3{,}000 \\
 Debt Yield & NOI            & $0.977 \pm 0.002$ & 3{,}000 \\
 \midrule
-\multicolumn{2}{@{}l}{Router signal (binary)} & \multicolumn{1}{c}{100\% accuracy} & \\
+\multicolumn{2}{@{}l}{Router signal (binary)} & \multicolumn{1}{c}{100\% accuracy} & 1{,}000 \\
 \bottomrule
 \end{tabular}
 \caption{5-fold cross-validated extraction MLP $R^2$ (best-of-3
@@ -90,7 +90,10 @@ seeds per fold, layer~12, mean-pooled representations, log-scale
 targets). $N$ = total training pool size. Seven of eight probes
 achieve $R^2 > 0.97$; DSCR/NOI shows higher variance
 ($0.885 \pm 0.183$) due to one unstable fold, mitigated by the
-5-probe ensemble at inference.}
+5-probe ensemble at inference. The router classifier is trained on
+500 positive (CRE computation) and 500 negative samples spanning
+general knowledge questions, qualitative CRE questions, and
+ambiguous prompts containing numbers but not requiring computation.}
 \label{tab:extraction}
 \end{table}
 
@@ -239,8 +242,9 @@ through division. LTV, computed as a simple ratio of two
 well-extracted quantities, achieves the best median error (6.2\%).
 
 \paragraph{Direct vs.\ input-extraction.} Direct output probes
-($R^2 \approx 0.46$--$0.56$ on the output value) consistently match
-or outperform the extract-then-compute pipeline despite their lower
-$R^2$. This is because division amplifies extraction errors: if both
-inputs have ${\sim}$10\% error, the quotient can have ${\sim}$20\%
-error. Direct probes sidestep this compounding entirely.
+have much lower $R^2$ on the output value ($0.46$--$0.56$ for three
+experts; negative for LTV), yet consistently match or outperform the
+extract-then-compute pipeline in accuracy. This is because division
+amplifies extraction errors: if both inputs have ${\sim}$10\% error,
+the quotient can have ${\sim}$20\% error. Direct probes sidestep this
+compounding entirely.

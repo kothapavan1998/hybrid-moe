@@ -37,8 +37,14 @@ Linear(2880, 128) -> SiLU -> Dropout(0.1)
 Linear(128, 32)   -> SiLU
 Linear(32, 1)     -> Sigmoid
 \end{verbatim}
-Trained with BCE loss, 30 epochs, learning rate $10^{-3}$.
-Achieves 100\% accuracy on held-out validation.
+Trained with BCE loss, 50 epochs, learning rate $10^{-3}$.
+Training data: 500 positive CRE computation scenarios (sampled from
+the 3{,}000 training pool) balanced with 500 negative prompts across
+four categories: general CRE questions (conceptual, no computation),
+non-CRE questions (unrelated domains), qualitative CRE questions
+(advisory, no numbers needed), and ambiguous prompts (containing
+financial figures but not requesting computation). Achieves 100\%
+accuracy on 20\% held-out validation (200 samples, balanced).
 
 \subsection{Dataset Generation}
 \label{sec:appendix:data}
@@ -115,7 +121,8 @@ format:}
 \label{sec:appendix:reproduce}
 
 All code, data generation scripts, training pipelines, and evaluation
-scripts will be made publicly available upon publication. The complete
+scripts are publicly available at
+\url{https://github.com/kothapavan1998/hybrid-moe}. The complete
 experiment (hidden state pre-computation, 5-fold probe training,
 200-scenario evaluation with 3 baseline methods) completes in under
 30 minutes on a single B200 GPU. Random seed: 42 for data splits;
