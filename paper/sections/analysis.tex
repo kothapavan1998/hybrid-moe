@@ -1,0 +1,144 @@
+\section{Analysis and Discussion}
+\label{sec:analysis}
+
+\subsection{Probe Instability and Ensemble Resolution}
+\label{sec:analysis:instability}
+
+Our most important methodological finding is that single-seed,
+single-split probe training on small datasets (${\sim}$2{,}600
+samples, 15\% validation $\approx$ 400 samples) produces highly
+unstable $R^2$ scores. Under naive training, two probes failed entirely
+(LTV/Loan: $R^2 = -0.03$; Debt Yield/NOI: $R^2 = 0.46$), while
+others varied by up to 0.75 across random seeds.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Expert} & \textbf{Single-seed $R^2$} & \textbf{5-fold CV $R^2$} & \textbf{$<$20\% Acc.} \\
+\midrule
+DSCR       & 0.97  & $0.885 \pm 0.183$ & 60\% \\
+Cap Rate   & 0.97  & $0.975 \pm 0.002$ & 65\% \\
+LTV        & $-$0.03 & $0.982 \pm 0.001$ & 87\% \\
+Debt Yield & 0.46  & $0.977 \pm 0.002$ & 65\% \\
+\bottomrule
+\end{tabular}
+\caption{Single-seed training vs.\ 5-fold CV ensemble for the
+worst-case input probe per expert. LTV and Debt Yield, which
+completely failed under single-seed training, are fully recovered
+by the ensemble. DSCR/NOI remains the most variable probe
+($0.885 \pm 0.183$) but the 5-probe ensemble median suppresses
+the outlier fold at inference.}
+\label{tab:bottleneck}
+\end{table}
+
+The 5-fold CV ensemble resolves this: by training 5 probes on
+different data splits (each with 3 random seeds, keeping the best),
+the ensemble median suppresses individual probe failures. This
+demonstrates that the extraction failures were \emph{not}
+fundamental limits of the hidden state representation but rather
+artifacts of overfitting to a particular train/val split.
+
+\subsection{Error Compounding in Chained Computation}
+\label{sec:analysis:compounding}
+
+Deterministic computation amplifies extraction errors because there is
+no opportunity for neural compensation. For DSCR = NOI / ADS, if both
+inputs have ${\sim}$10\% error, the quotient can have ${\sim}$20\%
+error. This explains why DSCR has the highest median error (15.5\%)
+despite both input probes achieving $R^2 > 0.88$.
+
+Direct output probes, which predict the final metric value directly
+from hidden states bypassing the deterministic computation, achieve
+lower median errors (12.3\% vs.\ 15.5\% for DSCR) despite their
+lower $R^2$ (${\sim}$0.56 vs.\ ${\sim}$0.98). This suggests that
+for division-based metrics, the ``extract-then-compute'' pipeline
+is suboptimal compared to direct prediction, and that the hidden
+state encodes the \emph{answer} (not just the inputs) at a moderate
+but useful level of fidelity.
+
+\subsection{Log-Scale Training and Error Amplification}
+\label{sec:analysis:logscale}
+
+We train extraction probes in log-scale ($\text{sign}(y) \cdot
+\log(1 + |y|)$) to handle the 1{,}000$\times$ dynamic range of
+financial values. While this enables learning across the full range,
+it introduces multiplicative error when converting back to raw values.
+A residual standard deviation of 0.24 in log-space translates to
+approximately $e^{0.24} - 1 \approx 27\%$ multiplicative error in
+raw values. This partially explains median errors of 6--16\%: the
+extraction is strong in log-space ($R^2 > 0.97$) but the
+nonlinear back-transformation amplifies small errors.
+
+\subsection{Layer Selection}
+\label{sec:analysis:layer}
+
+We evaluate extraction at layers 12, 16, and 20 (of 24 total). Layer~12
+consistently outperforms deeper layers for input value extraction. This
+is consistent with prior work showing that factual/numerical information
+is most accessible in middle layers
+\citep{geva2023dissecting,meng2022locating}, while later layers shift
+toward next-token prediction representations.
+
+\subsection{Comparison to Tool-Calling and Generation Approaches}
+\label{sec:analysis:toolcalling}
+
+Our approach trades per-prediction accuracy for \emph{coverage} and
+\emph{speed}:
+
+\begin{itemize}
+\item \textbf{Generation baselines} achieve high per-prediction accuracy
+when they produce parseable output (e.g., 96--100\% for structured
+Cap Rate, Debt Yield) but fail to parse a significant fraction of
+scenarios ($N$ ranges from 0 to 187 out of 200). The structured prompt
+improves coverage but degrades accuracy on hard metrics (DSCR drops
+from 77\% to 19\%).
+\item \textbf{Tool calling} achieves perfect computation accuracy
+\emph{when invoked correctly}, but requires multiple inference passes
+(2--5$\times$ total latency) and an external execution environment.
+\item \textbf{Hybrid MoE} guarantees a prediction for every scenario
+($N{=}200$) at 173$\times$ the speed, with 60--87\% within 20\%
+accuracy. Computation is \emph{exactly} correct; accuracy is bounded
+solely by extraction quality.
+\end{itemize}
+
+This positions Hybrid MoE as ideal for high-throughput, latency-sensitive
+applications (batch underwriting, real-time screening) where guaranteed
+coverage at 173$\times$ the speed is preferable to high per-prediction
+accuracy with incomplete coverage and multi-second latency.
+
+\subsection{Limitations}
+\label{sec:analysis:limitations}
+
+\begin{enumerate}
+\item \textbf{Extraction is the bottleneck.} Accuracy depends entirely
+on extraction quality. Despite $R^2 \geq 0.88$ for all probes,
+median errors of 6--16\% persist due to log-scale
+back-transformation and error compounding through division.
+Attention-based extraction over specific token positions is the
+primary avenue for improvement.
+
+\item \textbf{Probe seed sensitivity.} On small training sets
+(${\sim}$2{,}600 samples), individual probes are sensitive to random
+initialization and train/val splits. Our 5-fold CV ensemble
+mitigates this but adds training complexity. Larger training sets
+would reduce this sensitivity.
+
+\item \textbf{Baselines are under-optimized.} Our generation baselines
+use a base model without instruction tuning. An instruction-tuned
+variant would likely produce more consistently formatted outputs,
+increasing baseline $N$ and potentially accuracy. The structured
+prompt partially addresses this.
+
+\item \textbf{Synthetic evaluation.} Our CRE benchmark is synthetically
+generated. Real-world underwriting documents contain ambiguity,
+missing data, and domain-specific conventions not captured here.
+
+\item \textbf{Mean-pooling limitation.} We extract from mean-pooled
+hidden states, which loses positional information about where
+specific numbers appear in the input.
+
+\item \textbf{Limited expert set.} We evaluate four CRE metrics. The
+architecture supports arbitrary Python functions, but generalization
+to more complex formulas was not validated.
+\end{enumerate}

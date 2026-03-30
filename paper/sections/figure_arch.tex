@@ -1,0 +1,151 @@
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+    >=Stealth,
+    box/.style={draw, rounded corners=3pt, minimum height=0.65cm,
+                align=center, font=\small},
+    frozenbox/.style={box, fill=blue!8, draw=blue!50},
+    trainbox/.style={box, fill=orange!12, draw=orange!60},
+    compbox/.style={box, fill=green!10, draw=green!60, font=\small\bfseries},
+    routerbox/.style={box, fill=purple!10, draw=purple!50},
+    graybox/.style={box, fill=gray!8, draw=gray!40},
+    arrow/.style={->, thick},
+    note/.style={font=\scriptsize, text=gray!70!black},
+]
+
+% =============================================
+% ROW 1 LEFT: (a) Standard MoE
+% =============================================
+\node[font=\normalsize\bfseries] at (-4.2, 0) (atitle) {(a) Standard MoE Layer};
+
+\node[graybox, minimum width=4.2cm] at (-4.2, -0.9) (a_input)
+    {Hidden state $\mathbf{h} \in \mathbb{R}^{2880}$};
+
+\node[routerbox, minimum width=4.2cm] at (-4.2, -2.0) (a_router)
+    {Router $\mathbf{W}_r \in \mathbb{R}^{32 \times 2880}$};
+
+\draw[arrow] (a_input) -- (a_router);
+
+\node[frozenbox, minimum width=1.2cm] at (-6.2, -3.3) (a_e0) {Expert 0};
+\node[frozenbox, minimum width=1.2cm] at (-4.6, -3.3) (a_e1) {Expert 1};
+\node[font=\small] at (-3.4, -3.3) {$\cdots$};
+\node[frozenbox, minimum width=1.2cm] at (-2.2, -3.3) (a_e31) {Expert 31};
+
+\draw[arrow] (a_router.south) -- ++(0,-0.25) -| (a_e0.north);
+\draw[arrow] (a_router.south) -- ++(0,-0.25) -| (a_e1.north);
+\draw[arrow] (a_router.south) -- ++(0,-0.25) -| (a_e31.north);
+
+\node[graybox, minimum width=4.2cm] at (-4.2, -4.5) (a_out)
+    {Weighted sum $\to$ residual};
+
+\draw[arrow] (a_e0.south) |- (a_out.west);
+\draw[arrow] (a_e1.south) -- (a_out.north);
+\draw[arrow] (a_e31.south) |- (a_out.east);
+
+\node[note] at (-4.2, -5.2) {All 32 experts are neural FFNs};
+
+% =============================================
+% ROW 1 RIGHT: (b) Hybrid MoE
+% =============================================
+\node[font=\normalsize\bfseries] at (4.5, 0) (btitle) {(b) Hybrid MoE Layer (ours)};
+
+\node[graybox, minimum width=7.0cm] at (4.5, -0.9) (b_input)
+    {Hidden state $\mathbf{h} \in \mathbb{R}^{2880}$};
+
+\node[routerbox, minimum width=7.0cm] at (4.5, -2.0) (b_router)
+    {Extended Router $\mathbf{W}_r \in \mathbb{R}^{36 \times 2880}$};
+
+\draw[arrow] (b_input) -- (b_router);
+
+% Frozen experts
+\node[frozenbox, minimum width=0.9cm, font=\scriptsize] at (1.7, -3.3) (b_e0) {E\,0};
+\node[font=\small] at (2.5, -3.3) {$\cdots$};
+\node[frozenbox, minimum width=0.9cm, font=\scriptsize] at (3.3, -3.3) (b_e31) {E\,31};
+
+% Vertical divider line
+\draw[dashed, gray!50, thick] (4.05, -2.8) -- (4.05, -4.0);
+
+% Deterministic experts
+\node[trainbox, minimum width=0.9cm, font=\scriptsize\bfseries] at (4.8, -3.3) (b_dscr) {DSCR};
+\node[trainbox, minimum width=0.9cm, font=\scriptsize\bfseries] at (5.7, -3.3) (b_ltv) {LTV};
+\node[trainbox, minimum width=0.9cm, font=\scriptsize\bfseries] at (6.5, -3.3) (b_cap) {Cap};
+\node[trainbox, minimum width=0.9cm, font=\scriptsize\bfseries] at (7.3, -3.3) (b_dy) {DY};
+
+% Router arrows
+\draw[arrow] (b_router.south) -- ++(0,-0.25) -| (b_e0.north);
+\draw[arrow] (b_router.south) -- ++(0,-0.25) -| (b_e31.north);
+\draw[arrow, orange!70!black] (b_router.south) -- ++(0,-0.25) -| (b_dscr.north);
+\draw[arrow, orange!70!black] (b_router.south) -- ++(0,-0.25) -| (b_ltv.north);
+\draw[arrow, orange!70!black] (b_router.south) -- ++(0,-0.25) -| (b_cap.north);
+\draw[arrow, orange!70!black] (b_router.south) -- ++(0,-0.25) -| (b_dy.north);
+
+% Labels under expert groups
+\node[note, text=blue!60!black] at (2.5, -3.95) {32 frozen neural};
+\node[note, text=orange!70!black] at (6.05, -3.95) {4 deterministic (new)};
+
+\node[graybox, minimum width=7.0cm] at (4.5, -4.8) (b_out)
+    {Weighted sum $\to$ residual};
+
+\draw[arrow] (b_e0.south) |- (b_out.west);
+\draw[arrow] (b_dy.south) |- (b_out.east);
+
+% =============================================
+% ROW 2 CENTER: (c) Deterministic Expert Detail
+% =============================================
+\node[font=\normalsize\bfseries] at (0.5, -6.6) (ctitle)
+    {(c) Inside a Deterministic Expert (e.g., DSCR)};
+
+% Stage 1: Input
+\node[graybox, minimum width=4.5cm] at (0.5, -7.5) (c_input)
+    {Mean-pooled $\bar{\mathbf{h}} \in \mathbb{R}^{2880}$};
+
+% Stage 2: Extraction
+\node[trainbox, minimum width=4.5cm] at (0.5, -8.7) (c_extract)
+    {Extraction MLP\\[-2pt]\scriptsize $2880 \to 512 \to 128 \to k$};
+\draw[arrow] (c_input) -- (c_extract);
+\node[note, anchor=west] at (2.9, -8.7) {learned};
+
+% Arrow with label
+\node[note, anchor=west] at (1.0, -9.45) {$\hat{x}_1\!=\!\text{NOI},\; \hat{x}_2\!=\!\text{ADS}$};
+\draw[arrow] (c_extract.south) -- ++(0,-0.65);
+
+% Stage 3: Computation
+\node[compbox, minimum width=4.5cm] at (0.5, -10.3) (c_compute)
+    {$\mathcal{F}$: NOI\,/\,ADS = 1.29\\[-2pt]\scriptsize deterministic, exact};
+\node[note, anchor=west] at (2.9, -10.3) {no parameters};
+
+% Arrow with label
+\draw[arrow] (c_compute.south) -- node[right, note, xshift=2pt] {$y = 1.29$} ++(0,-0.75);
+
+% Stage 4: Projection
+\node[trainbox, minimum width=4.5cm] at (0.5, -11.7) (c_project)
+    {Projection MLP\\[-2pt]\scriptsize $1 \to 256 \to 512 \to 2880$};
+\node[note, anchor=west] at (2.9, -11.7) {learned};
+
+% Stage 5: Output
+\draw[arrow] (c_project.south) -- ++(0,-0.55);
+\node[graybox, minimum width=4.5cm] at (0.5, -12.85) (c_out)
+    {$\alpha \cdot g_\phi(y) \in \mathbb{R}^{2880}$};
+
+\node[note] at (0.5, -13.55) {scaled output ($\alpha$ initialized to 0.01)};
+
+% Brace showing "three stages"
+\draw[decorate, decoration={brace, amplitude=6pt, mirror}, thick, gray!60]
+    (-2.1, -8.3) -- (-2.1, -12.2)
+    node[midway, left=8pt, note, align=center] {three\\stages};
+
+\end{tikzpicture}
+\caption{Overview of the Hybrid MoE architecture. \textbf{(a)}~A
+standard MoE layer routes tokens to 32 neural FFN experts.
+\textbf{(b)}~Hybrid MoE extends the router from 32 to 36 experts:
+the original 32 frozen neural experts (blue) plus 4 trainable
+deterministic computation experts (orange), separated by the dashed
+line. The router learns when to invoke deterministic computation.
+\textbf{(c)}~Each deterministic expert uses a three-stage pipeline:
+a learned extraction MLP recovers function arguments from the
+mean-pooled hidden state, a deterministic function computes the
+exact result, and a learned projection maps the scalar back to the
+hidden dimension. Only the extraction and projection MLPs have
+trainable parameters (${\sim}5$M total across all experts and layers).}
+\label{fig:architecture}
+\end{figure*}

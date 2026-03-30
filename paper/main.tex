@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,fit,calc,backgrounds,decorations.pathreplacing}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\title{Hybrid MoE: Integrating Deterministic Computation Experts \\
+into Sparse Mixture-of-Experts Transformers}
+
+\author{
+Pavan Kumar Kotha \\
+Independent Researcher \\
+\texttt{kothapavan1998@gmail.com}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models struggle with deterministic numerical computation,
+a critical limitation in domains like financial underwriting where exact
+calculations are non-negotiable. We introduce \textbf{Hybrid MoE}, a
+novel architecture that integrates deterministic Python functions as
+first-class experts within a sparse Mixture-of-Experts (MoE) transformer's
+routing mechanism. Each deterministic expert consists of three stages:
+(1)~a learned extraction MLP that recovers function arguments from the
+hidden state, (2)~an exact deterministic computation (e.g., DSCR = NOI /
+Annual Debt Service), and (3)~a learned projection that re-injects the
+result into the residual stream. Using OpenAI's gpt-oss-20b (21B parameters,
+32 experts per layer) as the base model, we extend the router to select
+from 36~experts (32~frozen neural + 4~deterministic) with only ${\sim}5$M
+trainable parameters. On a commercial real estate underwriting benchmark
+(3{,}000 training, 200 evaluation scenarios), we show that:
+(i)~financial values encoded in hidden states can be recovered with
+5-fold cross-validated $R^2 = 0.98 \pm 0.002$ using mean-pooled
+representations, (ii)~the routing signal achieves 100\% accuracy in
+detecting computation-requiring inputs, and (iii)~Hybrid MoE produces
+results \textbf{173$\times$ faster} (40\,ms vs.\ 7{,}000\,ms) than
+single-sample generation. Hybrid MoE achieves 60--87\% accuracy within
+20\% error across all four experts with \emph{guaranteed coverage}
+($N{=}200$ for every metric), whereas generation-based baselines parse
+answers for only 1--94\% of scenarios depending on metric and prompt
+format. We analyze which numerical quantities are extractable from MoE
+hidden states, identify extraction quality as the primary bottleneck,
+and show that 5-fold cross-validated ensembles resolve probe training
+instability on small datasets.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/analysis}
+\input{sections/conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

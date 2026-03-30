@@ -1,0 +1,246 @@
+\section{Experiments}
+\label{sec:experiments}
+
+\subsection{Experimental Setup}
+\label{sec:exp:setup}
+
+\paragraph{Base Model.}
+OpenAI gpt-oss-20b \citep{openai2025gptoss}: 21B total parameters,
+3.6B active per token, 24 transformer layers, 32 experts per layer with
+top-4 routing, hidden dimension 2{,}880, SwiGLU activation, RoPE
+positional encoding, 128K context window, MXFP4 quantization. Apache
+2.0 license.
+
+\paragraph{Dataset.}
+We generate a synthetic CRE underwriting benchmark:
+\begin{itemize}
+\item \textbf{Training set}: 3{,}000 scenarios with 13{,}184 computation
+markers, spanning 4 complexity levels (L1: single metric 15\%, L2:
+multiple metrics 25\%, L3: chained calculations 35\%, L4: full
+underwriting memo 25\%).
+\item \textbf{Evaluation set}: 200 scenarios held out from a 500-scenario pool.
+\item \textbf{Coverage}: 8 property types, 20 locations, purchase prices
+\$1M--\$200M, DSCR range 0.56x--2.75x.
+\end{itemize}
+Each scenario includes an input prompt with financial details,
+computation markers identifying which expert(s) should fire and what the
+ground-truth inputs/outputs are, and a reference answer.
+
+\paragraph{Baselines.}
+We compare against three generation-based methods using the same
+gpt-oss-20b model:
+\begin{itemize}
+\item \textbf{Zero-Shot}: Direct prompting instructing precise calculations.
+\item \textbf{Chain-of-Thought (CoT)}: Step-by-step prompting with
+explicit instructions to show all calculations.
+\item \textbf{Structured Output}: A prompt constraining the model to
+emit answers in a fixed ``\texttt{DSCR: [number]}'' format, designed
+to maximize parseability.
+\end{itemize}
+All baselines generate up to 256 tokens with greedy decoding in
+batches of 32. Numerical answers are extracted from generated text
+using metric-specific regex patterns with sanity-range filtering
+(e.g., $0.2 \leq \text{DSCR} \leq 8.0$).
+
+\paragraph{Probe Training.}
+To address probe seed sensitivity on our training set
+(${\sim}$2{,}400 samples per fold), we train extraction probes using
+5-fold cross-validation with 3 random seeds per fold, keeping the
+best-performing seed. The final ensemble comprises 5 probes per
+input parameter; at inference, we take the median prediction across
+all 5 probes. This adds negligible latency ($<$1\,ms) while
+substantially improving robustness.
+
+\paragraph{Hardware.}
+All experiments run on a single NVIDIA B200 GPU (192\,GB HBM3e).
+Pre-computation of hidden states for 3{,}000 scenarios takes 31
+seconds; 5-fold probe training takes ${\sim}$12 minutes;
+evaluation of 200 scenarios takes 10 seconds for Hybrid MoE and
+${\sim}$2 minutes per baseline (batched).
+
+\subsection{Extraction Quality}
+\label{sec:exp:extraction}
+
+\Cref{tab:extraction} shows the 5-fold cross-validated $R^2$ scores for
+each extraction MLP. We report results for the best-performing layer
+(layer~12) using mean-pooled hidden states. For each fold, we train
+with 3 random seeds and keep the best; the table reports the mean and
+standard deviation across 5 folds.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{Expert} & \textbf{Parameter} & \textbf{$R^2$ (mean $\pm$ std)} & \textbf{$N$} \\
+\midrule
+DSCR       & NOI            & $0.885 \pm 0.183$ & 3{,}000 \\
+DSCR       & Debt Service   & $0.980 \pm 0.002$ & 3{,}000 \\
+Cap Rate   & NOI            & $0.975 \pm 0.002$ & 3{,}000 \\
+Cap Rate   & Purchase Price & $0.982 \pm 0.002$ & 3{,}000 \\
+LTV        & Loan Amount    & $0.982 \pm 0.001$ & 3{,}000 \\
+LTV        & Property Value & $0.983 \pm 0.001$ & 3{,}000 \\
+Debt Yield & Loan Amount    & $0.983 \pm 0.001$ & 3{,}000 \\
+Debt Yield & NOI            & $0.977 \pm 0.002$ & 3{,}000 \\
+\midrule
+\multicolumn{2}{@{}l}{Router signal (binary)} & \multicolumn{1}{c}{100\% accuracy} & \\
+\bottomrule
+\end{tabular}
+\caption{5-fold cross-validated extraction MLP $R^2$ (best-of-3
+seeds per fold, layer~12, mean-pooled representations, log-scale
+targets). $N$ = total training pool size. Seven of eight probes
+achieve $R^2 > 0.97$; DSCR/NOI shows higher variance
+($0.885 \pm 0.183$) due to one unstable fold, mitigated by the
+5-probe ensemble at inference.}
+\label{tab:extraction}
+\end{table}
+
+All eight extraction probes achieve $R^2 \geq 0.88$ with the
+ensemble approach. Under single-seed, single-split training, two
+probes had previously failed entirely ($R^2 = -0.03$ for LTV/Loan
+Amount; $R^2 = 0.46$ for Debt Yield/NOI). The 5-fold CV ensemble
+resolved these failures, demonstrating that they were artifacts of
+random initialization and train/val split rather than fundamental
+limits of hidden state extractability. The one remaining source of
+variance, DSCR/NOI ($R^2 = 0.885 \pm 0.183$), contains 4
+folds above 0.97 and one outlier at 0.52; the ensemble median
+suppresses this at inference.
+
+\subsection{End-to-End Evaluation}
+\label{sec:exp:results}
+
+\Cref{tab:main_results} presents the main comparison on 200 evaluation
+scenarios. We report accuracy at the $<$10\% and $<$20\% relative error
+thresholds along with the number of scenarios $N$ where each method
+produced a parseable answer.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}l|rrr|rrr|rrr|rrr@{}}
+\toprule
+& \multicolumn{3}{c|}{\textbf{Hybrid MoE}} &
+  \multicolumn{3}{c|}{\textbf{Zero-Shot}} &
+  \multicolumn{3}{c|}{\textbf{CoT}} &
+  \multicolumn{3}{c}{\textbf{Structured}} \\
+\textbf{Expert} & $N$ & \tiny{$<$10\%} & \tiny{$<$20\%}
+  & $N$ & \tiny{$<$10\%} & \tiny{$<$20\%}
+  & $N$ & \tiny{$<$10\%} & \tiny{$<$20\%}
+  & $N$ & \tiny{$<$10\%} & \tiny{$<$20\%} \\
+\midrule
+DSCR  & \textbf{200} & 33.5 & 60.0
+      & 35  & 77.1 & 85.7
+      & 14  & 85.7 & 92.9
+      & 187 & 19.3 & 36.4 \\
+LTV   & \textbf{200} & 69.0 & 86.5
+      & 7   & 100  & 100
+      & 2   & 50.0 & 50.0
+      & 48  & 95.8 & 95.8 \\
+Cap Rate & \textbf{200} & 31.5 & 65.0
+      & 10  & 100  & 100
+      & 6   & 50.0 & 50.0
+      & 38  & 100  & 100 \\
+Debt Yield & \textbf{200} & 35.0 & 65.0
+      & 0   &      &    
+      & 1   & 0    & 0
+      & 51  & 98.0 & 100 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) by error threshold on 200 evaluation scenarios.
+$N$ = number of scenarios with a parseable prediction. Hybrid MoE
+\emph{always} produces a prediction ($N{=}200$); baselines range from
+$N{=}0$ to $N{=}187$ depending on metric and prompt format. When
+baselines parse, they can be highly accurate (e.g., Structured
+Cap~Rate: 100\% at $N{=}38$), but their coverage is incomplete. DSCR
+is the hardest metric: even the structured prompt, despite parsing
+94\% of scenarios, achieves only 19\% within 10\% because the model
+struggles with the division itself.}
+\label{tab:main_results}
+\end{table}
+
+\paragraph{Coverage vs.\ per-prediction accuracy.}
+The results reveal a fundamental trade-off. Hybrid MoE guarantees a
+structured prediction for every scenario ($N{=}200$), achieving
+60--87\% within 20\% error across all four experts. Baselines, when
+they produce a parseable answer, can be more accurate per prediction,
+particularly for simple ratio metrics (LTV, Cap Rate, Debt Yield
+structured: 96--100\%), but they \emph{fail to parse} a
+significant fraction of scenarios. For Debt Yield, zero-shot and CoT
+produce parseable answers for 0--1 out of 200 scenarios. The structured
+prompt substantially improves coverage (e.g., Debt Yield from 0 to 51,
+LTV from 7 to 48) but degrades DSCR accuracy, suggesting the model
+struggles with the underlying division.
+
+\paragraph{All four experts are now viable.}
+With 5-fold CV ensembles, all extraction probes achieve
+$R^2 \geq 0.88$, enabling all four experts. Under single-seed training,
+two experts (LTV and Debt Yield) had failed entirely due to probe
+instability. The ensemble approach resolves this, producing 65--87\%
+accuracy within 20\% for all experts.
+
+\paragraph{Speed advantage.}
+\Cref{tab:latency} shows the latency comparison. Hybrid MoE requires
+only a single forward pass through the frozen model (to obtain hidden
+states) plus negligible MLP inference ($<$1\,ms for the 5-probe
+ensemble), while baselines must generate hundreds of tokens
+autoregressively.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Metric} & \textbf{Hybrid MoE} & \textbf{Zero-Shot} & \textbf{Structured} \\
+\midrule
+Single-sample latency (ms) & \textbf{40} & 6{,}993 & 6{,}993 \\
+Batched latency (ms)       & \textbf{34} & 626 & 625 \\
+Speedup (single-sample)    & \textbf{173$\times$} & 1$\times$ & 1$\times$ \\
+\bottomrule
+\end{tabular}
+\caption{Latency comparison. Single-sample latency reflects one
+scenario at a time; batched latency amortizes across 32 scenarios.
+Hybrid MoE requires no autoregressive generation, yielding a
+173$\times$ single-sample speedup. Baseline latencies are measured
+with 256 generated tokens (greedy decoding).}
+\label{tab:latency}
+\end{table}
+
+\subsection{Error Distribution}
+\label{sec:exp:error}
+
+\Cref{tab:error_dist} presents the median percentage error for Hybrid
+MoE predictions across experts, comparing the ensemble-input pipeline
+(extract arguments $\to$ deterministic compute) against direct-output
+probes that predict the final metric directly from hidden states.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\textbf{Expert} & \multicolumn{2}{c}{\textbf{Ensemble Input}} & \multicolumn{2}{c}{\textbf{Direct Output}} \\
+               & $<$20\% & Median & $<$20\% & Median \\
+\midrule
+DSCR       & 60.0\% & 15.5\% & 68.5\% & 12.3\% \\
+LTV        & 86.5\% & 6.2\%  & 86.5\% & 6.5\%  \\
+Cap Rate   & 65.0\% & 15.6\% & 74.0\% & 13.0\% \\
+Debt Yield & 65.0\% & 13.8\% & 74.5\% & 12.2\% \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy ($<$20\% error) and median percentage error for
+Hybrid MoE on $N{=}200$ scenarios. Ensemble Input: extract parameters
+$\to$ deterministic compute. Direct Output: probes predict the final
+metric directly. Direct output avoids error compounding from division
+and is consistently better on DSCR, Cap Rate, and Debt Yield.}
+\label{tab:error_dist}
+\end{table}
+
+All four experts produce useful predictions. DSCR and Cap Rate (which
+involve division: DSCR = NOI / ADS, Cap Rate = NOI / Price) show
+higher median errors (${\sim}13$--16\%) due to error amplification
+through division. LTV, computed as a simple ratio of two
+well-extracted quantities, achieves the best median error (6.2\%).
+
+\paragraph{Direct vs.\ input-extraction.} Direct output probes
+($R^2 \approx 0.46$--$0.56$ on the output value) consistently match
+or outperform the extract-then-compute pipeline despite their lower
+$R^2$. This is because division amplifies extraction errors: if both
+inputs have ${\sim}$10\% error, the quotient can have ${\sim}$20\%
+error. Direct probes sidestep this compounding entirely.

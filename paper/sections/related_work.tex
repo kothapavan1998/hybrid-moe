@@ -1,0 +1,78 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Sparse Mixture-of-Experts.}
+MoE models route each token to a subset of experts, achieving
+sub-linear inference cost relative to total parameters
+\citep{shazeer2017outrageously,lepikhin2021gshard}. Switch Transformer
+\citep{fedus2022switch} simplified routing to top-1 selection.
+Mixtral \citep{jiang2024mixtral} demonstrated strong open-weight MoE
+models with top-2 routing across 8 experts. DeepSeek-V2
+\citep{deepseekai2024deepseekv2} introduced fine-grained experts and
+shared expert isolation. Our base model, gpt-oss-20b, uses 32 experts
+per layer with top-4 routing and sigmoid-normalized weights. To our knowledge, all prior MoE work uses exclusively neural or
+trivial (zero/copy) experts; we introduce \emph{deterministic
+computation} experts that execute exact domain functions.
+
+\paragraph{MoE Expert Expansion.}
+Several works have added experts to existing MoE models post-training.
+Sparse Upcycling \citep{komatsuzaki2023sparse} converts dense models
+to MoE by duplicating FFN layers as experts. Branch-Train-Merge
+\citep{li2022branch} trains expert modules independently. MoE++
+\citep{jin2024moepp} introduces heterogeneous expert types (zero
+experts, copy experts) but these perform trivial operations. Nexus
+\citep{gritsch2024nexus} adds task-specialized neural experts with
+adaptive routing from domain embeddings. All of these add \emph{neural} experts.
+Our deterministic experts are a fundamentally new class: they execute
+exact symbolic computation rather than learned approximations.
+
+\paragraph{Tool-Augmented Language Models.}
+Toolformer \citep{schick2023toolformer} teaches models to insert API
+calls into generated text via self-supervised learning. ReAct
+\citep{yao2023react} interleaves reasoning and action traces for
+multi-step tool use. ToolkenGPT \citep{hao2023toolkengpt} represents
+tools as special vocabulary tokens, enabling tool invocation through
+standard next-token prediction. Gorilla \citep{patil2023gorilla}
+fine-tunes models on API documentation. These approaches share a common
+limitation: tool execution is \emph{external} to the model, requiring
+separate inference passes, API calls, or decoding steps. Hybrid MoE
+embeds computation \emph{inside} the forward pass through the MoE
+routing mechanism.
+
+\paragraph{In-Model Arithmetic and Neurosymbolic Integration.}
+The broader vision of combining neural and symbolic computation has a
+long history \citep{garcez2019neural}. Two recent works are closely
+related to ours. OccamLLM \citep{deleo2024occamllm} uses LLM hidden
+states to control a symbolic architecture (OccamNet) that performs
+exact arithmetic operations ($+, -, \times, \div, \sin$, etc.) in a
+single autoregressive step, achieving 100\% accuracy on individual
+operations. IGC \citep{dietz2025igc} integrates a gated calculator
+directly into the LLM forward pass, achieving 98--99\% on the BigBench
+Arithmetic benchmark without external tools. Both demonstrate that
+hidden states contain sufficient information to drive exact computation.
+Our work differs from these approaches in using \emph{MoE routing} for
+dispatch: rather than adding a separate module or gating mechanism, we
+extend the existing expert routing to naturally select between neural and
+deterministic experts, which avoids introducing new architectural
+components and allows the model to decide when computation is needed
+through the same mechanism it already uses for expert selection.
+Additional related work includes neural module networks
+\citep{andreas2016neural} and dual-system neuro-symbolic approaches
+\citep{nye2021improving,baydin2018automatic}.
+
+\paragraph{Numerical Representations in LLMs.}
+Understanding how transformers encode numbers is an active area.
+\citet{wallace2019nlp} showed that MLPs can probe word embeddings for
+numerical magnitudes. \citet{geva2023dissecting} demonstrated that
+factual information is stored in specific feed-forward neurons.
+\citet{chen2024states} found that LLMs develop ``implicit discrete
+state representations'' for numerical reasoning, though these are ``far
+from lossless.'' \citet{bai2025numbers} showed that LLMs encode number
+values linearly in hidden states, recovering log-magnitudes with
+${\sim}2.3\%$ error via linear probes. Most relevantly,
+\citet{razeghi2022impact} showed that numerical reasoning accuracy
+correlates with the frequency of specific numbers in pretraining data.
+Our extraction experiments extend this line of work to domain-specific
+financial values (NOI, loan amounts, property values), showing that
+mean-pooled representations at middle layers encode these quantities
+with $R^2$ up to 0.98.

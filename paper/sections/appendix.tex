@@ -1,0 +1,119 @@
+\section{Appendix}
+\label{sec:appendix}
+
+\subsection{Model Architecture Details}
+\label{sec:appendix:arch}
+
+gpt-oss-20b uses GptOssTopKRouter with a linear projection
+$\mathbb{R}^{2880} \to \mathbb{R}^{32}$ and per-expert bias, followed
+by top-4 selection with sigmoid normalization. Experts are implemented
+as GptOssExperts with packed weight tensors: gate\_up\_proj of shape
+$(32, 2880, 5760)$ and down\_proj of shape $(32, 2880, 2880)$, using
+SwiGLU activation. These implementation details were discovered via
+runtime inspection using \texttt{scripts/explore\_model.py}.
+
+\subsection{Extraction MLP Architecture}
+\label{sec:appendix:extraction}
+
+Each extraction probe uses the following architecture:
+\begin{verbatim}
+Linear(2880, 512) -> SiLU -> Dropout(0.1)
+Linear(512, 128)  -> SiLU -> Dropout(0.05)
+Linear(128, 1)
+\end{verbatim}
+Total parameters per probe: $2880 \times 512 + 512 + 512 \times 128 +
+128 + 128 \times 1 + 1 = 1{,}541{,}121$.
+Training: AdamW optimizer, learning rate $10^{-3}$, weight decay 0.01,
+cosine annealing schedule, 300 epochs, batch size 64, Huber loss on
+log-scaled targets. 5-fold cross-validation with 3 seeds per fold;
+best seed selected by validation $R^2$. Final ensemble: 5 probes
+(one per fold), predictions aggregated via median.
+
+\subsection{Router Signal Classifier}
+\label{sec:appendix:router}
+
+\begin{verbatim}
+Linear(2880, 128) -> SiLU -> Dropout(0.1)
+Linear(128, 32)   -> SiLU
+Linear(32, 1)     -> Sigmoid
+\end{verbatim}
+Trained with BCE loss, 30 epochs, learning rate $10^{-3}$.
+Achieves 100\% accuracy on held-out validation.
+
+\subsection{Dataset Generation}
+\label{sec:appendix:data}
+
+Training and evaluation scenarios are generated procedurally with the
+following distributions:
+\begin{itemize}
+\item \textbf{Property types}: Office (20\%), Multifamily (20\%),
+Retail (15\%), Industrial (15\%), Hotel (10\%), Mixed-Use (8\%),
+Self-Storage (7\%), Medical Office (5\%)
+\item \textbf{Price range}: \$1M -- \$200M (log-uniform)
+\item \textbf{Cap rate range}: 3\% -- 12\%
+\item \textbf{LTV range}: 50\% -- 85\%
+\item \textbf{Interest rate range}: 4\% -- 9\%
+\item \textbf{Term}: 5, 7, 10, 15, 20, 25, or 30 years
+\end{itemize}
+
+Each scenario includes an input prompt phrased as a natural language
+underwriting question, ground-truth computation markers with exact
+input values and expected outputs, and complexity annotations (L1--L4).
+All ground-truth values are computed using the same deterministic
+functions used in the computation experts, ensuring zero systematic
+bias in evaluation.
+
+\subsection{Baseline Prompt Templates}
+\label{sec:appendix:prompts}
+
+\paragraph{Zero-Shot.}
+\begin{quote}
+\small
+\textit{You are a commercial real estate underwriting analyst. Provide
+precise calculations.}
+
+[scenario prompt]
+\end{quote}
+
+\paragraph{Chain-of-Thought.}
+\begin{quote}
+\small
+\textit{You are a commercial real estate underwriting analyst. Provide
+precise calculations.}
+
+\textit{Think step by step. Show all calculations clearly before giving
+final answers.}
+
+[scenario prompt]
+
+\textit{Let me work through this step by step:}
+\end{quote}
+
+\paragraph{Structured Output.}
+\begin{quote}
+\small
+\textit{You are a CRE underwriting analyst. Calculate ALL metrics from
+the data below. Output ONLY the final numerical answers in this EXACT
+format:}
+
+\textit{DSCR: [number]}\\
+\textit{LTV: [number]\%}\\
+\textit{Cap Rate: [number]\%}\\
+\textit{Debt Yield: [number]\%}
+
+\textit{If a metric cannot be calculated, write N/A.}
+
+[scenario prompt]
+
+\textit{DSCR:}
+\end{quote}
+
+\subsection{Reproducibility}
+\label{sec:appendix:reproduce}
+
+All code, data generation scripts, training pipelines, and evaluation
+scripts will be made publicly available upon publication. The complete
+experiment (hidden state pre-computation, 5-fold probe training,
+200-scenario evaluation with 3 baseline methods) completes in under
+30 minutes on a single B200 GPU. Random seed: 42 for data splits;
+seeds 0--2 for per-fold probe training.

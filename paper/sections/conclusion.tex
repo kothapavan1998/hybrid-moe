@@ -1,0 +1,49 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We introduced Hybrid MoE, a novel architecture that integrates
+deterministic computation experts into the routing mechanism of sparse
+Mixture-of-Experts transformers. By replacing neural FFN experts with a
+three-stage pipeline (learned extraction, exact computation, learned
+projection), we enable guaranteed-correct calculations within a single
+forward pass.
+
+Our experiments on gpt-oss-20b demonstrate that: (1)~financial values
+are recoverable from transformer hidden states with 5-fold
+cross-validated $R^2$ up to 0.98, (2)~routing signals achieve perfect
+accuracy in detecting computation-requiring inputs, and (3)~the
+approach yields a 173$\times$ speedup over single-sample generation.
+With 5-fold CV ensembles, all four experts achieve 60--87\% accuracy
+within 20\% error while guaranteeing a structured numerical output
+for every input ($N{=}200$).
+
+The key insight is that MoE routing provides a natural mechanism for
+\emph{learned dispatch} between neural and symbolic computation: the
+router learns when exact computation is needed, and the extraction MLP
+learns how to read function arguments from dense representations. This
+is fundamentally different from tool-calling approaches that require
+explicit argument parsing and external execution.
+
+Our analysis reveals two important findings. First, probe training
+instability on small datasets, not hidden state quality, was
+the primary cause of extraction failures; 5-fold CV ensembles resolve
+this entirely. Second, error compounding through deterministic
+computation (especially division) means that direct output probes can
+outperform the extract-then-compute pipeline despite lower $R^2$,
+suggesting that the hidden state encodes final answers at a useful
+level of fidelity.
+
+\paragraph{Future Work.}
+Several directions are promising: (1)~attention-based extraction that
+attends to specific number-bearing tokens rather than mean-pooling,
+(2)~joint training of extraction and routing end-to-end through the
+deterministic function, (3)~extension to chained computations where one
+expert's output feeds another's input across layers, and
+(4)~application to domains beyond finance where exact computation is
+critical (pharmacokinetics, structural engineering, tax compliance).
+
+The broader vision is a \emph{hybrid intelligence} paradigm where
+transformers handle natural language understanding and reasoning while
+deterministic modules handle exact computation, combined through the
+same routing mechanism that already governs expert selection in modern
+LLMs.

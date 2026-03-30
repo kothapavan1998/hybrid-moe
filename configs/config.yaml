@@ -1,0 +1,52 @@
+# Hybrid MoE Configuration
+# 6 experts defined in code, 4 active in experiments (matching paper)
+
+base_model:
+  name: "openai/gpt-oss-20b"
+  path: "./models/gpt-oss-20b"
+  hidden_dim: 2880
+  n_layers: 24
+  n_original_experts: 32
+  top_k: 4
+  router_path: "model.layers.{i}.mlp.router"
+  experts_path: "model.layers.{i}.mlp.experts"
+
+hybrid_moe:
+  n_defined_experts: 6           # Total defined in cre_experts.py
+  n_active_experts: 4            # Used in experiments (DSCR, LTV, Cap Rate, Debt Yield)
+  active_experts: ["dscr", "ltv", "cap_rate", "debt_yield"]
+  defined_experts: ["dscr", "ltv", "cap_rate", "debt_yield", "annual_debt_service", "noi_projection"]
+  active_layers: [12, 16, 20]
+  best_layer: 12
+  expert_intermediate_dim: 512
+  output_scale_init: 0.01
+  new_router_bias_init: -2.0
+  extraction_method: "mean_pool"
+
+training:
+  extractor_lr: 1e-3
+  extractor_epochs: 200
+  extractor_batch_size: 64
+  router_lr: 1e-3
+  router_epochs: 30
+  router_batch_size: 64
+  optimizer: "adamw"
+  weight_decay: 0.01
+  seed: 42
+
+precompute:
+  layers: [12, 16, 20]
+  batch_size: 8
+  max_seq_len: 512
+  save_mean_pool: true
+  save_last_token: true
+
+evaluation:
+  methods: ["hybrid_moe", "cot", "zeroshot"]
+  max_new_tokens: 512
+  n_eval_scenarios: 200
+  epsilon:
+    dscr: 0.05
+    ltv: 1.0
+    cap_rate: 0.5
+    debt_yield: 1.0

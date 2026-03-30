@@ -1,0 +1,1336 @@
+[
+  {
+    "scenario_id": "cre_10000",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10001",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10002",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10003",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10004",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10005",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10006",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10007",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {
+      "dscr": {
+        "predicted": 1.29,
+        "ground_truth": 1.29,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10008",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10009",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10010",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10011",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10012",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10013",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10014",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10015",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10016",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10017",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10018",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10019",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10020",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {
+      "dscr": {
+        "predicted": 1.45,
+        "ground_truth": 1.452,
+        "pct_error": 0.13774104683195607
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10021",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10022",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10023",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10024",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10025",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10026",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10027",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10028",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10029",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10030",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10031",
+    "method": "cot",
+    "latency_ms": 610.9357625246048,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10032",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10033",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {
+      "dscr": {
+        "predicted": 0.567,
+        "ground_truth": 0.567,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10034",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10035",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10036",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10037",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10038",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10039",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10040",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10041",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10042",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10043",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10044",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10045",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10046",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10047",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10048",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10049",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {
+      "dscr": {
+        "predicted": 1.9,
+        "ground_truth": 1.925,
+        "pct_error": 1.2987012987013056
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10050",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10051",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {
+      "dscr": {
+        "predicted": 1.934,
+        "ground_truth": 1.935,
+        "pct_error": 0.05167958656331328
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10052",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10053",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10054",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10055",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10056",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10057",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10058",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10059",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10060",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10061",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10062",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10063",
+    "method": "cot",
+    "latency_ms": 610.5723306536674,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10064",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10065",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10066",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10067",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10068",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10069",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10070",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10071",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10072",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10073",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10074",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10075",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10076",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10077",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10078",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10079",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10080",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10081",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10082",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {
+      "cap_rate": {
+        "predicted": 7.3142857,
+        "ground_truth": 7.31,
+        "pct_error": 0.05862790697675106
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10083",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10084",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10085",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10086",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10087",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10088",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10089",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10090",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10091",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10092",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10093",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10094",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10095",
+    "method": "cot",
+    "latency_ms": 609.9318638443947,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10096",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {
+      "dscr": {
+        "predicted": 1.78,
+        "ground_truth": 1.778,
+        "pct_error": 0.1124859392575929
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10097",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10098",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10099",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10100",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10101",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10102",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10103",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10104",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10105",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10106",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10107",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10108",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10109",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10110",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10111",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10112",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10113",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10114",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10115",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10116",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10117",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10118",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10119",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10120",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10121",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10122",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10123",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10124",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {
+      "dscr": {
+        "predicted": 1.22,
+        "ground_truth": 1.22,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10125",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10126",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {
+      "dscr": {
+        "predicted": 1.69,
+        "ground_truth": 1.69,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10127",
+    "method": "cot",
+    "latency_ms": 609.0027838945389,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10128",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10129",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10130",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10131",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10132",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10133",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10134",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10135",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10136",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10137",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {
+      "dscr": {
+        "predicted": 8.0,
+        "ground_truth": 1.935,
+        "pct_error": 313.4366925064599
+      },
+      "ltv": {
+        "predicted": 60.0,
+        "ground_truth": 57.17,
+        "pct_error": 4.950148679377293
+      },
+      "cap_rate": {
+        "predicted": 8.0,
+        "ground_truth": 7.6,
+        "pct_error": 5.263157894736848
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10138",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10139",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10140",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10141",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10142",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10143",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {
+      "dscr": {
+        "predicted": 1.07,
+        "ground_truth": 0.957,
+        "pct_error": 11.807732497387681
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10144",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10145",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10146",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10147",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10148",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10149",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10150",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {
+      "cap_rate": {
+        "predicted": 4.657,
+        "ground_truth": 7.39,
+        "pct_error": 36.98240866035182
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10151",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {
+      "cap_rate": {
+        "predicted": 3.0,
+        "ground_truth": 7.04,
+        "pct_error": 57.38636363636363
+      },
+      "debt_yield": {
+        "predicted": 3.0,
+        "ground_truth": 9.99,
+        "pct_error": 69.96996996996997
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10152",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10153",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10154",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10155",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10156",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10157",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10158",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {
+      "dscr": {
+        "predicted": 2.398,
+        "ground_truth": 2.398,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10159",
+    "method": "cot",
+    "latency_ms": 609.4297990202904,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10160",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10161",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10162",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10163",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10164",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10165",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {
+      "dscr": {
+        "predicted": 1.309,
+        "ground_truth": 1.309,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10166",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10167",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10168",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10169",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10170",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10171",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10172",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10173",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10174",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10175",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10176",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10177",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10178",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10179",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10180",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10181",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10182",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {
+      "dscr": {
+        "predicted": 1.68,
+        "ground_truth": 1.681,
+        "pct_error": 0.059488399762053064
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10183",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10184",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10185",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10186",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10187",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {
+      "ltv": {
+        "predicted": 81.0,
+        "ground_truth": 59.12,
+        "pct_error": 37.00947225981056
+      },
+      "cap_rate": {
+        "predicted": 10.3,
+        "ground_truth": 7.52,
+        "pct_error": 36.968085106383
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10188",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10189",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10190",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {
+      "cap_rate": {
+        "predicted": 9.12,
+        "ground_truth": 9.12,
+        "pct_error": 0.0
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10191",
+    "method": "cot",
+    "latency_ms": 608.9164167642593,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10192",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10193",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10194",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10195",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10196",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10197",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10198",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {}
+  },
+  {
+    "scenario_id": "cre_10199",
+    "method": "cot",
+    "latency_ms": 875.1963675022125,
+    "matches": {
+      "dscr": {
+        "predicted": 1.73,
+        "ground_truth": 1.73,
+        "pct_error": 0.0
+      }
+    }
+  }
+]

@@ -1,0 +1,5402 @@
+[
+  {
+    "scenario_id": "cre_10000",
+    "method": "ensemble_input",
+    "latency_ms": 193.5722827911377,
+    "matches": {
+      "dscr": {
+        "predicted": 0.27613866329193115,
+        "ground_truth": 1.894,
+        "pct_error": 85.42034512714196
+      },
+      "ltv": {
+        "predicted": 70.38147735595703,
+        "ground_truth": 55.48,
+        "pct_error": 26.859187736043683
+      },
+      "cap_rate": {
+        "predicted": 3.0172345638275146,
+        "ground_truth": 7.75,
+        "pct_error": 61.06794111190303
+      },
+      "debt_yield": {
+        "predicted": 4.367414474487305,
+        "ground_truth": 13.96,
+        "pct_error": 68.7147960280279
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10001",
+    "method": "ensemble_input",
+    "latency_ms": 30.79080581665039,
+    "matches": {
+      "dscr": {
+        "predicted": 0.35037514567375183,
+        "ground_truth": 1.776,
+        "pct_error": 80.27166972557703
+      },
+      "ltv": {
+        "predicted": 65.06130981445312,
+        "ground_truth": 58.0,
+        "pct_error": 12.174672093884698
+      },
+      "cap_rate": {
+        "predicted": 3.3567075729370117,
+        "ground_truth": 7.45,
+        "pct_error": 54.94352251091259
+      },
+      "debt_yield": {
+        "predicted": 5.441004276275635,
+        "ground_truth": 12.84,
+        "pct_error": 57.62457728757294
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10002",
+    "method": "ensemble_input",
+    "latency_ms": 98.06585311889648,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2005839347839355,
+        "ground_truth": 1.117,
+        "pct_error": 7.482894788176862
+      },
+      "ltv": {
+        "predicted": 72.5408706665039,
+        "ground_truth": 66.49,
+        "pct_error": 9.100422118369547
+      },
+      "cap_rate": {
+        "predicted": 6.9434590339660645,
+        "ground_truth": 5.98,
+        "pct_error": 16.111355083044547
+      },
+      "debt_yield": {
+        "predicted": 8.730878829956055,
+        "ground_truth": 9.0,
+        "pct_error": 2.9902352227105036
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10003",
+    "method": "ensemble_input",
+    "latency_ms": 155.98130226135254,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5573054552078247,
+        "ground_truth": 1.664,
+        "pct_error": 6.411931778375915
+      },
+      "ltv": {
+        "predicted": 68.63617706298828,
+        "ground_truth": 71.62,
+        "pct_error": 4.166186731376324
+      },
+      "cap_rate": {
+        "predicted": 7.658775806427002,
+        "ground_truth": 8.29,
+        "pct_error": 7.614284602810582
+      },
+      "debt_yield": {
+        "predicted": 11.264684677124023,
+        "ground_truth": 11.58,
+        "pct_error": 2.7229302493607657
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10004",
+    "method": "ensemble_input",
+    "latency_ms": 35.288333892822266,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7501777410507202,
+        "ground_truth": 1.908,
+        "pct_error": 8.271606863169795
+      },
+      "ltv": {
+        "predicted": 63.32499313354492,
+        "ground_truth": 69.77,
+        "pct_error": 9.237504466755158
+      },
+      "cap_rate": {
+        "predicted": 7.800140380859375,
+        "ground_truth": 9.42,
+        "pct_error": 17.195961986630838
+      },
+      "debt_yield": {
+        "predicted": 12.032111167907715,
+        "ground_truth": 13.5,
+        "pct_error": 10.873250608091
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10005",
+    "method": "ensemble_input",
+    "latency_ms": 31.705856323242188,
+    "matches": {
+      "dscr": {
+        "predicted": 0.5655609369277954,
+        "ground_truth": 0.812,
+        "pct_error": 30.349638309384808
+      },
+      "ltv": {
+        "predicted": 24.07688331604004,
+        "ground_truth": 72.86,
+        "pct_error": 66.95459330765847
+      },
+      "cap_rate": {
+        "predicted": 6.140660285949707,
+        "ground_truth": 5.16,
+        "pct_error": 19.005044301350907
+      },
+      "debt_yield": {
+        "predicted": 9.083786010742188,
+        "ground_truth": 7.08,
+        "pct_error": 28.30206229861847
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10006",
+    "method": "ensemble_input",
+    "latency_ms": 30.428409576416016,
+    "matches": {
+      "dscr": {
+        "predicted": 2.0697906017303467,
+        "ground_truth": 2.26,
+        "pct_error": 8.416345056179342
+      },
+      "ltv": {
+        "predicted": 58.193241119384766,
+        "ground_truth": 60.77,
+        "pct_error": 4.240182459462296
+      },
+      "cap_rate": {
+        "predicted": 10.106599807739258,
+        "ground_truth": 9.88,
+        "pct_error": 2.2935203212475406
+      },
+      "debt_yield": {
+        "predicted": 16.9365291595459,
+        "ground_truth": 16.25,
+        "pct_error": 4.224794827974759
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10007",
+    "method": "ensemble_input",
+    "latency_ms": 38.96498680114746,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4742358922958374,
+        "ground_truth": 1.29,
+        "pct_error": 14.281852115956383
+      },
+      "ltv": {
+        "predicted": 76.42566680908203,
+        "ground_truth": 70.0,
+        "pct_error": 9.17952401297433
+      },
+      "cap_rate": {
+        "predicted": 10.678234100341797,
+        "ground_truth": 6.69,
+        "pct_error": 59.61485949688784
+      },
+      "debt_yield": {
+        "predicted": 12.941202163696289,
+        "ground_truth": 9.56,
+        "pct_error": 35.36822346962645
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10008",
+    "method": "ensemble_input",
+    "latency_ms": 38.64026069641113,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6956672668457031,
+        "ground_truth": 1.656,
+        "pct_error": 2.3953663554168605
+      },
+      "ltv": {
+        "predicted": 59.19292068481445,
+        "ground_truth": 58.0,
+        "pct_error": 2.0567598014042296
+      },
+      "cap_rate": {
+        "predicted": 6.694825649261475,
+        "ground_truth": 7.25,
+        "pct_error": 7.657577251565867
+      },
+      "debt_yield": {
+        "predicted": 11.860838890075684,
+        "ground_truth": 12.5,
+        "pct_error": 5.113288879394531
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10009",
+    "method": "ensemble_input",
+    "latency_ms": 28.96428108215332,
+    "matches": {
+      "dscr": {
+        "predicted": 1.196984887123108,
+        "ground_truth": 1.946,
+        "pct_error": 38.489985245472354
+      },
+      "ltv": {
+        "predicted": 36.14948272705078,
+        "ground_truth": 60.65,
+        "pct_error": 40.39656599002344
+      },
+      "cap_rate": {
+        "predicted": 7.277307510375977,
+        "ground_truth": 9.82,
+        "pct_error": 25.892998876008388
+      },
+      "debt_yield": {
+        "predicted": 16.880229949951172,
+        "ground_truth": 16.2,
+        "pct_error": 4.198950308340572
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10010",
+    "method": "ensemble_input",
+    "latency_ms": 71.25663757324219,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0554695129394531,
+        "ground_truth": 1.35,
+        "pct_error": 21.81707311559607
+      },
+      "ltv": {
+        "predicted": 62.90599822998047,
+        "ground_truth": 60.0,
+        "pct_error": 4.843330383300781
+      },
+      "cap_rate": {
+        "predicted": 6.448283672332764,
+        "ground_truth": 7.64,
+        "pct_error": 15.598381252188954
+      },
+      "debt_yield": {
+        "predicted": 9.556493759155273,
+        "ground_truth": 12.74,
+        "pct_error": 24.988275045876975
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10011",
+    "method": "ensemble_input",
+    "latency_ms": 28.964757919311523,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7128489017486572,
+        "ground_truth": 1.621,
+        "pct_error": 56.02412697417291
+      },
+      "ltv": {
+        "predicted": 24.56314468383789,
+        "ground_truth": 65.5,
+        "pct_error": 62.49901574986582
+      },
+      "cap_rate": {
+        "predicted": 7.930946350097656,
+        "ground_truth": 6.65,
+        "pct_error": 19.262351129288056
+      },
+      "debt_yield": {
+        "predicted": 10.562302589416504,
+        "ground_truth": 10.16,
+        "pct_error": 3.95967115567425
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10012",
+    "method": "ensemble_input",
+    "latency_ms": 40.509939193725586,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4507920742034912,
+        "ground_truth": 1.431,
+        "pct_error": 1.3830939345556368
+      },
+      "ltv": {
+        "predicted": 62.657814025878906,
+        "ground_truth": 65.0,
+        "pct_error": 3.603363037109375
+      },
+      "cap_rate": {
+        "predicted": 6.7817301750183105,
+        "ground_truth": 8.97,
+        "pct_error": 24.39542725732096
+      },
+      "debt_yield": {
+        "predicted": 10.646767616271973,
+        "ground_truth": 13.81,
+        "pct_error": 22.90537569679962
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10013",
+    "method": "ensemble_input",
+    "latency_ms": 35.51626205444336,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4845561981201172,
+        "ground_truth": 1.311,
+        "pct_error": 13.238459048063863
+      },
+      "ltv": {
+        "predicted": 68.6928939819336,
+        "ground_truth": 72.79,
+        "pct_error": 5.62866605037287
+      },
+      "cap_rate": {
+        "predicted": 7.293692111968994,
+        "ground_truth": 6.33,
+        "pct_error": 15.224203980552828
+      },
+      "debt_yield": {
+        "predicted": 10.652778625488281,
+        "ground_truth": 8.7,
+        "pct_error": 22.44573132745152
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10014",
+    "method": "ensemble_input",
+    "latency_ms": 48.05636405944824,
+    "matches": {
+      "dscr": {
+        "predicted": 1.244164228439331,
+        "ground_truth": 0.904,
+        "pct_error": 37.628786331784404
+      },
+      "ltv": {
+        "predicted": 64.65480041503906,
+        "ground_truth": 58.0,
+        "pct_error": 11.473793819032867
+      },
+      "cap_rate": {
+        "predicted": 6.403666019439697,
+        "ground_truth": 4.3,
+        "pct_error": 48.922465568365055
+      },
+      "debt_yield": {
+        "predicted": 9.690193176269531,
+        "ground_truth": 7.41,
+        "pct_error": 30.771837736430918
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10015",
+    "method": "ensemble_input",
+    "latency_ms": 34.7137451171875,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4841934442520142,
+        "ground_truth": 1.568,
+        "pct_error": 5.344805851274611
+      },
+      "ltv": {
+        "predicted": 63.802059173583984,
+        "ground_truth": 71.25,
+        "pct_error": 10.453250282689144
+      },
+      "cap_rate": {
+        "predicted": 6.68646764755249,
+        "ground_truth": 8.09,
+        "pct_error": 17.348978398609514
+      },
+      "debt_yield": {
+        "predicted": 10.143062591552734,
+        "ground_truth": 11.35,
+        "pct_error": 10.633809766055201
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10016",
+    "method": "ensemble_input",
+    "latency_ms": 29.20055389404297,
+    "matches": {
+      "dscr": {
+        "predicted": 0.3154452443122864,
+        "ground_truth": 1.26,
+        "pct_error": 74.96466314981855
+      },
+      "ltv": {
+        "predicted": 71.22828674316406,
+        "ground_truth": 71.11,
+        "pct_error": 0.16634333168902132
+      },
+      "cap_rate": {
+        "predicted": 3.686945915222168,
+        "ground_truth": 6.49,
+        "pct_error": 43.19035569765535
+      },
+      "debt_yield": {
+        "predicted": 6.151890754699707,
+        "ground_truth": 9.12,
+        "pct_error": 32.54505751425759
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10017",
+    "method": "ensemble_input",
+    "latency_ms": 30.7004451751709,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0547263622283936,
+        "ground_truth": 1.09,
+        "pct_error": 3.236113557028121
+      },
+      "ltv": {
+        "predicted": 62.610382080078125,
+        "ground_truth": 55.0,
+        "pct_error": 13.837058327414772
+      },
+      "cap_rate": {
+        "predicted": 5.954232215881348,
+        "ground_truth": 5.55,
+        "pct_error": 7.283463349213474
+      },
+      "debt_yield": {
+        "predicted": 9.60746955871582,
+        "ground_truth": 10.09,
+        "pct_error": 4.782264036513177
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10018",
+    "method": "ensemble_input",
+    "latency_ms": 35.157203674316406,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4290448427200317,
+        "ground_truth": 1.564,
+        "pct_error": 8.628846373399508
+      },
+      "ltv": {
+        "predicted": 60.7951774597168,
+        "ground_truth": 66.06,
+        "pct_error": 7.969758613810483
+      },
+      "cap_rate": {
+        "predicted": 6.667212963104248,
+        "ground_truth": 8.95,
+        "pct_error": 25.506000412243036
+      },
+      "debt_yield": {
+        "predicted": 11.26072883605957,
+        "ground_truth": 13.55,
+        "pct_error": 16.894990139781775
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10019",
+    "method": "ensemble_input",
+    "latency_ms": 50.4302978515625,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2084786891937256,
+        "ground_truth": 1.138,
+        "pct_error": 6.1932064317860895
+      },
+      "ltv": {
+        "predicted": 64.2403564453125,
+        "ground_truth": 55.0,
+        "pct_error": 16.800648082386363
+      },
+      "cap_rate": {
+        "predicted": 6.371291637420654,
+        "ground_truth": 5.4,
+        "pct_error": 17.986882174456554
+      },
+      "debt_yield": {
+        "predicted": 9.60459041595459,
+        "ground_truth": 9.82,
+        "pct_error": 2.1935802855948108
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10020",
+    "method": "ensemble_input",
+    "latency_ms": 35.30693054199219,
+    "matches": {
+      "dscr": {
+        "predicted": 1.21182119846344,
+        "ground_truth": 1.452,
+        "pct_error": 16.54123977524518
+      },
+      "ltv": {
+        "predicted": 69.60468292236328,
+        "ground_truth": 70.0,
+        "pct_error": 0.5647386823381696
+      },
+      "cap_rate": {
+        "predicted": 6.487709999084473,
+        "ground_truth": 7.35,
+        "pct_error": 11.731836747150028
+      },
+      "debt_yield": {
+        "predicted": 9.97915267944336,
+        "ground_truth": 10.5,
+        "pct_error": 4.9604506719680055
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10021",
+    "method": "ensemble_input",
+    "latency_ms": 30.696392059326172,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3887813091278076,
+        "ground_truth": 0.861,
+        "pct_error": 61.29864217512284
+      },
+      "ltv": {
+        "predicted": 63.76227569580078,
+        "ground_truth": 73.18,
+        "pct_error": 12.869259776167294
+      },
+      "cap_rate": {
+        "predicted": 6.2822184562683105,
+        "ground_truth": 4.35,
+        "pct_error": 44.41881508662784
+      },
+      "debt_yield": {
+        "predicted": 10.089461326599121,
+        "ground_truth": 5.95,
+        "pct_error": 69.57077859830456
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10022",
+    "method": "ensemble_input",
+    "latency_ms": 31.169414520263672,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8757060766220093,
+        "ground_truth": 1.877,
+        "pct_error": 53.3454407766644
+      },
+      "ltv": {
+        "predicted": 39.34526062011719,
+        "ground_truth": 56.9,
+        "pct_error": 30.851914551639386
+      },
+      "cap_rate": {
+        "predicted": 6.441878318786621,
+        "ground_truth": 7.26,
+        "pct_error": 11.268893680625052
+      },
+      "debt_yield": {
+        "predicted": 13.918916702270508,
+        "ground_truth": 12.75,
+        "pct_error": 9.167974135454964
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10023",
+    "method": "ensemble_input",
+    "latency_ms": 30.62129020690918,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3407213687896729,
+        "ground_truth": 1.176,
+        "pct_error": 14.006919114768108
+      },
+      "ltv": {
+        "predicted": 71.40689086914062,
+        "ground_truth": 71.43,
+        "pct_error": 0.032352136160411334
+      },
+      "cap_rate": {
+        "predicted": 7.636743545532227,
+        "ground_truth": 6.97,
+        "pct_error": 9.565904527004689
+      },
+      "debt_yield": {
+        "predicted": 10.67244815826416,
+        "ground_truth": 9.76,
+        "pct_error": 9.348854080575414
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10024",
+    "method": "ensemble_input",
+    "latency_ms": 41.22757911682129,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2822335958480835,
+        "ground_truth": 1.176,
+        "pct_error": 9.033469034700984
+      },
+      "ltv": {
+        "predicted": 64.95925903320312,
+        "ground_truth": 71.43,
+        "pct_error": 9.058856176392107
+      },
+      "cap_rate": {
+        "predicted": 6.270073890686035,
+        "ground_truth": 5.14,
+        "pct_error": 21.985873359650494
+      },
+      "debt_yield": {
+        "predicted": 9.16861629486084,
+        "ground_truth": 7.2,
+        "pct_error": 27.34189298417833
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10025",
+    "method": "ensemble_input",
+    "latency_ms": 34.71231460571289,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0793291330337524,
+        "ground_truth": 1.391,
+        "pct_error": 22.406244929277324
+      },
+      "ltv": {
+        "predicted": 65.16749572753906,
+        "ground_truth": 62.83,
+        "pct_error": 3.7203497175538183
+      },
+      "cap_rate": {
+        "predicted": 6.283011436462402,
+        "ground_truth": 7.39,
+        "pct_error": 14.97954754448711
+      },
+      "debt_yield": {
+        "predicted": 9.445365905761719,
+        "ground_truth": 11.76,
+        "pct_error": 19.682262706107835
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10026",
+    "method": "ensemble_input",
+    "latency_ms": 51.43880844116211,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4360395669937134,
+        "ground_truth": 1.34,
+        "pct_error": 7.167131865202485
+      },
+      "ltv": {
+        "predicted": 73.51953125,
+        "ground_truth": 74.91,
+        "pct_error": 1.856185756240818
+      },
+      "cap_rate": {
+        "predicted": 8.3095121383667,
+        "ground_truth": 7.44,
+        "pct_error": 11.686991107079285
+      },
+      "debt_yield": {
+        "predicted": 11.172449111938477,
+        "ground_truth": 9.93,
+        "pct_error": 12.51207564892726
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10027",
+    "method": "ensemble_input",
+    "latency_ms": 30.619144439697266,
+    "matches": {
+      "dscr": {
+        "predicted": 2.0564587116241455,
+        "ground_truth": 1.87,
+        "pct_error": 9.971054097547881
+      },
+      "ltv": {
+        "predicted": 53.25861740112305,
+        "ground_truth": 63.96,
+        "pct_error": 16.731367415379854
+      },
+      "cap_rate": {
+        "predicted": 7.573672294616699,
+        "ground_truth": 7.55,
+        "pct_error": 0.3135403260489987
+      },
+      "debt_yield": {
+        "predicted": 13.10134220123291,
+        "ground_truth": 11.8,
+        "pct_error": 11.028323739261944
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10028",
+    "method": "ensemble_input",
+    "latency_ms": 30.54046630859375,
+    "matches": {
+      "dscr": {
+        "predicted": 0.913184404373169,
+        "ground_truth": 0.823,
+        "pct_error": 10.958007821770229
+      },
+      "ltv": {
+        "predicted": 63.292747497558594,
+        "ground_truth": 62.98,
+        "pct_error": 0.4965822444563305
+      },
+      "cap_rate": {
+        "predicted": 4.674009799957275,
+        "ground_truth": 4.9,
+        "pct_error": 4.612044898831122
+      },
+      "debt_yield": {
+        "predicted": 7.4467854499816895,
+        "ground_truth": 7.78,
+        "pct_error": 4.282963367844612
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10029",
+    "method": "ensemble_input",
+    "latency_ms": 34.537315368652344,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4602408409118652,
+        "ground_truth": 1.993,
+        "pct_error": 26.731518268345955
+      },
+      "ltv": {
+        "predicted": 67.56375122070312,
+        "ground_truth": 60.0,
+        "pct_error": 12.606252034505209
+      },
+      "cap_rate": {
+        "predicted": 7.800858497619629,
+        "ground_truth": 9.26,
+        "pct_error": 15.757467628297741
+      },
+      "debt_yield": {
+        "predicted": 11.714688301086426,
+        "ground_truth": 15.43,
+        "pct_error": 24.078494484209813
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10030",
+    "method": "ensemble_input",
+    "latency_ms": 35.16745567321777,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0484960079193115,
+        "ground_truth": 1.093,
+        "pct_error": 4.071728461179181
+      },
+      "ltv": {
+        "predicted": 79.0992660522461,
+        "ground_truth": 80.0,
+        "pct_error": 1.1259174346923828
+      },
+      "cap_rate": {
+        "predicted": 6.58546257019043,
+        "ground_truth": 6.34,
+        "pct_error": 3.8716493720887986
+      },
+      "debt_yield": {
+        "predicted": 7.860770225524902,
+        "ground_truth": 7.93,
+        "pct_error": 0.8730110274287184
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10031",
+    "method": "ensemble_input",
+    "latency_ms": 28.72180938720703,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7358826994895935,
+        "ground_truth": 1.889,
+        "pct_error": 61.04379568609881
+      },
+      "ltv": {
+        "predicted": 30.5140438079834,
+        "ground_truth": 56.96,
+        "pct_error": 46.42899612362466
+      },
+      "cap_rate": {
+        "predicted": 7.183701515197754,
+        "ground_truth": 8.8,
+        "pct_error": 18.367028236389167
+      },
+      "debt_yield": {
+        "predicted": 7.857494831085205,
+        "ground_truth": 15.45,
+        "pct_error": 49.14242827776566
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10032",
+    "method": "ensemble_input",
+    "latency_ms": 30.43222427368164,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1966757774353027,
+        "ground_truth": 1.246,
+        "pct_error": 3.958605342271048
+      },
+      "ltv": {
+        "predicted": 63.90887451171875,
+        "ground_truth": 61.33,
+        "pct_error": 4.204915231891002
+      },
+      "cap_rate": {
+        "predicted": 6.902987480163574,
+        "ground_truth": 6.81,
+        "pct_error": 1.3654549216383938
+      },
+      "debt_yield": {
+        "predicted": 10.190277099609375,
+        "ground_truth": 11.11,
+        "pct_error": 8.278333936909311
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10033",
+    "method": "ensemble_input",
+    "latency_ms": 35.22515296936035,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9346891641616821,
+        "ground_truth": 0.567,
+        "pct_error": 64.8481771008258
+      },
+      "ltv": {
+        "predicted": 65.5049057006836,
+        "ground_truth": 77.5,
+        "pct_error": 15.477541031376008
+      },
+      "cap_rate": {
+        "predicted": 4.995626449584961,
+        "ground_truth": 4.15,
+        "pct_error": 20.37654095385447
+      },
+      "debt_yield": {
+        "predicted": 7.284354209899902,
+        "ground_truth": 5.35,
+        "pct_error": 36.15615345607295
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10034",
+    "method": "ensemble_input",
+    "latency_ms": 30.643224716186523,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9505172371864319,
+        "ground_truth": 0.625,
+        "pct_error": 52.08275794982911
+      },
+      "ltv": {
+        "predicted": 68.21905517578125,
+        "ground_truth": 74.62,
+        "pct_error": 8.578055245535719
+      },
+      "cap_rate": {
+        "predicted": 5.024872303009033,
+        "ground_truth": 4.05,
+        "pct_error": 24.07092106195144
+      },
+      "debt_yield": {
+        "predicted": 7.015782356262207,
+        "ground_truth": 5.42,
+        "pct_error": 29.442478897826703
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10035",
+    "method": "ensemble_input",
+    "latency_ms": 30.41839599609375,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1790399551391602,
+        "ground_truth": 0.82,
+        "pct_error": 43.785360382824415
+      },
+      "ltv": {
+        "predicted": 67.96630859375,
+        "ground_truth": 73.11,
+        "pct_error": 7.035551095951305
+      },
+      "cap_rate": {
+        "predicted": 6.382538318634033,
+        "ground_truth": 4.61,
+        "pct_error": 38.44985506798336
+      },
+      "debt_yield": {
+        "predicted": 9.439483642578125,
+        "ground_truth": 6.3,
+        "pct_error": 49.83307369171627
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10036",
+    "method": "ensemble_input",
+    "latency_ms": 28.36775779724121,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7750279903411865,
+        "ground_truth": 2.342,
+        "pct_error": 66.9074299598127
+      },
+      "ltv": {
+        "predicted": 42.05339431762695,
+        "ground_truth": 65.96,
+        "pct_error": 36.24409594052918
+      },
+      "cap_rate": {
+        "predicted": 5.63455867767334,
+        "ground_truth": 9.51,
+        "pct_error": 40.75122315800904
+      },
+      "debt_yield": {
+        "predicted": 10.592520713806152,
+        "ground_truth": 14.41,
+        "pct_error": 26.491875684898318
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10037",
+    "method": "ensemble_input",
+    "latency_ms": 32.842397689819336,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7377939224243164,
+        "ground_truth": 2.146,
+        "pct_error": 19.021718433163258
+      },
+      "ltv": {
+        "predicted": 68.6622314453125,
+        "ground_truth": 61.11,
+        "pct_error": 12.358421609086076
+      },
+      "cap_rate": {
+        "predicted": 8.325016021728516,
+        "ground_truth": 9.7,
+        "pct_error": 14.175092559499832
+      },
+      "debt_yield": {
+        "predicted": 12.315618515014648,
+        "ground_truth": 15.87,
+        "pct_error": 22.396858758571838
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10038",
+    "method": "ensemble_input",
+    "latency_ms": 30.53569793701172,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8426905870437622,
+        "ground_truth": 0.854,
+        "pct_error": 1.3242872314095755
+      },
+      "ltv": {
+        "predicted": 76.41490936279297,
+        "ground_truth": 75.0,
+        "pct_error": 1.8865458170572915
+      },
+      "cap_rate": {
+        "predicted": 5.176589488983154,
+        "ground_truth": 5.58,
+        "pct_error": 7.229579050481107
+      },
+      "debt_yield": {
+        "predicted": 7.002223491668701,
+        "ground_truth": 7.44,
+        "pct_error": 5.884092853915312
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10039",
+    "method": "ensemble_input",
+    "latency_ms": 37.6591682434082,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3552614450454712,
+        "ground_truth": 1.423,
+        "pct_error": 4.760263875933159
+      },
+      "ltv": {
+        "predicted": 61.66405487060547,
+        "ground_truth": 56.05,
+        "pct_error": 10.016154987699325
+      },
+      "cap_rate": {
+        "predicted": 5.880082607269287,
+        "ground_truth": 5.49,
+        "pct_error": 7.105329822755681
+      },
+      "debt_yield": {
+        "predicted": 9.32038688659668,
+        "ground_truth": 9.8,
+        "pct_error": 4.894011361258378
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10040",
+    "method": "ensemble_input",
+    "latency_ms": 34.80887413024902,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4907875061035156,
+        "ground_truth": 1.343,
+        "pct_error": 11.004281913887986
+      },
+      "ltv": {
+        "predicted": 69.79460144042969,
+        "ground_truth": 70.12,
+        "pct_error": 0.46405955443570596
+      },
+      "cap_rate": {
+        "predicted": 7.056327819824219,
+        "ground_truth": 5.9,
+        "pct_error": 19.598776607190143
+      },
+      "debt_yield": {
+        "predicted": 10.505790710449219,
+        "ground_truth": 8.41,
+        "pct_error": 24.92022247858762
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10041",
+    "method": "ensemble_input",
+    "latency_ms": 28.530597686767578,
+    "matches": {
+      "dscr": {
+        "predicted": 0.5960279107093811,
+        "ground_truth": 1.125,
+        "pct_error": 47.01974127027724
+      },
+      "ltv": {
+        "predicted": 24.716962814331055,
+        "ground_truth": 61.43,
+        "pct_error": 59.76401951110035
+      },
+      "cap_rate": {
+        "predicted": 6.741767406463623,
+        "ground_truth": 6.27,
+        "pct_error": 7.524201060025894
+      },
+      "debt_yield": {
+        "predicted": 10.093738555908203,
+        "ground_truth": 10.21,
+        "pct_error": 1.1387017051106536
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10042",
+    "method": "ensemble_input",
+    "latency_ms": 31.77809715270996,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4156785011291504,
+        "ground_truth": 1.957,
+        "pct_error": 27.660781751193138
+      },
+      "ltv": {
+        "predicted": 64.21574401855469,
+        "ground_truth": 64.62,
+        "pct_error": 0.6255895720292742
+      },
+      "cap_rate": {
+        "predicted": 7.012061595916748,
+        "ground_truth": 9.72,
+        "pct_error": 27.859448601679553
+      },
+      "debt_yield": {
+        "predicted": 10.754961013793945,
+        "ground_truth": 15.05,
+        "pct_error": 28.538465024624955
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10043",
+    "method": "ensemble_input",
+    "latency_ms": 28.81908416748047,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7376843690872192,
+        "ground_truth": 1.332,
+        "pct_error": 44.61829060906763
+      },
+      "ltv": {
+        "predicted": 28.14535140991211,
+        "ground_truth": 62.98,
+        "pct_error": 55.31065193726244
+      },
+      "cap_rate": {
+        "predicted": 7.061079978942871,
+        "ground_truth": 7.01,
+        "pct_error": 0.72867302343611
+      },
+      "debt_yield": {
+        "predicted": 7.971769332885742,
+        "ground_truth": 11.12,
+        "pct_error": 28.311426862538287
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10044",
+    "method": "ensemble_input",
+    "latency_ms": 30.70545196533203,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2796261310577393,
+        "ground_truth": 1.139,
+        "pct_error": 12.346455755727765
+      },
+      "ltv": {
+        "predicted": 62.23131561279297,
+        "ground_truth": 57.88,
+        "pct_error": 7.517822413256679
+      },
+      "cap_rate": {
+        "predicted": 5.424604415893555,
+        "ground_truth": 4.06,
+        "pct_error": 33.61094620427476
+      },
+      "debt_yield": {
+        "predicted": 8.723175048828125,
+        "ground_truth": 7.02,
+        "pct_error": 24.26175283230948
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10045",
+    "method": "ensemble_input",
+    "latency_ms": 30.792236328125,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2220203876495361,
+        "ground_truth": 1.122,
+        "pct_error": 8.914473052543318
+      },
+      "ltv": {
+        "predicted": 73.39427185058594,
+        "ground_truth": 75.83,
+        "pct_error": 3.212090398805303
+      },
+      "cap_rate": {
+        "predicted": 7.53652811050415,
+        "ground_truth": 7.5,
+        "pct_error": 0.4870414733886719
+      },
+      "debt_yield": {
+        "predicted": 10.148900032043457,
+        "ground_truth": 9.89,
+        "pct_error": 2.617796077284696
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10046",
+    "method": "ensemble_input",
+    "latency_ms": 28.394699096679688,
+    "matches": {
+      "dscr": {
+        "predicted": 0.4658215641975403,
+        "ground_truth": 1.623,
+        "pct_error": 71.29873295147627
+      },
+      "ltv": {
+        "predicted": 44.82840347290039,
+        "ground_truth": 67.78,
+        "pct_error": 33.86190104322752
+      },
+      "cap_rate": {
+        "predicted": 4.030796051025391,
+        "ground_truth": 9.28,
+        "pct_error": 56.564697726019496
+      },
+      "debt_yield": {
+        "predicted": 9.381423950195312,
+        "ground_truth": 13.69,
+        "pct_error": 31.472432796235843
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10047",
+    "method": "ensemble_input",
+    "latency_ms": 30.551671981811523,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6447471380233765,
+        "ground_truth": 1.72,
+        "pct_error": 4.37516639398974
+      },
+      "ltv": {
+        "predicted": 56.74856185913086,
+        "ground_truth": 56.67,
+        "pct_error": 0.13863042020620728
+      },
+      "cap_rate": {
+        "predicted": 7.161369323730469,
+        "ground_truth": 8.5,
+        "pct_error": 15.74859619140625
+      },
+      "debt_yield": {
+        "predicted": 12.390233993530273,
+        "ground_truth": 15.0,
+        "pct_error": 17.39844004313151
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10048",
+    "method": "ensemble_input",
+    "latency_ms": 30.418872833251953,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3776326179504395,
+        "ground_truth": 1.485,
+        "pct_error": 7.2301267373441505
+      },
+      "ltv": {
+        "predicted": 77.1199951171875,
+        "ground_truth": 78.89,
+        "pct_error": 2.2436365607966793
+      },
+      "cap_rate": {
+        "predicted": 7.810929298400879,
+        "ground_truth": 8.12,
+        "pct_error": 3.8062894285605955
+      },
+      "debt_yield": {
+        "predicted": 10.27561092376709,
+        "ground_truth": 10.3,
+        "pct_error": 0.2367871478923385
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10049",
+    "method": "ensemble_input",
+    "latency_ms": 29.18529510498047,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7304987907409668,
+        "ground_truth": 1.925,
+        "pct_error": 10.103958922547182
+      },
+      "ltv": {
+        "predicted": 72.85664367675781,
+        "ground_truth": 66.0,
+        "pct_error": 10.388854055693656
+      },
+      "cap_rate": {
+        "predicted": 11.099370002746582,
+        "ground_truth": 8.79,
+        "pct_error": 26.27269627698047
+      },
+      "debt_yield": {
+        "predicted": 15.00401496887207,
+        "ground_truth": 13.32,
+        "pct_error": 12.642755021562088
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10050",
+    "method": "ensemble_input",
+    "latency_ms": 30.949831008911133,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3897895812988281,
+        "ground_truth": 1.423,
+        "pct_error": 2.333831250960781
+      },
+      "ltv": {
+        "predicted": 72.99457550048828,
+        "ground_truth": 75.22,
+        "pct_error": 2.9585542402442404
+      },
+      "cap_rate": {
+        "predicted": 8.765958786010742,
+        "ground_truth": 9.32,
+        "pct_error": 5.944648218768863
+      },
+      "debt_yield": {
+        "predicted": 11.27057933807373,
+        "ground_truth": 12.39,
+        "pct_error": 9.034872170510653
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10051",
+    "method": "ensemble_input",
+    "latency_ms": 30.696630477905273,
+    "matches": {
+      "dscr": {
+        "predicted": 2.0278289318084717,
+        "ground_truth": 1.935,
+        "pct_error": 4.797360816975278
+      },
+      "ltv": {
+        "predicted": 59.64283752441406,
+        "ground_truth": 61.91,
+        "pct_error": 3.6620295196025427
+      },
+      "cap_rate": {
+        "predicted": 8.339472770690918,
+        "ground_truth": 9.58,
+        "pct_error": 12.94913600531401
+      },
+      "debt_yield": {
+        "predicted": 13.698683738708496,
+        "ground_truth": 15.48,
+        "pct_error": 11.507210990255196
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10052",
+    "method": "ensemble_input",
+    "latency_ms": 35.22920608520508,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0778565406799316,
+        "ground_truth": 1.078,
+        "pct_error": 0.013307914663119539
+      },
+      "ltv": {
+        "predicted": 77.80863952636719,
+        "ground_truth": 70.0,
+        "pct_error": 11.155199323381696
+      },
+      "cap_rate": {
+        "predicted": 6.435154438018799,
+        "ground_truth": 6.0,
+        "pct_error": 7.2525739669799805
+      },
+      "debt_yield": {
+        "predicted": 8.452609062194824,
+        "ground_truth": 8.57,
+        "pct_error": 1.369789239266932
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10053",
+    "method": "ensemble_input",
+    "latency_ms": 32.43255615234375,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5196325778961182,
+        "ground_truth": 1.321,
+        "pct_error": 15.03653125632992
+      },
+      "ltv": {
+        "predicted": 64.27499389648438,
+        "ground_truth": 58.2,
+        "pct_error": 10.438133842756653
+      },
+      "cap_rate": {
+        "predicted": 7.141931533813477,
+        "ground_truth": 6.01,
+        "pct_error": 18.834135337994624
+      },
+      "debt_yield": {
+        "predicted": 11.671192169189453,
+        "ground_truth": 10.33,
+        "pct_error": 12.983467271921134
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10054",
+    "method": "ensemble_input",
+    "latency_ms": 29.02078628540039,
+    "matches": {
+      "dscr": {
+        "predicted": 0.3161827325820923,
+        "ground_truth": 0.668,
+        "pct_error": 52.6672556014832
+      },
+      "ltv": {
+        "predicted": 68.31338500976562,
+        "ground_truth": 66.67,
+        "pct_error": 2.464954266935088
+      },
+      "cap_rate": {
+        "predicted": 3.933677911758423,
+        "ground_truth": 4.13,
+        "pct_error": 4.753561458633826
+      },
+      "debt_yield": {
+        "predicted": 7.4950032234191895,
+        "ground_truth": 6.2,
+        "pct_error": 20.887148764825632
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10055",
+    "method": "ensemble_input",
+    "latency_ms": 28.51128578186035,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9239178895950317,
+        "ground_truth": 1.234,
+        "pct_error": 25.128209919365336
+      },
+      "ltv": {
+        "predicted": 37.11149597167969,
+        "ground_truth": 76.07,
+        "pct_error": 51.2140187042465
+      },
+      "cap_rate": {
+        "predicted": 5.336534023284912,
+        "ground_truth": 6.54,
+        "pct_error": 18.401620439068623
+      },
+      "debt_yield": {
+        "predicted": 9.934564590454102,
+        "ground_truth": 8.6,
+        "pct_error": 15.518192912257
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10056",
+    "method": "ensemble_input",
+    "latency_ms": 28.439998626708984,
+    "matches": {
+      "dscr": {
+        "predicted": 0.6421008110046387,
+        "ground_truth": 1.725,
+        "pct_error": 62.776764579441235
+      },
+      "ltv": {
+        "predicted": 25.983264923095703,
+        "ground_truth": 60.0,
+        "pct_error": 56.694558461507164
+      },
+      "cap_rate": {
+        "predicted": 7.7063140869140625,
+        "ground_truth": 8.58,
+        "pct_error": 10.182819499836102
+      },
+      "debt_yield": {
+        "predicted": 10.237841606140137,
+        "ground_truth": 14.3,
+        "pct_error": 28.406702054964082
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10057",
+    "method": "ensemble_input",
+    "latency_ms": 28.4881591796875,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9191896319389343,
+        "ground_truth": 0.849,
+        "pct_error": 8.267330028143032
+      },
+      "ltv": {
+        "predicted": 36.0867919921875,
+        "ground_truth": 58.05,
+        "pct_error": 37.83498364825581
+      },
+      "cap_rate": {
+        "predicted": 4.849977493286133,
+        "ground_truth": 4.11,
+        "pct_error": 18.004318571438745
+      },
+      "debt_yield": {
+        "predicted": 9.77342700958252,
+        "ground_truth": 7.08,
+        "pct_error": 38.042754372634455
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10058",
+    "method": "ensemble_input",
+    "latency_ms": 30.47466278076172,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4855220317840576,
+        "ground_truth": 1.194,
+        "pct_error": 24.41558055142862
+      },
+      "ltv": {
+        "predicted": 65.46861267089844,
+        "ground_truth": 70.54,
+        "pct_error": 7.189378124612373
+      },
+      "cap_rate": {
+        "predicted": 7.693424224853516,
+        "ground_truth": 6.45,
+        "pct_error": 19.27789495896923
+      },
+      "debt_yield": {
+        "predicted": 10.741377830505371,
+        "ground_truth": 9.14,
+        "pct_error": 17.520545191524842
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10059",
+    "method": "ensemble_input",
+    "latency_ms": 30.664682388305664,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5544508695602417,
+        "ground_truth": 2.059,
+        "pct_error": 24.504571658074717
+      },
+      "ltv": {
+        "predicted": 72.57303619384766,
+        "ground_truth": 68.33,
+        "pct_error": 6.209624167785245
+      },
+      "cap_rate": {
+        "predicted": 6.978730201721191,
+        "ground_truth": 8.95,
+        "pct_error": 22.025360874623555
+      },
+      "debt_yield": {
+        "predicted": 10.310257911682129,
+        "ground_truth": 13.1,
+        "pct_error": 21.295741132197488
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10060",
+    "method": "ensemble_input",
+    "latency_ms": 30.621051788330078,
+    "matches": {
+      "dscr": {
+        "predicted": 1.078405499458313,
+        "ground_truth": 1.104,
+        "pct_error": 2.3183424403702086
+      },
+      "ltv": {
+        "predicted": 70.94937896728516,
+        "ground_truth": 67.5,
+        "pct_error": 5.110191062644676
+      },
+      "cap_rate": {
+        "predicted": 6.2859954833984375,
+        "ground_truth": 5.84,
+        "pct_error": 7.636908962302015
+      },
+      "debt_yield": {
+        "predicted": 8.6685209274292,
+        "ground_truth": 8.65,
+        "pct_error": 0.21411476796761691
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10061",
+    "method": "ensemble_input",
+    "latency_ms": 34.16919708251953,
+    "matches": {
+      "dscr": {
+        "predicted": 1.392839789390564,
+        "ground_truth": 1.741,
+        "pct_error": 19.997714566883175
+      },
+      "ltv": {
+        "predicted": 67.70714569091797,
+        "ground_truth": 71.45,
+        "pct_error": 5.238424505363239
+      },
+      "cap_rate": {
+        "predicted": 7.356675148010254,
+        "ground_truth": 9.42,
+        "pct_error": 21.903660849148046
+      },
+      "debt_yield": {
+        "predicted": 10.835404396057129,
+        "ground_truth": 13.18,
+        "pct_error": 17.789041001083998
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10062",
+    "method": "ensemble_input",
+    "latency_ms": 42.61469841003418,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0645148754119873,
+        "ground_truth": 1.225,
+        "pct_error": 13.100826496980634
+      },
+      "ltv": {
+        "predicted": 66.50391387939453,
+        "ground_truth": 69.08,
+        "pct_error": 3.7291345115886902
+      },
+      "cap_rate": {
+        "predicted": 6.465501308441162,
+        "ground_truth": 8.0,
+        "pct_error": 19.181233644485474
+      },
+      "debt_yield": {
+        "predicted": 9.382126808166504,
+        "ground_truth": 11.58,
+        "pct_error": 18.97990666522881
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10063",
+    "method": "ensemble_input",
+    "latency_ms": 34.61289405822754,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4369946718215942,
+        "ground_truth": 1.664,
+        "pct_error": 13.64214712610611
+      },
+      "ltv": {
+        "predicted": 71.8270034790039,
+        "ground_truth": 72.67,
+        "pct_error": 1.1600337429421983
+      },
+      "cap_rate": {
+        "predicted": 7.866480350494385,
+        "ground_truth": 9.11,
+        "pct_error": 13.650051037383257
+      },
+      "debt_yield": {
+        "predicted": 11.228982925415039,
+        "ground_truth": 12.53,
+        "pct_error": 10.383216876176858
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10064",
+    "method": "ensemble_input",
+    "latency_ms": 30.597925186157227,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0336393117904663,
+        "ground_truth": 1.447,
+        "pct_error": 28.56673726396225
+      },
+      "ltv": {
+        "predicted": 73.92738342285156,
+        "ground_truth": 76.0,
+        "pct_error": 2.7271270751953125
+      },
+      "cap_rate": {
+        "predicted": 7.565390110015869,
+        "ground_truth": 9.87,
+        "pct_error": 23.349644275421785
+      },
+      "debt_yield": {
+        "predicted": 10.355724334716797,
+        "ground_truth": 12.99,
+        "pct_error": 20.279258393250217
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10065",
+    "method": "ensemble_input",
+    "latency_ms": 30.668020248413086,
+    "matches": {
+      "dscr": {
+        "predicted": 1.700259804725647,
+        "ground_truth": 1.794,
+        "pct_error": 5.225205979618343
+      },
+      "ltv": {
+        "predicted": 60.75587463378906,
+        "ground_truth": 61.18,
+        "pct_error": 0.693241853891692
+      },
+      "cap_rate": {
+        "predicted": 7.32806921005249,
+        "ground_truth": 9.44,
+        "pct_error": 22.3721481985965
+      },
+      "debt_yield": {
+        "predicted": 12.40860652923584,
+        "ground_truth": 15.44,
+        "pct_error": 19.633377401322278
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10066",
+    "method": "ensemble_input",
+    "latency_ms": 30.63511848449707,
+    "matches": {
+      "dscr": {
+        "predicted": 1.8135578632354736,
+        "ground_truth": 1.624,
+        "pct_error": 11.672282218933098
+      },
+      "ltv": {
+        "predicted": 58.77340316772461,
+        "ground_truth": 56.18,
+        "pct_error": 4.616239173593111
+      },
+      "cap_rate": {
+        "predicted": 8.001792907714844,
+        "ground_truth": 8.47,
+        "pct_error": 5.5278287164717455
+      },
+      "debt_yield": {
+        "predicted": 13.482677459716797,
+        "ground_truth": 15.08,
+        "pct_error": 10.592324537687023
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10067",
+    "method": "ensemble_input",
+    "latency_ms": 30.26723861694336,
+    "matches": {
+      "dscr": {
+        "predicted": 1.387942910194397,
+        "ground_truth": 1.358,
+        "pct_error": 2.2049271129894605
+      },
+      "ltv": {
+        "predicted": 66.70539855957031,
+        "ground_truth": 78.38,
+        "pct_error": 14.894872978348664
+      },
+      "cap_rate": {
+        "predicted": 8.337573051452637,
+        "ground_truth": 9.6,
+        "pct_error": 13.15028071403503
+      },
+      "debt_yield": {
+        "predicted": 12.505574226379395,
+        "ground_truth": 12.25,
+        "pct_error": 2.086320215341996
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10068",
+    "method": "ensemble_input",
+    "latency_ms": 30.281782150268555,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5069941282272339,
+        "ground_truth": 1.38,
+        "pct_error": 9.202473059944491
+      },
+      "ltv": {
+        "predicted": 71.64775085449219,
+        "ground_truth": 75.56,
+        "pct_error": 5.177672241275562
+      },
+      "cap_rate": {
+        "predicted": 7.554011821746826,
+        "ground_truth": 8.02,
+        "pct_error": 5.810326412134332
+      },
+      "debt_yield": {
+        "predicted": 10.635496139526367,
+        "ground_truth": 10.62,
+        "pct_error": 0.14591468480572475
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10069",
+    "method": "ensemble_input",
+    "latency_ms": 32.16862678527832,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3247615098953247,
+        "ground_truth": 1.927,
+        "pct_error": 31.25264608742477
+      },
+      "ltv": {
+        "predicted": 63.36933517456055,
+        "ground_truth": 60.0,
+        "pct_error": 5.615558624267578
+      },
+      "cap_rate": {
+        "predicted": 7.864996910095215,
+        "ground_truth": 9.85,
+        "pct_error": 20.152315633551115
+      },
+      "debt_yield": {
+        "predicted": 11.932486534118652,
+        "ground_truth": 16.42,
+        "pct_error": 27.32955825749908
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10070",
+    "method": "ensemble_input",
+    "latency_ms": 30.573368072509766,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3371987342834473,
+        "ground_truth": 1.573,
+        "pct_error": 14.990544546506845
+      },
+      "ltv": {
+        "predicted": 66.57041931152344,
+        "ground_truth": 64.41,
+        "pct_error": 3.3541675384621037
+      },
+      "cap_rate": {
+        "predicted": 7.224194526672363,
+        "ground_truth": 8.46,
+        "pct_error": 14.607629708364508
+      },
+      "debt_yield": {
+        "predicted": 11.50606918334961,
+        "ground_truth": 13.13,
+        "pct_error": 12.368094567025068
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10071",
+    "method": "ensemble_input",
+    "latency_ms": 30.504465103149414,
+    "matches": {
+      "dscr": {
+        "predicted": 2.048084020614624,
+        "ground_truth": 2.474,
+        "pct_error": 17.215682271033796
+      },
+      "ltv": {
+        "predicted": 61.31239700317383,
+        "ground_truth": 57.69,
+        "pct_error": 6.279072635073375
+      },
+      "cap_rate": {
+        "predicted": 8.431648254394531,
+        "ground_truth": 9.83,
+        "pct_error": 14.225348378489
+      },
+      "debt_yield": {
+        "predicted": 14.375650405883789,
+        "ground_truth": 17.04,
+        "pct_error": 15.635854425564613
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10072",
+    "method": "ensemble_input",
+    "latency_ms": 40.25840759277344,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4039100408554077,
+        "ground_truth": 1.164,
+        "pct_error": 20.6108282521828
+      },
+      "ltv": {
+        "predicted": 70.48873138427734,
+        "ground_truth": 70.0,
+        "pct_error": 0.6981876918247767
+      },
+      "cap_rate": {
+        "predicted": 7.925102710723877,
+        "ground_truth": 6.07,
+        "pct_error": 30.56182389989912
+      },
+      "debt_yield": {
+        "predicted": 10.310171127319336,
+        "ground_truth": 8.67,
+        "pct_error": 18.917775401607106
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10073",
+    "method": "ensemble_input",
+    "latency_ms": 31.82530403137207,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1714099645614624,
+        "ground_truth": 1.421,
+        "pct_error": 17.564393767666264
+      },
+      "ltv": {
+        "predicted": 74.39295959472656,
+        "ground_truth": 77.69,
+        "pct_error": 4.2438414278201
+      },
+      "cap_rate": {
+        "predicted": 6.536918640136719,
+        "ground_truth": 7.87,
+        "pct_error": 16.938772044006118
+      },
+      "debt_yield": {
+        "predicted": 8.652647972106934,
+        "ground_truth": 10.13,
+        "pct_error": 14.58392919933926
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10074",
+    "method": "ensemble_input",
+    "latency_ms": 30.612707138061523,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0425413846969604,
+        "ground_truth": 1.071,
+        "pct_error": 2.6572003084070497
+      },
+      "ltv": {
+        "predicted": 68.21247100830078,
+        "ground_truth": 68.33,
+        "pct_error": 0.17200203673235337
+      },
+      "cap_rate": {
+        "predicted": 5.318565845489502,
+        "ground_truth": 4.87,
+        "pct_error": 9.210797648655069
+      },
+      "debt_yield": {
+        "predicted": 7.958373546600342,
+        "ground_truth": 7.12,
+        "pct_error": 11.77490936236435
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10075",
+    "method": "ensemble_input",
+    "latency_ms": 30.835390090942383,
+    "matches": {
+      "dscr": {
+        "predicted": 1.8932240009307861,
+        "ground_truth": 1.427,
+        "pct_error": 32.6716188458855
+      },
+      "ltv": {
+        "predicted": 58.75535583496094,
+        "ground_truth": 63.23,
+        "pct_error": 7.076773944391997
+      },
+      "cap_rate": {
+        "predicted": 8.699833869934082,
+        "ground_truth": 8.01,
+        "pct_error": 8.61215817645546
+      },
+      "debt_yield": {
+        "predicted": 14.426461219787598,
+        "ground_truth": 12.67,
+        "pct_error": 13.86315090597946
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10076",
+    "method": "ensemble_input",
+    "latency_ms": 30.405759811401367,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0735732316970825,
+        "ground_truth": 0.955,
+        "pct_error": 12.416045203882991
+      },
+      "ltv": {
+        "predicted": 72.34016418457031,
+        "ground_truth": 73.0,
+        "pct_error": 0.9038846786708047
+      },
+      "cap_rate": {
+        "predicted": 6.324719429016113,
+        "ground_truth": 5.89,
+        "pct_error": 7.380635467166615
+      },
+      "debt_yield": {
+        "predicted": 9.315169334411621,
+        "ground_truth": 8.07,
+        "pct_error": 15.4296076135269
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10077",
+    "method": "ensemble_input",
+    "latency_ms": 28.89227867126465,
+    "matches": {
+      "dscr": {
+        "predicted": 0.3050791919231415,
+        "ground_truth": 1.3,
+        "pct_error": 76.53236985206604
+      },
+      "ltv": {
+        "predicted": 65.49359893798828,
+        "ground_truth": 61.33,
+        "pct_error": 6.788845488322654
+      },
+      "cap_rate": {
+        "predicted": 2.9730913639068604,
+        "ground_truth": 6.81,
+        "pct_error": 56.342270720897794
+      },
+      "debt_yield": {
+        "predicted": 4.526427268981934,
+        "ground_truth": 11.1,
+        "pct_error": 59.221375955117715
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10078",
+    "method": "ensemble_input",
+    "latency_ms": 31.00728988647461,
+    "matches": {
+      "dscr": {
+        "predicted": 1.636350154876709,
+        "ground_truth": 2.106,
+        "pct_error": 22.300562446500045
+      },
+      "ltv": {
+        "predicted": 54.370235443115234,
+        "ground_truth": 65.0,
+        "pct_error": 16.35348393366887
+      },
+      "cap_rate": {
+        "predicted": 7.090559005737305,
+        "ground_truth": 8.9,
+        "pct_error": 20.330797688344894
+      },
+      "debt_yield": {
+        "predicted": 13.775846481323242,
+        "ground_truth": 13.69,
+        "pct_error": 0.6270743705130949
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10079",
+    "method": "ensemble_input",
+    "latency_ms": 31.885862350463867,
+    "matches": {
+      "dscr": {
+        "predicted": 1.404039978981018,
+        "ground_truth": 1.297,
+        "pct_error": 8.252889667002169
+      },
+      "ltv": {
+        "predicted": 67.82205200195312,
+        "ground_truth": 74.62,
+        "pct_error": 9.110088445519805
+      },
+      "cap_rate": {
+        "predicted": 6.602583885192871,
+        "ground_truth": 6.26,
+        "pct_error": 5.472586025445229
+      },
+      "debt_yield": {
+        "predicted": 9.760294914245605,
+        "ground_truth": 8.39,
+        "pct_error": 16.332478119733075
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10080",
+    "method": "ensemble_input",
+    "latency_ms": 31.714439392089844,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4165750741958618,
+        "ground_truth": 1.513,
+        "pct_error": 6.37309489782803
+      },
+      "ltv": {
+        "predicted": 63.910823822021484,
+        "ground_truth": 75.24,
+        "pct_error": 15.057384606563678
+      },
+      "cap_rate": {
+        "predicted": 7.125776290893555,
+        "ground_truth": 8.99,
+        "pct_error": 20.736637476156233
+      },
+      "debt_yield": {
+        "predicted": 10.784790992736816,
+        "ground_truth": 11.94,
+        "pct_error": 9.675117313762001
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10081",
+    "method": "ensemble_input",
+    "latency_ms": 28.370141983032227,
+    "matches": {
+      "dscr": {
+        "predicted": 0.6426898837089539,
+        "ground_truth": 2.119,
+        "pct_error": 69.67013290660907
+      },
+      "ltv": {
+        "predicted": 39.83685302734375,
+        "ground_truth": 60.47,
+        "pct_error": 34.12129481173516
+      },
+      "cap_rate": {
+        "predicted": 4.696485996246338,
+        "ground_truth": 8.84,
+        "pct_error": 46.87233035920432
+      },
+      "debt_yield": {
+        "predicted": 11.71462345123291,
+        "ground_truth": 14.63,
+        "pct_error": 19.927385842563844
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10082",
+    "method": "ensemble_input",
+    "latency_ms": 28.418540954589844,
+    "matches": {
+      "dscr": {
+        "predicted": 0.5882502198219299,
+        "ground_truth": 1.518,
+        "pct_error": 61.24833861515613
+      },
+      "ltv": {
+        "predicted": 25.424171447753906,
+        "ground_truth": 62.86,
+        "pct_error": 59.554292956166236
+      },
+      "cap_rate": {
+        "predicted": 7.14286994934082,
+        "ground_truth": 7.31,
+        "pct_error": 2.2863208024511534
+      },
+      "debt_yield": {
+        "predicted": 9.39491081237793,
+        "ground_truth": 11.64,
+        "pct_error": 19.287707797440472
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10083",
+    "method": "ensemble_input",
+    "latency_ms": 30.702829360961914,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0254251956939697,
+        "ground_truth": 0.834,
+        "pct_error": 22.95266135419302
+      },
+      "ltv": {
+        "predicted": 68.25484466552734,
+        "ground_truth": 66.47,
+        "pct_error": 2.6851883037871898
+      },
+      "cap_rate": {
+        "predicted": 5.321694374084473,
+        "ground_truth": 4.54,
+        "pct_error": 17.217937755164595
+      },
+      "debt_yield": {
+        "predicted": 7.7749786376953125,
+        "ground_truth": 6.83,
+        "pct_error": 13.835704797881586
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10084",
+    "method": "ensemble_input",
+    "latency_ms": 30.853271484375,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5247877836227417,
+        "ground_truth": 1.36,
+        "pct_error": 12.116748795789823
+      },
+      "ltv": {
+        "predicted": 59.649776458740234,
+        "ground_truth": 61.29,
+        "pct_error": 2.6761682839937424
+      },
+      "cap_rate": {
+        "predicted": 8.18713665008545,
+        "ground_truth": 7.47,
+        "pct_error": 9.600222892710168
+      },
+      "debt_yield": {
+        "predicted": 12.78952407836914,
+        "ground_truth": 12.19,
+        "pct_error": 4.918163071116827
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10085",
+    "method": "ensemble_input",
+    "latency_ms": 28.450727462768555,
+    "matches": {
+      "dscr": {
+        "predicted": 0.32167568802833557,
+        "ground_truth": 1.446,
+        "pct_error": 77.75410179610404
+      },
+      "ltv": {
+        "predicted": 76.12055206298828,
+        "ground_truth": 73.64,
+        "pct_error": 3.368484604818415
+      },
+      "cap_rate": {
+        "predicted": 3.934122323989868,
+        "ground_truth": 8.48,
+        "pct_error": 53.60704806615721
+      },
+      "debt_yield": {
+        "predicted": 5.747386932373047,
+        "ground_truth": 11.52,
+        "pct_error": 50.10948843426174
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10086",
+    "method": "ensemble_input",
+    "latency_ms": 30.234575271606445,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3984754085540771,
+        "ground_truth": 1.692,
+        "pct_error": 17.34778909254863
+      },
+      "ltv": {
+        "predicted": 59.491390228271484,
+        "ground_truth": 55.79,
+        "pct_error": 6.6345048006300145
+      },
+      "cap_rate": {
+        "predicted": 6.149580478668213,
+        "ground_truth": 7.22,
+        "pct_error": 14.825755143099542
+      },
+      "debt_yield": {
+        "predicted": 11.564559936523438,
+        "ground_truth": 12.93,
+        "pct_error": 10.560247977390274
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10087",
+    "method": "ensemble_input",
+    "latency_ms": 33.965349197387695,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3663181066513062,
+        "ground_truth": 1.036,
+        "pct_error": 31.883987128504447
+      },
+      "ltv": {
+        "predicted": 69.64500427246094,
+        "ground_truth": 72.26,
+        "pct_error": 3.6188703674772587
+      },
+      "cap_rate": {
+        "predicted": 7.827553749084473,
+        "ground_truth": 6.6,
+        "pct_error": 18.599299228552624
+      },
+      "debt_yield": {
+        "predicted": 11.983807563781738,
+        "ground_truth": 9.14,
+        "pct_error": 31.113868312710473
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10088",
+    "method": "ensemble_input",
+    "latency_ms": 31.293392181396484,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0015194416046143,
+        "ground_truth": 0.748,
+        "pct_error": 33.892973476552704
+      },
+      "ltv": {
+        "predicted": 68.6679916381836,
+        "ground_truth": 74.29,
+        "pct_error": 7.56765158408455
+      },
+      "cap_rate": {
+        "predicted": 6.12293004989624,
+        "ground_truth": 5.31,
+        "pct_error": 15.309417135522423
+      },
+      "debt_yield": {
+        "predicted": 8.683670043945312,
+        "ground_truth": 7.15,
+        "pct_error": 21.44993068454982
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10089",
+    "method": "ensemble_input",
+    "latency_ms": 34.50179100036621,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7459642887115479,
+        "ground_truth": 0.881,
+        "pct_error": 15.327549521958247
+      },
+      "ltv": {
+        "predicted": 92.30530548095703,
+        "ground_truth": 78.09,
+        "pct_error": 18.20374629396469
+      },
+      "cap_rate": {
+        "predicted": 7.107638359069824,
+        "ground_truth": 4.85,
+        "pct_error": 46.549244516903606
+      },
+      "debt_yield": {
+        "predicted": 8.898619651794434,
+        "ground_truth": 6.22,
+        "pct_error": 43.064624626920164
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10090",
+    "method": "ensemble_input",
+    "latency_ms": 31.505107879638672,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2024047374725342,
+        "ground_truth": 1.102,
+        "pct_error": 9.111137701681859
+      },
+      "ltv": {
+        "predicted": 66.32908630371094,
+        "ground_truth": 73.33,
+        "pct_error": 9.547134455596701
+      },
+      "cap_rate": {
+        "predicted": 6.158776760101318,
+        "ground_truth": 6.1,
+        "pct_error": 0.9635534442839134
+      },
+      "debt_yield": {
+        "predicted": 8.776617050170898,
+        "ground_truth": 8.32,
+        "pct_error": 5.488185699169449
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10091",
+    "method": "ensemble_input",
+    "latency_ms": 30.269622802734375,
+    "matches": {
+      "dscr": {
+        "predicted": 1.32735276222229,
+        "ground_truth": 1.871,
+        "pct_error": 29.05650656214377
+      },
+      "ltv": {
+        "predicted": 67.20503997802734,
+        "ground_truth": 63.33,
+        "pct_error": 6.118806218265191
+      },
+      "cap_rate": {
+        "predicted": 7.087977886199951,
+        "ground_truth": 9.52,
+        "pct_error": 25.546450775210594
+      },
+      "debt_yield": {
+        "predicted": 10.640843391418457,
+        "ground_truth": 15.04,
+        "pct_error": 29.249711493228343
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10092",
+    "method": "ensemble_input",
+    "latency_ms": 30.341625213623047,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7404237985610962,
+        "ground_truth": 1.375,
+        "pct_error": 26.576276258988813
+      },
+      "ltv": {
+        "predicted": 64.20711517333984,
+        "ground_truth": 65.18,
+        "pct_error": 1.492612498711511
+      },
+      "cap_rate": {
+        "predicted": 8.251164436340332,
+        "ground_truth": 7.8,
+        "pct_error": 5.7841594402606695
+      },
+      "debt_yield": {
+        "predicted": 11.825018882751465,
+        "ground_truth": 11.96,
+        "pct_error": 1.1286046592686956
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10093",
+    "method": "ensemble_input",
+    "latency_ms": 30.513286590576172,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4648820161819458,
+        "ground_truth": 1.76,
+        "pct_error": 16.768067262389444
+      },
+      "ltv": {
+        "predicted": 53.124839782714844,
+        "ground_truth": 55.0,
+        "pct_error": 3.4093822132457388
+      },
+      "cap_rate": {
+        "predicted": 6.221879005432129,
+        "ground_truth": 7.1,
+        "pct_error": 12.367901331941843
+      },
+      "debt_yield": {
+        "predicted": 11.332070350646973,
+        "ground_truth": 12.91,
+        "pct_error": 12.222537950062181
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10094",
+    "method": "ensemble_input",
+    "latency_ms": 31.63290023803711,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3994017839431763,
+        "ground_truth": 1.152,
+        "pct_error": 21.475849300622947
+      },
+      "ltv": {
+        "predicted": 68.33318328857422,
+        "ground_truth": 68.33,
+        "pct_error": 0.004658698337802511
+      },
+      "cap_rate": {
+        "predicted": 6.835032939910889,
+        "ground_truth": 5.61,
+        "pct_error": 21.836594294311734
+      },
+      "debt_yield": {
+        "predicted": 10.023209571838379,
+        "ground_truth": 8.21,
+        "pct_error": 22.085378463317635
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10095",
+    "method": "ensemble_input",
+    "latency_ms": 30.46560287475586,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2758996486663818,
+        "ground_truth": 0.921,
+        "pct_error": 38.53416380742473
+      },
+      "ltv": {
+        "predicted": 60.23066711425781,
+        "ground_truth": 55.24,
+        "pct_error": 9.034516861437021
+      },
+      "cap_rate": {
+        "predicted": 6.30120325088501,
+        "ground_truth": 4.42,
+        "pct_error": 42.561159522285294
+      },
+      "debt_yield": {
+        "predicted": 10.58498477935791,
+        "ground_truth": 8.01,
+        "pct_error": 32.14712583468053
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10096",
+    "method": "ensemble_input",
+    "latency_ms": 30.45964241027832,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4256561994552612,
+        "ground_truth": 1.778,
+        "pct_error": 19.81686167293244
+      },
+      "ltv": {
+        "predicted": 65.49458312988281,
+        "ground_truth": 65.0,
+        "pct_error": 0.7608971228966346
+      },
+      "cap_rate": {
+        "predicted": 6.873834133148193,
+        "ground_truth": 7.6,
+        "pct_error": 9.554814037523768
+      },
+      "debt_yield": {
+        "predicted": 10.514666557312012,
+        "ground_truth": 11.69,
+        "pct_error": 10.054178295021282
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10097",
+    "method": "ensemble_input",
+    "latency_ms": 30.858755111694336,
+    "matches": {
+      "dscr": {
+        "predicted": 1.603557825088501,
+        "ground_truth": 1.941,
+        "pct_error": 17.38496521955173
+      },
+      "ltv": {
+        "predicted": 59.04609680175781,
+        "ground_truth": 65.0,
+        "pct_error": 9.15985107421875
+      },
+      "cap_rate": {
+        "predicted": 7.028027534484863,
+        "ground_truth": 8.83,
+        "pct_error": 20.4073891904319
+      },
+      "debt_yield": {
+        "predicted": 10.829907417297363,
+        "ground_truth": 13.59,
+        "pct_error": 20.309732028716972
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10098",
+    "method": "ensemble_input",
+    "latency_ms": 30.229806900024414,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3447378873825073,
+        "ground_truth": 1.349,
+        "pct_error": 0.3159460798734361
+      },
+      "ltv": {
+        "predicted": 59.72821807861328,
+        "ground_truth": 57.08,
+        "pct_error": 4.639485071151512
+      },
+      "cap_rate": {
+        "predicted": 6.436699867248535,
+        "ground_truth": 6.42,
+        "pct_error": 0.2601225428120752
+      },
+      "debt_yield": {
+        "predicted": 10.873119354248047,
+        "ground_truth": 11.25,
+        "pct_error": 3.350050184461806
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10099",
+    "method": "ensemble_input",
+    "latency_ms": 38.66076469421387,
+    "matches": {
+      "dscr": {
+        "predicted": 1.374878168106079,
+        "ground_truth": 1.188,
+        "pct_error": 15.730485530814745
+      },
+      "ltv": {
+        "predicted": 64.79147338867188,
+        "ground_truth": 69.71,
+        "pct_error": 7.055697333708391
+      },
+      "cap_rate": {
+        "predicted": 7.354262351989746,
+        "ground_truth": 7.35,
+        "pct_error": 0.05799118353396529
+      },
+      "debt_yield": {
+        "predicted": 11.500222206115723,
+        "ground_truth": 10.54,
+        "pct_error": 9.110267610206106
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10100",
+    "method": "ensemble_input",
+    "latency_ms": 30.54332733154297,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2961156368255615,
+        "ground_truth": 1.325,
+        "pct_error": 2.179951937693467
+      },
+      "ltv": {
+        "predicted": 66.34200286865234,
+        "ground_truth": 60.27,
+        "pct_error": 10.074668771614967
+      },
+      "cap_rate": {
+        "predicted": 7.0930867195129395,
+        "ground_truth": 6.99,
+        "pct_error": 1.4747742419590735
+      },
+      "debt_yield": {
+        "predicted": 10.199638366699219,
+        "ground_truth": 11.6,
+        "pct_error": 12.072083045696386
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10101",
+    "method": "ensemble_input",
+    "latency_ms": 37.120819091796875,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4470314979553223,
+        "ground_truth": 1.096,
+        "pct_error": 32.02842134628852
+      },
+      "ltv": {
+        "predicted": 66.69258117675781,
+        "ground_truth": 60.0,
+        "pct_error": 11.15430196126302
+      },
+      "cap_rate": {
+        "predicted": 6.983630180358887,
+        "ground_truth": 4.3,
+        "pct_error": 62.41000419439272
+      },
+      "debt_yield": {
+        "predicted": 10.149977684020996,
+        "ground_truth": 7.17,
+        "pct_error": 41.561752915216125
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10102",
+    "method": "ensemble_input",
+    "latency_ms": 28.32961082458496,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9702866077423096,
+        "ground_truth": 1.213,
+        "pct_error": 20.00934808389864
+      },
+      "ltv": {
+        "predicted": 39.474700927734375,
+        "ground_truth": 55.0,
+        "pct_error": 28.227816495028407
+      },
+      "cap_rate": {
+        "predicted": 6.248184680938721,
+        "ground_truth": 4.95,
+        "pct_error": 26.22595315027718
+      },
+      "debt_yield": {
+        "predicted": 11.974846839904785,
+        "ground_truth": 8.99,
+        "pct_error": 33.2018558387629
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10103",
+    "method": "ensemble_input",
+    "latency_ms": 30.026912689208984,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2035083770751953,
+        "ground_truth": 1.968,
+        "pct_error": 38.84611905105715
+      },
+      "ltv": {
+        "predicted": 63.990962982177734,
+        "ground_truth": 63.0,
+        "pct_error": 1.5729571145678325
+      },
+      "cap_rate": {
+        "predicted": 6.500837802886963,
+        "ground_truth": 9.67,
+        "pct_error": 32.77313544067256
+      },
+      "debt_yield": {
+        "predicted": 10.205401420593262,
+        "ground_truth": 15.35,
+        "pct_error": 33.515300191574845
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10104",
+    "method": "ensemble_input",
+    "latency_ms": 36.98611259460449,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2114574909210205,
+        "ground_truth": 0.981,
+        "pct_error": 23.492098972581093
+      },
+      "ltv": {
+        "predicted": 71.49049377441406,
+        "ground_truth": 72.73,
+        "pct_error": 1.7042571505375244
+      },
+      "cap_rate": {
+        "predicted": 6.094625473022461,
+        "ground_truth": 4.46,
+        "pct_error": 36.65079535924801
+      },
+      "debt_yield": {
+        "predicted": 8.438067436218262,
+        "ground_truth": 6.13,
+        "pct_error": 37.6519973281935
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10105",
+    "method": "ensemble_input",
+    "latency_ms": 28.75828742980957,
+    "matches": {
+      "dscr": {
+        "predicted": 0.29675495624542236,
+        "ground_truth": 1.331,
+        "pct_error": 77.70436091319141
+      },
+      "ltv": {
+        "predicted": 67.050048828125,
+        "ground_truth": 70.0,
+        "pct_error": 4.214215959821429
+      },
+      "cap_rate": {
+        "predicted": 3.9351351261138916,
+        "ground_truth": 8.55,
+        "pct_error": 53.975027764749804
+      },
+      "debt_yield": {
+        "predicted": 5.629138469696045,
+        "ground_truth": 12.21,
+        "pct_error": 53.89730983049923
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10106",
+    "method": "ensemble_input",
+    "latency_ms": 30.327320098876953,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5080971717834473,
+        "ground_truth": 1.4,
+        "pct_error": 7.721226555960525
+      },
+      "ltv": {
+        "predicted": 60.98133850097656,
+        "ground_truth": 62.55,
+        "pct_error": 2.5078521167441004
+      },
+      "cap_rate": {
+        "predicted": 6.210263252258301,
+        "ground_truth": 6.16,
+        "pct_error": 0.8159618873100754
+      },
+      "debt_yield": {
+        "predicted": 9.903209686279297,
+        "ground_truth": 9.84,
+        "pct_error": 0.6423748605619616
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10107",
+    "method": "ensemble_input",
+    "latency_ms": 30.492782592773438,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6029423475265503,
+        "ground_truth": 1.797,
+        "pct_error": 10.798978991288239
+      },
+      "ltv": {
+        "predicted": 63.58836364746094,
+        "ground_truth": 76.27,
+        "pct_error": 16.627292975664165
+      },
+      "cap_rate": {
+        "predicted": 7.959479331970215,
+        "ground_truth": 9.86,
+        "pct_error": 19.275057485089096
+      },
+      "debt_yield": {
+        "predicted": 12.662908554077148,
+        "ground_truth": 12.93,
+        "pct_error": 2.065672435598231
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10108",
+    "method": "ensemble_input",
+    "latency_ms": 30.368804931640625,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2242376804351807,
+        "ground_truth": 1.127,
+        "pct_error": 8.628010686351434
+      },
+      "ltv": {
+        "predicted": 66.62135314941406,
+        "ground_truth": 68.46,
+        "pct_error": 2.6857242924129876
+      },
+      "cap_rate": {
+        "predicted": 6.241858959197998,
+        "ground_truth": 6.03,
+        "pct_error": 3.513415575422849
+      },
+      "debt_yield": {
+        "predicted": 9.125556945800781,
+        "ground_truth": 8.81,
+        "pct_error": 3.5818041521087487
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10109",
+    "method": "ensemble_input",
+    "latency_ms": 31.377553939819336,
+    "matches": {
+      "dscr": {
+        "predicted": 1.557743787765503,
+        "ground_truth": 1.612,
+        "pct_error": 3.3657699897330753
+      },
+      "ltv": {
+        "predicted": 67.85543060302734,
+        "ground_truth": 62.94,
+        "pct_error": 7.809708616185807
+      },
+      "cap_rate": {
+        "predicted": 8.123208045959473,
+        "ground_truth": 7.98,
+        "pct_error": 1.7945870420986494
+      },
+      "debt_yield": {
+        "predicted": 12.419011116027832,
+        "ground_truth": 12.67,
+        "pct_error": 1.9809698813904333
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10110",
+    "method": "ensemble_input",
+    "latency_ms": 30.29799461364746,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0255377292633057,
+        "ground_truth": 0.874,
+        "pct_error": 17.33841295918829
+      },
+      "ltv": {
+        "predicted": 69.85520935058594,
+        "ground_truth": 73.77,
+        "pct_error": 5.306751591994115
+      },
+      "cap_rate": {
+        "predicted": 5.4488205909729,
+        "ground_truth": 5.84,
+        "pct_error": 6.698277551833895
+      },
+      "debt_yield": {
+        "predicted": 7.9333038330078125,
+        "ground_truth": 7.91,
+        "pct_error": 0.2946123009837213
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10111",
+    "method": "ensemble_input",
+    "latency_ms": 30.566692352294922,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1478142738342285,
+        "ground_truth": 1.128,
+        "pct_error": 1.756584559772041
+      },
+      "ltv": {
+        "predicted": 64.36971282958984,
+        "ground_truth": 56.21,
+        "pct_error": 14.516478970983531
+      },
+      "cap_rate": {
+        "predicted": 5.845761775970459,
+        "ground_truth": 4.71,
+        "pct_error": 24.113838131007622
+      },
+      "debt_yield": {
+        "predicted": 9.31607437133789,
+        "ground_truth": 8.39,
+        "pct_error": 11.037835176852086
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10112",
+    "method": "ensemble_input",
+    "latency_ms": 29.89649772644043,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6237587928771973,
+        "ground_truth": 2.027,
+        "pct_error": 19.89349813136669
+      },
+      "ltv": {
+        "predicted": 63.4017333984375,
+        "ground_truth": 58.13,
+        "pct_error": 9.06886873978582
+      },
+      "cap_rate": {
+        "predicted": 7.953023910522461,
+        "ground_truth": 9.54,
+        "pct_error": 16.634969491378808
+      },
+      "debt_yield": {
+        "predicted": 12.748373031616211,
+        "ground_truth": 16.41,
+        "pct_error": 22.313387985275984
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10113",
+    "method": "ensemble_input",
+    "latency_ms": 31.248092651367188,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0017974376678467,
+        "ground_truth": 0.686,
+        "pct_error": 46.03461190493391
+      },
+      "ltv": {
+        "predicted": 70.0111312866211,
+        "ground_truth": 78.0,
+        "pct_error": 10.242139376126804
+      },
+      "cap_rate": {
+        "predicted": 5.876071453094482,
+        "ground_truth": 4.48,
+        "pct_error": 31.16230922085897
+      },
+      "debt_yield": {
+        "predicted": 8.237619400024414,
+        "ground_truth": 5.74,
+        "pct_error": 43.51253310147062
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10114",
+    "method": "ensemble_input",
+    "latency_ms": 30.1516056060791,
+    "matches": {
+      "dscr": {
+        "predicted": 1.425561547279358,
+        "ground_truth": 1.309,
+        "pct_error": 8.904625460607942
+      },
+      "ltv": {
+        "predicted": 65.58247375488281,
+        "ground_truth": 67.92,
+        "pct_error": 3.441587522257346
+      },
+      "cap_rate": {
+        "predicted": 6.085238456726074,
+        "ground_truth": 5.59,
+        "pct_error": 8.859364163257144
+      },
+      "debt_yield": {
+        "predicted": 8.84565544128418,
+        "ground_truth": 8.23,
+        "pct_error": 7.4806250459803065
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10115",
+    "method": "ensemble_input",
+    "latency_ms": 28.17511558532715,
+    "matches": {
+      "dscr": {
+        "predicted": 0.4350658357143402,
+        "ground_truth": 0.871,
+        "pct_error": 50.04984664588517
+      },
+      "ltv": {
+        "predicted": 41.256446838378906,
+        "ground_truth": 72.0,
+        "pct_error": 42.699379391140404
+      },
+      "cap_rate": {
+        "predicted": 3.272420644760132,
+        "ground_truth": 5.52,
+        "pct_error": 40.71701730507007
+      },
+      "debt_yield": {
+        "predicted": 7.961160659790039,
+        "ground_truth": 7.67,
+        "pct_error": 3.7960972593225444
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10116",
+    "method": "ensemble_input",
+    "latency_ms": 34.1184139251709,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2447975873947144,
+        "ground_truth": 1.006,
+        "pct_error": 23.737334731084925
+      },
+      "ltv": {
+        "predicted": 67.08708953857422,
+        "ground_truth": 71.25,
+        "pct_error": 5.842681349369518
+      },
+      "cap_rate": {
+        "predicted": 5.805239677429199,
+        "ground_truth": 4.99,
+        "pct_error": 16.33746848555509
+      },
+      "debt_yield": {
+        "predicted": 8.282072067260742,
+        "ground_truth": 7.0,
+        "pct_error": 18.31531524658203
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10117",
+    "method": "ensemble_input",
+    "latency_ms": 30.602216720581055,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1514134407043457,
+        "ground_truth": 1.189,
+        "pct_error": 3.161190857498263
+      },
+      "ltv": {
+        "predicted": 80.6515121459961,
+        "ground_truth": 76.59,
+        "pct_error": 5.302927465721492
+      },
+      "cap_rate": {
+        "predicted": 7.2662672996521,
+        "ground_truth": 6.79,
+        "pct_error": 7.014245944802644
+      },
+      "debt_yield": {
+        "predicted": 9.54454517364502,
+        "ground_truth": 8.87,
+        "pct_error": 7.60479338945908
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10118",
+    "method": "ensemble_input",
+    "latency_ms": 29.99591827392578,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2242646217346191,
+        "ground_truth": 1.88,
+        "pct_error": 34.87954139709472
+      },
+      "ltv": {
+        "predicted": 73.93521118164062,
+        "ground_truth": 66.25,
+        "pct_error": 11.600318764740566
+      },
+      "cap_rate": {
+        "predicted": 6.032192230224609,
+        "ground_truth": 8.3,
+        "pct_error": 27.32298517801676
+      },
+      "debt_yield": {
+        "predicted": 8.799090385437012,
+        "ground_truth": 12.53,
+        "pct_error": 29.775814960598467
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10119",
+    "method": "ensemble_input",
+    "latency_ms": 30.2276611328125,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8485265970230103,
+        "ground_truth": 0.873,
+        "pct_error": 2.803368038601345
+      },
+      "ltv": {
+        "predicted": 71.6916275024414,
+        "ground_truth": 71.67,
+        "pct_error": 0.030176506824898204
+      },
+      "cap_rate": {
+        "predicted": 4.7061052322387695,
+        "ground_truth": 5.52,
+        "pct_error": 14.744470430457069
+      },
+      "debt_yield": {
+        "predicted": 6.498905181884766,
+        "ground_truth": 7.7,
+        "pct_error": 15.598634001496553
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10120",
+    "method": "ensemble_input",
+    "latency_ms": 32.06658363342285,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2213025093078613,
+        "ground_truth": 0.818,
+        "pct_error": 49.303485245459825
+      },
+      "ltv": {
+        "predicted": 68.09541320800781,
+        "ground_truth": 70.25,
+        "pct_error": 3.067027461910587
+      },
+      "cap_rate": {
+        "predicted": 5.672394752502441,
+        "ground_truth": 4.03,
+        "pct_error": 40.75421222090424
+      },
+      "debt_yield": {
+        "predicted": 8.504650115966797,
+        "ground_truth": 5.74,
+        "pct_error": 48.16463616666893
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10121",
+    "method": "ensemble_input",
+    "latency_ms": 30.508041381835938,
+    "matches": {
+      "dscr": {
+        "predicted": 1.284050464630127,
+        "ground_truth": 1.049,
+        "pct_error": 22.407098630136037
+      },
+      "ltv": {
+        "predicted": 70.1119613647461,
+        "ground_truth": 68.75,
+        "pct_error": 1.9810347123579546
+      },
+      "cap_rate": {
+        "predicted": 6.518588066101074,
+        "ground_truth": 6.31,
+        "pct_error": 3.3056745816335122
+      },
+      "debt_yield": {
+        "predicted": 9.129586219787598,
+        "ground_truth": 9.18,
+        "pct_error": 0.5491697190893471
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10122",
+    "method": "ensemble_input",
+    "latency_ms": 30.051469802856445,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3818120956420898,
+        "ground_truth": 1.637,
+        "pct_error": 15.588754084172887
+      },
+      "ltv": {
+        "predicted": 66.31315612792969,
+        "ground_truth": 58.97,
+        "pct_error": 12.45235904346225
+      },
+      "cap_rate": {
+        "predicted": 7.050167560577393,
+        "ground_truth": 7.27,
+        "pct_error": 3.0238299783027096
+      },
+      "debt_yield": {
+        "predicted": 10.561635971069336,
+        "ground_truth": 12.33,
+        "pct_error": 14.341962927255993
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10123",
+    "method": "ensemble_input",
+    "latency_ms": 30.2278995513916,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0133172273635864,
+        "ground_truth": 0.751,
+        "pct_error": 34.929058237494864
+      },
+      "ltv": {
+        "predicted": 65.8985824584961,
+        "ground_truth": 69.61,
+        "pct_error": 5.3317304144575575
+      },
+      "cap_rate": {
+        "predicted": 6.2387919425964355,
+        "ground_truth": 4.44,
+        "pct_error": 40.51333204046025
+      },
+      "debt_yield": {
+        "predicted": 9.021310806274414,
+        "ground_truth": 6.37,
+        "pct_error": 41.621833693475885
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10124",
+    "method": "ensemble_input",
+    "latency_ms": 30.324459075927734,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1576377153396606,
+        "ground_truth": 1.22,
+        "pct_error": 5.111662677076994
+      },
+      "ltv": {
+        "predicted": 75.81554412841797,
+        "ground_truth": 78.75,
+        "pct_error": 3.7262931702628967
+      },
+      "cap_rate": {
+        "predicted": 7.598206520080566,
+        "ground_truth": 8.4,
+        "pct_error": 9.545160475231357
+      },
+      "debt_yield": {
+        "predicted": 9.635419845581055,
+        "ground_truth": 10.67,
+        "pct_error": 9.696158898021979
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10125",
+    "method": "ensemble_input",
+    "latency_ms": 31.740903854370117,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5751112699508667,
+        "ground_truth": 1.057,
+        "pct_error": 49.01714947501105
+      },
+      "ltv": {
+        "predicted": 63.29758071899414,
+        "ground_truth": 63.0,
+        "pct_error": 0.472350347609747
+      },
+      "cap_rate": {
+        "predicted": 7.152310848236084,
+        "ground_truth": 4.75,
+        "pct_error": 50.57496522602282
+      },
+      "debt_yield": {
+        "predicted": 10.858564376831055,
+        "ground_truth": 7.55,
+        "pct_error": 43.82204472623914
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10126",
+    "method": "ensemble_input",
+    "latency_ms": 30.419111251831055,
+    "matches": {
+      "dscr": {
+        "predicted": 1.819265365600586,
+        "ground_truth": 1.69,
+        "pct_error": 7.648838201218106
+      },
+      "ltv": {
+        "predicted": 55.49015426635742,
+        "ground_truth": 59.0,
+        "pct_error": 5.948891073970471
+      },
+      "cap_rate": {
+        "predicted": 7.366164684295654,
+        "ground_truth": 6.68,
+        "pct_error": 10.271926411611595
+      },
+      "debt_yield": {
+        "predicted": 13.174886703491211,
+        "ground_truth": 11.32,
+        "pct_error": 16.385924942501862
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10127",
+    "method": "ensemble_input",
+    "latency_ms": 30.276060104370117,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2330527305603027,
+        "ground_truth": 1.851,
+        "pct_error": 33.38450942407873
+      },
+      "ltv": {
+        "predicted": 67.6129379272461,
+        "ground_truth": 60.0,
+        "pct_error": 12.68822987874349
+      },
+      "cap_rate": {
+        "predicted": 6.91517972946167,
+        "ground_truth": 9.67,
+        "pct_error": 28.488317172061322
+      },
+      "debt_yield": {
+        "predicted": 10.257637023925781,
+        "ground_truth": 16.11,
+        "pct_error": 36.32751692162767
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10128",
+    "method": "ensemble_input",
+    "latency_ms": 30.41386604309082,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2378700971603394,
+        "ground_truth": 1.27,
+        "pct_error": 2.529913609422099
+      },
+      "ltv": {
+        "predicted": 69.29783630371094,
+        "ground_truth": 74.16,
+        "pct_error": 6.5563156638201985
+      },
+      "cap_rate": {
+        "predicted": 7.287657260894775,
+        "ground_truth": 7.37,
+        "pct_error": 1.117269187316482
+      },
+      "debt_yield": {
+        "predicted": 9.951797485351562,
+        "ground_truth": 9.94,
+        "pct_error": 0.11868697536783701
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10129",
+    "method": "ensemble_input",
+    "latency_ms": 32.68790245056152,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4915028810501099,
+        "ground_truth": 1.691,
+        "pct_error": 11.797582433464825
+      },
+      "ltv": {
+        "predicted": 65.03463745117188,
+        "ground_truth": 65.2,
+        "pct_error": 0.25362354114743535
+      },
+      "cap_rate": {
+        "predicted": 7.696526527404785,
+        "ground_truth": 8.54,
+        "pct_error": 9.876738554979088
+      },
+      "debt_yield": {
+        "predicted": 12.2482271194458,
+        "ground_truth": 13.1,
+        "pct_error": 6.50208305766564
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10130",
+    "method": "ensemble_input",
+    "latency_ms": 30.068159103393555,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0643137693405151,
+        "ground_truth": 1.277,
+        "pct_error": 16.655147271690275
+      },
+      "ltv": {
+        "predicted": 68.47704315185547,
+        "ground_truth": 71.77,
+        "pct_error": 4.588207953385157
+      },
+      "cap_rate": {
+        "predicted": 6.017058372497559,
+        "ground_truth": 6.84,
+        "pct_error": 12.031310343602943
+      },
+      "debt_yield": {
+        "predicted": 8.582635879516602,
+        "ground_truth": 9.54,
+        "pct_error": 10.035263317436034
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10131",
+    "method": "ensemble_input",
+    "latency_ms": 31.502962112426758,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3621653318405151,
+        "ground_truth": 1.238,
+        "pct_error": 10.029509841721742
+      },
+      "ltv": {
+        "predicted": 71.40451049804688,
+        "ground_truth": 77.04,
+        "pct_error": 7.315017525899703
+      },
+      "cap_rate": {
+        "predicted": 7.176968574523926,
+        "ground_truth": 7.4,
+        "pct_error": 3.013938182109116
+      },
+      "debt_yield": {
+        "predicted": 10.090009689331055,
+        "ground_truth": 9.61,
+        "pct_error": 4.994897911873624
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10132",
+    "method": "ensemble_input",
+    "latency_ms": 28.38134765625,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8533002734184265,
+        "ground_truth": 1.057,
+        "pct_error": 19.27149731140714
+      },
+      "ltv": {
+        "predicted": 28.2376766204834,
+        "ground_truth": 77.62,
+        "pct_error": 63.620617597934306
+      },
+      "cap_rate": {
+        "predicted": 8.894694328308105,
+        "ground_truth": 7.82,
+        "pct_error": 13.742894223888813
+      },
+      "debt_yield": {
+        "predicted": 9.860809326171875,
+        "ground_truth": 10.07,
+        "pct_error": 2.0773651820072025
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10133",
+    "method": "ensemble_input",
+    "latency_ms": 30.269622802734375,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0126874446868896,
+        "ground_truth": 1.043,
+        "pct_error": 2.90628526491949
+      },
+      "ltv": {
+        "predicted": 83.87413787841797,
+        "ground_truth": 75.0,
+        "pct_error": 11.832183837890625
+      },
+      "cap_rate": {
+        "predicted": 6.645118236541748,
+        "ground_truth": 5.65,
+        "pct_error": 17.612712151181373
+      },
+      "debt_yield": {
+        "predicted": 7.748581409454346,
+        "ground_truth": 7.53,
+        "pct_error": 2.902807562474707
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10134",
+    "method": "ensemble_input",
+    "latency_ms": 30.24601936340332,
+    "matches": {
+      "dscr": {
+        "predicted": 1.506409764289856,
+        "ground_truth": 1.389,
+        "pct_error": 8.452826802725411
+      },
+      "ltv": {
+        "predicted": 64.96285247802734,
+        "ground_truth": 59.76,
+        "pct_error": 8.70624577983157
+      },
+      "cap_rate": {
+        "predicted": 6.911739826202393,
+        "ground_truth": 7.28,
+        "pct_error": 5.058518870846259
+      },
+      "debt_yield": {
+        "predicted": 10.587882995605469,
+        "ground_truth": 12.19,
+        "pct_error": 13.142879445402222
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10135",
+    "method": "ensemble_input",
+    "latency_ms": 31.409502029418945,
+    "matches": {
+      "dscr": {
+        "predicted": 1.265855312347412,
+        "ground_truth": 1.382,
+        "pct_error": 8.404101856193039
+      },
+      "ltv": {
+        "predicted": 71.8276138305664,
+        "ground_truth": 76.67,
+        "pct_error": 6.315881269640792
+      },
+      "cap_rate": {
+        "predicted": 6.334236145019531,
+        "ground_truth": 7.05,
+        "pct_error": 10.1526787940492
+      },
+      "debt_yield": {
+        "predicted": 8.687111854553223,
+        "ground_truth": 9.2,
+        "pct_error": 5.574871146160616
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10136",
+    "method": "ensemble_input",
+    "latency_ms": 30.03692626953125,
+    "matches": {
+      "dscr": {
+        "predicted": 1.142144799232483,
+        "ground_truth": 1.353,
+        "pct_error": 15.584272044901484
+      },
+      "ltv": {
+        "predicted": 63.17046356201172,
+        "ground_truth": 57.11,
+        "pct_error": 10.611913083543547
+      },
+      "cap_rate": {
+        "predicted": 6.035867214202881,
+        "ground_truth": 6.81,
+        "pct_error": 11.367588631382068
+      },
+      "debt_yield": {
+        "predicted": 9.876797676086426,
+        "ground_truth": 11.92,
+        "pct_error": 17.140959093234684
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10137",
+    "method": "ensemble_input",
+    "latency_ms": 30.24888038635254,
+    "matches": {
+      "dscr": {
+        "predicted": 1.689515471458435,
+        "ground_truth": 1.935,
+        "pct_error": 12.686538942716538
+      },
+      "ltv": {
+        "predicted": 49.9342155456543,
+        "ground_truth": 57.17,
+        "pct_error": 12.656610904925145
+      },
+      "cap_rate": {
+        "predicted": 6.612037658691406,
+        "ground_truth": 7.6,
+        "pct_error": 12.999504490902543
+      },
+      "debt_yield": {
+        "predicted": 12.629018783569336,
+        "ground_truth": 13.29,
+        "pct_error": 4.973523073217933
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10138",
+    "method": "ensemble_input",
+    "latency_ms": 31.583547592163086,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2979539632797241,
+        "ground_truth": 2.059,
+        "pct_error": 36.96192504712365
+      },
+      "ltv": {
+        "predicted": 65.71369934082031,
+        "ground_truth": 63.68,
+        "pct_error": 3.1936233367153157
+      },
+      "cap_rate": {
+        "predicted": 6.855407238006592,
+        "ground_truth": 9.35,
+        "pct_error": 26.680136491908108
+      },
+      "debt_yield": {
+        "predicted": 9.765974044799805,
+        "ground_truth": 14.68,
+        "pct_error": 33.47429124795773
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10139",
+    "method": "ensemble_input",
+    "latency_ms": 30.556201934814453,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3062649965286255,
+        "ground_truth": 1.318,
+        "pct_error": 0.8903644515458704
+      },
+      "ltv": {
+        "predicted": 71.23651123046875,
+        "ground_truth": 72.84,
+        "pct_error": 2.20138491149266
+      },
+      "cap_rate": {
+        "predicted": 7.564172267913818,
+        "ground_truth": 7.53,
+        "pct_error": 0.4538149789351674
+      },
+      "debt_yield": {
+        "predicted": 10.298513412475586,
+        "ground_truth": 10.34,
+        "pct_error": 0.4012242507196704
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10140",
+    "method": "ensemble_input",
+    "latency_ms": 30.253171920776367,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0862780809402466,
+        "ground_truth": 0.697,
+        "pct_error": 55.85051376474127
+      },
+      "ltv": {
+        "predicted": 71.42793273925781,
+        "ground_truth": 76.0,
+        "pct_error": 6.015877974660773
+      },
+      "cap_rate": {
+        "predicted": 6.15559196472168,
+        "ground_truth": 4.52,
+        "pct_error": 36.18566293632036
+      },
+      "debt_yield": {
+        "predicted": 9.247481346130371,
+        "ground_truth": 5.95,
+        "pct_error": 55.41985455681295
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10141",
+    "method": "ensemble_input",
+    "latency_ms": 29.143571853637695,
+    "matches": {
+      "dscr": {
+        "predicted": 0.36267364025115967,
+        "ground_truth": 0.9,
+        "pct_error": 59.70292886098226
+      },
+      "ltv": {
+        "predicted": 64.77750396728516,
+        "ground_truth": 56.85,
+        "pct_error": 13.944598007537651
+      },
+      "cap_rate": {
+        "predicted": 3.6701607704162598,
+        "ground_truth": 4.31,
+        "pct_error": 14.845457762963804
+      },
+      "debt_yield": {
+        "predicted": 6.086647033691406,
+        "ground_truth": 7.59,
+        "pct_error": 19.807021953999914
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10142",
+    "method": "ensemble_input",
+    "latency_ms": 30.62725067138672,
+    "matches": {
+      "dscr": {
+        "predicted": 2.0536930561065674,
+        "ground_truth": 2.299,
+        "pct_error": 10.670158499061877
+      },
+      "ltv": {
+        "predicted": 57.15700912475586,
+        "ground_truth": 57.14,
+        "pct_error": 0.02976745669558769
+      },
+      "cap_rate": {
+        "predicted": 8.326753616333008,
+        "ground_truth": 8.6,
+        "pct_error": 3.177283531011533
+      },
+      "debt_yield": {
+        "predicted": 14.116652488708496,
+        "ground_truth": 15.05,
+        "pct_error": 6.201644593299034
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10143",
+    "method": "ensemble_input",
+    "latency_ms": 30.13777732849121,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9129091501235962,
+        "ground_truth": 0.957,
+        "pct_error": 4.6071943444518055
+      },
+      "ltv": {
+        "predicted": 63.12504959106445,
+        "ground_truth": 66.36,
+        "pct_error": 4.8748499230493465
+      },
+      "cap_rate": {
+        "predicted": 4.364007472991943,
+        "ground_truth": 4.43,
+        "pct_error": 1.4896732958929202
+      },
+      "debt_yield": {
+        "predicted": 6.727108478546143,
+        "ground_truth": 6.67,
+        "pct_error": 0.8561990786528133
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10144",
+    "method": "ensemble_input",
+    "latency_ms": 30.00950813293457,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4559552669525146,
+        "ground_truth": 1.458,
+        "pct_error": 0.14024232150105037
+      },
+      "ltv": {
+        "predicted": 63.94831466674805,
+        "ground_truth": 63.33,
+        "pct_error": 0.9763377021128194
+      },
+      "cap_rate": {
+        "predicted": 6.256817817687988,
+        "ground_truth": 6.72,
+        "pct_error": 6.892591998690648
+      },
+      "debt_yield": {
+        "predicted": 10.252608299255371,
+        "ground_truth": 10.61,
+        "pct_error": 3.368442042833444
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10145",
+    "method": "ensemble_input",
+    "latency_ms": 30.109167098999023,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2659207582473755,
+        "ground_truth": 1.473,
+        "pct_error": 14.058332773430045
+      },
+      "ltv": {
+        "predicted": 70.80480194091797,
+        "ground_truth": 72.86,
+        "pct_error": 2.820749463466965
+      },
+      "cap_rate": {
+        "predicted": 8.169793128967285,
+        "ground_truth": 9.68,
+        "pct_error": 15.601310651164408
+      },
+      "debt_yield": {
+        "predicted": 11.511173248291016,
+        "ground_truth": 13.28,
+        "pct_error": 13.31947855202548
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10146",
+    "method": "ensemble_input",
+    "latency_ms": 30.374765396118164,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5626887083053589,
+        "ground_truth": 1.785,
+        "pct_error": 12.454414100540115
+      },
+      "ltv": {
+        "predicted": 60.950927734375,
+        "ground_truth": 72.0,
+        "pct_error": 15.345933702256945
+      },
+      "cap_rate": {
+        "predicted": 7.668969631195068,
+        "ground_truth": 9.04,
+        "pct_error": 15.166265141647466
+      },
+      "debt_yield": {
+        "predicted": 12.176438331604004,
+        "ground_truth": 12.56,
+        "pct_error": 3.0538349394585715
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10147",
+    "method": "ensemble_input",
+    "latency_ms": 27.99844741821289,
+    "matches": {
+      "dscr": {
+        "predicted": 0.492781400680542,
+        "ground_truth": 1.266,
+        "pct_error": 61.0757187456128
+      },
+      "ltv": {
+        "predicted": 42.29302215576172,
+        "ground_truth": 63.0,
+        "pct_error": 32.86821880037822
+      },
+      "cap_rate": {
+        "predicted": 3.8558788299560547,
+        "ground_truth": 6.46,
+        "pct_error": 40.311473220494506
+      },
+      "debt_yield": {
+        "predicted": 9.528542518615723,
+        "ground_truth": 10.25,
+        "pct_error": 7.038609574480755
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10148",
+    "method": "ensemble_input",
+    "latency_ms": 28.167724609375,
+    "matches": {
+      "dscr": {
+        "predicted": 0.3632557988166809,
+        "ground_truth": 1.183,
+        "pct_error": 69.2936771921656
+      },
+      "ltv": {
+        "predicted": 40.33135223388672,
+        "ground_truth": 80.0,
+        "pct_error": 49.5858097076416
+      },
+      "cap_rate": {
+        "predicted": 3.625706672668457,
+        "ground_truth": 6.57,
+        "pct_error": 44.81420589545728
+      },
+      "debt_yield": {
+        "predicted": 8.852136611938477,
+        "ground_truth": 8.21,
+        "pct_error": 7.821396004122724
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10149",
+    "method": "ensemble_input",
+    "latency_ms": 36.83972358703613,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3042494058609009,
+        "ground_truth": 1.14,
+        "pct_error": 14.407842619377279
+      },
+      "ltv": {
+        "predicted": 63.6678466796875,
+        "ground_truth": 64.29,
+        "pct_error": 0.9677295385168863
+      },
+      "cap_rate": {
+        "predicted": 6.919826030731201,
+        "ground_truth": 5.99,
+        "pct_error": 15.52297213240736
+      },
+      "debt_yield": {
+        "predicted": 10.640631675720215,
+        "ground_truth": 9.31,
+        "pct_error": 14.29249920215053
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10150",
+    "method": "ensemble_input",
+    "latency_ms": 28.403520584106445,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7257089614868164,
+        "ground_truth": 1.071,
+        "pct_error": 32.240059618411166
+      },
+      "ltv": {
+        "predicted": 32.54627990722656,
+        "ground_truth": 78.41,
+        "pct_error": 58.49218223794597
+      },
+      "cap_rate": {
+        "predicted": 7.006906509399414,
+        "ground_truth": 7.39,
+        "pct_error": 5.183944392430117
+      },
+      "debt_yield": {
+        "predicted": 7.107448577880859,
+        "ground_truth": 9.43,
+        "pct_error": 24.62938941801846
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10151",
+    "method": "ensemble_input",
+    "latency_ms": 30.168533325195312,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3909536600112915,
+        "ground_truth": 1.117,
+        "pct_error": 24.52584243610488
+      },
+      "ltv": {
+        "predicted": 70.12178802490234,
+        "ground_truth": 70.43,
+        "pct_error": 0.4376146174892277
+      },
+      "cap_rate": {
+        "predicted": 8.415996551513672,
+        "ground_truth": 7.04,
+        "pct_error": 19.54540556127375
+      },
+      "debt_yield": {
+        "predicted": 11.108881950378418,
+        "ground_truth": 9.99,
+        "pct_error": 11.200019523307486
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10152",
+    "method": "ensemble_input",
+    "latency_ms": 30.01546859741211,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0896270275115967,
+        "ground_truth": 1.323,
+        "pct_error": 17.63968046019677
+      },
+      "ltv": {
+        "predicted": 69.16156768798828,
+        "ground_truth": 67.31,
+        "pct_error": 2.750806251653958
+      },
+      "cap_rate": {
+        "predicted": 7.034914970397949,
+        "ground_truth": 8.38,
+        "pct_error": 16.05113400479775
+      },
+      "debt_yield": {
+        "predicted": 9.902765274047852,
+        "ground_truth": 12.46,
+        "pct_error": 20.52355317778611
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10153",
+    "method": "ensemble_input",
+    "latency_ms": 30.191421508789062,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1587843894958496,
+        "ground_truth": 1.124,
+        "pct_error": 3.094696574363834
+      },
+      "ltv": {
+        "predicted": 71.80535888671875,
+        "ground_truth": 71.25,
+        "pct_error": 0.7794510690789473
+      },
+      "cap_rate": {
+        "predicted": 6.148715496063232,
+        "ground_truth": 5.9,
+        "pct_error": 4.215516882427662
+      },
+      "debt_yield": {
+        "predicted": 8.23620319366455,
+        "ground_truth": 8.28,
+        "pct_error": 0.5289469364184611
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10154",
+    "method": "ensemble_input",
+    "latency_ms": 28.20563316345215,
+    "matches": {
+      "dscr": {
+        "predicted": 0.48188912868499756,
+        "ground_truth": 1.397,
+        "pct_error": 65.50543101753775
+      },
+      "ltv": {
+        "predicted": 39.82868194580078,
+        "ground_truth": 58.0,
+        "pct_error": 31.329858714136584
+      },
+      "cap_rate": {
+        "predicted": 3.5939979553222656,
+        "ground_truth": 7.08,
+        "pct_error": 49.23731701522224
+      },
+      "debt_yield": {
+        "predicted": 10.5338716506958,
+        "ground_truth": 12.21,
+        "pct_error": 13.727504908306306
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10155",
+    "method": "ensemble_input",
+    "latency_ms": 30.274391174316406,
+    "matches": {
+      "dscr": {
+        "predicted": 1.166441798210144,
+        "ground_truth": 1.146,
+        "pct_error": 1.7837520253179875
+      },
+      "ltv": {
+        "predicted": 70.563720703125,
+        "ground_truth": 60.0,
+        "pct_error": 17.606201171875
+      },
+      "cap_rate": {
+        "predicted": 6.674383640289307,
+        "ground_truth": 5.55,
+        "pct_error": 20.25916468989742
+      },
+      "debt_yield": {
+        "predicted": 9.646483421325684,
+        "ground_truth": 9.25,
+        "pct_error": 4.286307257574958
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10156",
+    "method": "ensemble_input",
+    "latency_ms": 31.336545944213867,
+    "matches": {
+      "dscr": {
+        "predicted": 1.497970461845398,
+        "ground_truth": 1.671,
+        "pct_error": 10.354849680107844
+      },
+      "ltv": {
+        "predicted": 68.45497131347656,
+        "ground_truth": 79.23,
+        "pct_error": 13.599682805153906
+      },
+      "cap_rate": {
+        "predicted": 7.445577621459961,
+        "ground_truth": 9.72,
+        "pct_error": 23.399407186625922
+      },
+      "debt_yield": {
+        "predicted": 11.472614288330078,
+        "ground_truth": 12.27,
+        "pct_error": 6.498661056804576
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10157",
+    "method": "ensemble_input",
+    "latency_ms": 28.552770614624023,
+    "matches": {
+      "dscr": {
+        "predicted": 0.3831305205821991,
+        "ground_truth": 1.339,
+        "pct_error": 71.38681698415242
+      },
+      "ltv": {
+        "predicted": 60.682044982910156,
+        "ground_truth": 64.0,
+        "pct_error": 5.184304714202881
+      },
+      "cap_rate": {
+        "predicted": 3.6966793537139893,
+        "ground_truth": 7.46,
+        "pct_error": 50.44665745691703
+      },
+      "debt_yield": {
+        "predicted": 6.570970058441162,
+        "ground_truth": 11.66,
+        "pct_error": 43.645196754363965
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10158",
+    "method": "ensemble_input",
+    "latency_ms": 29.214143753051758,
+    "matches": {
+      "dscr": {
+        "predicted": 1.8871628046035767,
+        "ground_truth": 2.398,
+        "pct_error": 21.302635337632335
+      },
+      "ltv": {
+        "predicted": 62.79298782348633,
+        "ground_truth": 61.67,
+        "pct_error": 1.8209629049559373
+      },
+      "cap_rate": {
+        "predicted": 9.928486824035645,
+        "ground_truth": 9.48,
+        "pct_error": 4.730873671262068
+      },
+      "debt_yield": {
+        "predicted": 15.231911659240723,
+        "ground_truth": 15.38,
+        "pct_error": 0.9628630738574651
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10159",
+    "method": "ensemble_input",
+    "latency_ms": 31.054019927978516,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6541236639022827,
+        "ground_truth": 1.611,
+        "pct_error": 2.676825816404887
+      },
+      "ltv": {
+        "predicted": 66.52788543701172,
+        "ground_truth": 72.5,
+        "pct_error": 8.237399397225216
+      },
+      "cap_rate": {
+        "predicted": 7.095932960510254,
+        "ground_truth": 7.13,
+        "pct_error": 0.47779859031901806
+      },
+      "debt_yield": {
+        "predicted": 11.128807067871094,
+        "ground_truth": 9.83,
+        "pct_error": 13.212686346603192
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10160",
+    "method": "ensemble_input",
+    "latency_ms": 30.596256256103516,
+    "matches": {
+      "dscr": {
+        "predicted": 1.6457396745681763,
+        "ground_truth": 2.144,
+        "pct_error": 23.239753984693277
+      },
+      "ltv": {
+        "predicted": 60.98064041137695,
+        "ground_truth": 65.0,
+        "pct_error": 6.183630136343149
+      },
+      "cap_rate": {
+        "predicted": 7.60185432434082,
+        "ground_truth": 9.76,
+        "pct_error": 22.112148316180118
+      },
+      "debt_yield": {
+        "predicted": 13.029803276062012,
+        "ground_truth": 15.02,
+        "pct_error": 13.250311078149055
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10161",
+    "method": "ensemble_input",
+    "latency_ms": 30.034542083740234,
+    "matches": {
+      "dscr": {
+        "predicted": 1.9221545457839966,
+        "ground_truth": 1.965,
+        "pct_error": 2.180430240000178
+      },
+      "ltv": {
+        "predicted": 62.18907165527344,
+        "ground_truth": 58.0,
+        "pct_error": 7.22253733667834
+      },
+      "cap_rate": {
+        "predicted": 8.052277565002441,
+        "ground_truth": 7.87,
+        "pct_error": 2.316106289738771
+      },
+      "debt_yield": {
+        "predicted": 13.175599098205566,
+        "ground_truth": 13.57,
+        "pct_error": 2.9064178466796897
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10162",
+    "method": "ensemble_input",
+    "latency_ms": 30.09963035583496,
+    "matches": {
+      "dscr": {
+        "predicted": 1.064131498336792,
+        "ground_truth": 0.953,
+        "pct_error": 11.661227527470308
+      },
+      "ltv": {
+        "predicted": 65.65693664550781,
+        "ground_truth": 63.33,
+        "pct_error": 3.674303877321671
+      },
+      "cap_rate": {
+        "predicted": 6.7001423835754395,
+        "ground_truth": 5.8,
+        "pct_error": 15.519696268542063
+      },
+      "debt_yield": {
+        "predicted": 10.31449031829834,
+        "ground_truth": 9.16,
+        "pct_error": 12.60360609496004
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10163",
+    "method": "ensemble_input",
+    "latency_ms": 30.332326889038086,
+    "matches": {
+      "dscr": {
+        "predicted": 1.288102388381958,
+        "ground_truth": 1.497,
+        "pct_error": 13.954416273750306
+      },
+      "ltv": {
+        "predicted": 72.97370147705078,
+        "ground_truth": 75.85,
+        "pct_error": 3.792087703294942
+      },
+      "cap_rate": {
+        "predicted": 6.437765121459961,
+        "ground_truth": 9.22,
+        "pct_error": 30.176083281345328
+      },
+      "debt_yield": {
+        "predicted": 8.722433090209961,
+        "ground_truth": 12.15,
+        "pct_error": 28.210427241070285
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10164",
+    "method": "ensemble_input",
+    "latency_ms": 29.917478561401367,
+    "matches": {
+      "dscr": {
+        "predicted": 1.146012783050537,
+        "ground_truth": 1.214,
+        "pct_error": 5.600264987599906
+      },
+      "ltv": {
+        "predicted": 61.304847717285156,
+        "ground_truth": 57.19,
+        "pct_error": 7.195047590986464
+      },
+      "cap_rate": {
+        "predicted": 6.2042155265808105,
+        "ground_truth": 6.13,
+        "pct_error": 1.2106937452008264
+      },
+      "debt_yield": {
+        "predicted": 9.776083946228027,
+        "ground_truth": 10.72,
+        "pct_error": 8.805187068768406
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10165",
+    "method": "ensemble_input",
+    "latency_ms": 28.925657272338867,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1600775718688965,
+        "ground_truth": 1.309,
+        "pct_error": 11.376808871742053
+      },
+      "ltv": {
+        "predicted": 85.4923324584961,
+        "ground_truth": 60.0,
+        "pct_error": 42.487220764160156
+      },
+      "cap_rate": {
+        "predicted": 10.148407936096191,
+        "ground_truth": 5.9,
+        "pct_error": 72.00691417112188
+      },
+      "debt_yield": {
+        "predicted": 10.48779010772705,
+        "ground_truth": 9.83,
+        "pct_error": 6.691659285117504
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10166",
+    "method": "ensemble_input",
+    "latency_ms": 30.336618423461914,
+    "matches": {
+      "dscr": {
+        "predicted": 1.063327670097351,
+        "ground_truth": 1.119,
+        "pct_error": 4.975185871550395
+      },
+      "ltv": {
+        "predicted": 64.76799774169922,
+        "ground_truth": 66.45,
+        "pct_error": 2.531229884576048
+      },
+      "cap_rate": {
+        "predicted": 6.253346920013428,
+        "ground_truth": 5.6,
+        "pct_error": 11.666909285954073
+      },
+      "debt_yield": {
+        "predicted": 8.649688720703125,
+        "ground_truth": 8.42,
+        "pct_error": 2.7278945451677563
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10167",
+    "method": "ensemble_input",
+    "latency_ms": 30.03692626953125,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2910982370376587,
+        "ground_truth": 1.02,
+        "pct_error": 26.578258533103792
+      },
+      "ltv": {
+        "predicted": 70.43155670166016,
+        "ground_truth": 71.85,
+        "pct_error": 1.9741729969935118
+      },
+      "cap_rate": {
+        "predicted": 7.211543560028076,
+        "ground_truth": 5.71,
+        "pct_error": 26.296734851630056
+      },
+      "debt_yield": {
+        "predicted": 10.258735656738281,
+        "ground_truth": 7.95,
+        "pct_error": 29.040700084758253
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10168",
+    "method": "ensemble_input",
+    "latency_ms": 30.042409896850586,
+    "matches": {
+      "dscr": {
+        "predicted": 1.562764286994934,
+        "ground_truth": 1.766,
+        "pct_error": 11.508251019539408
+      },
+      "ltv": {
+        "predicted": 71.20118713378906,
+        "ground_truth": 77.27,
+        "pct_error": 7.854035028097495
+      },
+      "cap_rate": {
+        "predicted": 8.045095443725586,
+        "ground_truth": 8.96,
+        "pct_error": 10.210988351276951
+      },
+      "debt_yield": {
+        "predicted": 10.109197616577148,
+        "ground_truth": 11.6,
+        "pct_error": 12.851744684679753
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10169",
+    "method": "ensemble_input",
+    "latency_ms": 38.969993591308594,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2800202369689941,
+        "ground_truth": 1.277,
+        "pct_error": 0.2365103342986866
+      },
+      "ltv": {
+        "predicted": 69.9749526977539,
+        "ground_truth": 69.76,
+        "pct_error": 0.30813173416556927
+      },
+      "cap_rate": {
+        "predicted": 7.910576343536377,
+        "ground_truth": 7.96,
+        "pct_error": 0.6209002068294348
+      },
+      "debt_yield": {
+        "predicted": 11.555916786193848,
+        "ground_truth": 11.41,
+        "pct_error": 1.2788500104631684
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10170",
+    "method": "ensemble_input",
+    "latency_ms": 30.21693229675293,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2887015342712402,
+        "ground_truth": 1.332,
+        "pct_error": 3.2506355652222094
+      },
+      "ltv": {
+        "predicted": 70.03175354003906,
+        "ground_truth": 77.5,
+        "pct_error": 9.636447045110886
+      },
+      "cap_rate": {
+        "predicted": 6.135046482086182,
+        "ground_truth": 7.0,
+        "pct_error": 12.356478827340263
+      },
+      "debt_yield": {
+        "predicted": 8.867618560791016,
+        "ground_truth": 9.03,
+        "pct_error": 1.7982440665446704
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10171",
+    "method": "ensemble_input",
+    "latency_ms": 31.374692916870117,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1989940404891968,
+        "ground_truth": 1.344,
+        "pct_error": 10.789133892172863
+      },
+      "ltv": {
+        "predicted": 67.97037506103516,
+        "ground_truth": 70.0,
+        "pct_error": 2.8994641985212053
+      },
+      "cap_rate": {
+        "predicted": 7.122256755828857,
+        "ground_truth": 8.45,
+        "pct_error": 15.712937800841917
+      },
+      "debt_yield": {
+        "predicted": 10.197380065917969,
+        "ground_truth": 12.07,
+        "pct_error": 15.514663911201588
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10172",
+    "method": "ensemble_input",
+    "latency_ms": 29.047250747680664,
+    "matches": {
+      "dscr": {
+        "predicted": 1.202217698097229,
+        "ground_truth": 1.226,
+        "pct_error": 1.939828866457665
+      },
+      "ltv": {
+        "predicted": 97.40006256103516,
+        "ground_truth": 62.48,
+        "pct_error": 55.889984892821964
+      },
+      "cap_rate": {
+        "predicted": 10.657310485839844,
+        "ground_truth": 5.79,
+        "pct_error": 84.06408438410784
+      },
+      "debt_yield": {
+        "predicted": 10.620807647705078,
+        "ground_truth": 9.27,
+        "pct_error": 14.571819284844429
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10173",
+    "method": "ensemble_input",
+    "latency_ms": 30.447006225585938,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2061028480529785,
+        "ground_truth": 1.164,
+        "pct_error": 3.6170831660634533
+      },
+      "ltv": {
+        "predicted": 61.66116714477539,
+        "ground_truth": 58.0,
+        "pct_error": 6.312357146164467
+      },
+      "cap_rate": {
+        "predicted": 6.354187965393066,
+        "ground_truth": 4.76,
+        "pct_error": 33.49134381077871
+      },
+      "debt_yield": {
+        "predicted": 10.041027069091797,
+        "ground_truth": 8.21,
+        "pct_error": 22.30240035434587
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10174",
+    "method": "ensemble_input",
+    "latency_ms": 31.006813049316406,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1535512208938599,
+        "ground_truth": 1.341,
+        "pct_error": 13.978283303962721
+      },
+      "ltv": {
+        "predicted": 73.15612030029297,
+        "ground_truth": 79.17,
+        "pct_error": 7.596159782375941
+      },
+      "cap_rate": {
+        "predicted": 7.312662124633789,
+        "ground_truth": 6.53,
+        "pct_error": 11.985637436964607
+      },
+      "debt_yield": {
+        "predicted": 10.129598617553711,
+        "ground_truth": 8.25,
+        "pct_error": 22.783013546105586
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10175",
+    "method": "ensemble_input",
+    "latency_ms": 31.450748443603516,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1956422328948975,
+        "ground_truth": 1.442,
+        "pct_error": 17.084449868592404
+      },
+      "ltv": {
+        "predicted": 69.24498748779297,
+        "ground_truth": 74.0,
+        "pct_error": 6.4256925840635555
+      },
+      "cap_rate": {
+        "predicted": 7.268130779266357,
+        "ground_truth": 9.86,
+        "pct_error": 26.28670609263329
+      },
+      "debt_yield": {
+        "predicted": 10.379146575927734,
+        "ground_truth": 13.32,
+        "pct_error": 22.078479159701693
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10176",
+    "method": "ensemble_input",
+    "latency_ms": 34.27577018737793,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3158851861953735,
+        "ground_truth": 1.09,
+        "pct_error": 20.723411577557197
+      },
+      "ltv": {
+        "predicted": 62.59404373168945,
+        "ground_truth": 60.79,
+        "pct_error": 2.967665293122971
+      },
+      "cap_rate": {
+        "predicted": 6.922961235046387,
+        "ground_truth": 6.22,
+        "pct_error": 11.301627573093038
+      },
+      "debt_yield": {
+        "predicted": 11.451988220214844,
+        "ground_truth": 10.23,
+        "pct_error": 11.945143892618214
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10177",
+    "method": "ensemble_input",
+    "latency_ms": 28.093814849853516,
+    "matches": {
+      "dscr": {
+        "predicted": 0.694631814956665,
+        "ground_truth": 1.244,
+        "pct_error": 44.16142966586294
+      },
+      "ltv": {
+        "predicted": 26.568565368652344,
+        "ground_truth": 77.78,
+        "pct_error": 65.84139191482085
+      },
+      "cap_rate": {
+        "predicted": 7.848294734954834,
+        "ground_truth": 7.54,
+        "pct_error": 4.088789588260397
+      },
+      "debt_yield": {
+        "predicted": 11.17243766784668,
+        "ground_truth": 9.7,
+        "pct_error": 15.179769771615263
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10178",
+    "method": "ensemble_input",
+    "latency_ms": 30.01117706298828,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2090624570846558,
+        "ground_truth": 1.818,
+        "pct_error": 33.494914351779116
+      },
+      "ltv": {
+        "predicted": 64.59046936035156,
+        "ground_truth": 66.8,
+        "pct_error": 3.3076805982760997
+      },
+      "cap_rate": {
+        "predicted": 6.141913890838623,
+        "ground_truth": 8.98,
+        "pct_error": 31.60452237373471
+      },
+      "debt_yield": {
+        "predicted": 9.409650802612305,
+        "ground_truth": 13.45,
+        "pct_error": 30.039770984295128
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10179",
+    "method": "ensemble_input",
+    "latency_ms": 30.216693878173828,
+    "matches": {
+      "dscr": {
+        "predicted": 1.8220694065093994,
+        "ground_truth": 1.985,
+        "pct_error": 8.208090352171318
+      },
+      "ltv": {
+        "predicted": 61.79391860961914,
+        "ground_truth": 62.73,
+        "pct_error": 1.4922387858773414
+      },
+      "cap_rate": {
+        "predicted": 8.275426864624023,
+        "ground_truth": 8.11,
+        "pct_error": 2.039788712996597
+      },
+      "debt_yield": {
+        "predicted": 13.416316032409668,
+        "ground_truth": 12.93,
+        "pct_error": 3.761144875558146
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10180",
+    "method": "ensemble_input",
+    "latency_ms": 30.21550178527832,
+    "matches": {
+      "dscr": {
+        "predicted": 1.1743667125701904,
+        "ground_truth": 1.325,
+        "pct_error": 11.368549994702606
+      },
+      "ltv": {
+        "predicted": 70.81890869140625,
+        "ground_truth": 70.0,
+        "pct_error": 1.1698695591517858
+      },
+      "cap_rate": {
+        "predicted": 6.392069339752197,
+        "ground_truth": 7.38,
+        "pct_error": 13.386594312300847
+      },
+      "debt_yield": {
+        "predicted": 9.1651029586792,
+        "ground_truth": 10.54,
+        "pct_error": 13.04456395940038
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10181",
+    "method": "ensemble_input",
+    "latency_ms": 30.352115631103516,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5643765926361084,
+        "ground_truth": 1.28,
+        "pct_error": 22.216921299695965
+      },
+      "ltv": {
+        "predicted": 69.3211669921875,
+        "ground_truth": 66.0,
+        "pct_error": 5.032071200284091
+      },
+      "cap_rate": {
+        "predicted": 8.163639068603516,
+        "ground_truth": 6.46,
+        "pct_error": 26.372121805007982
+      },
+      "debt_yield": {
+        "predicted": 11.787017822265625,
+        "ground_truth": 9.79,
+        "pct_error": 20.398547724878714
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10182",
+    "method": "ensemble_input",
+    "latency_ms": 30.20644187927246,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7593730688095093,
+        "ground_truth": 1.681,
+        "pct_error": 4.6622884479184545
+      },
+      "ltv": {
+        "predicted": 59.775848388671875,
+        "ground_truth": 57.5,
+        "pct_error": 3.9579971976902177
+      },
+      "cap_rate": {
+        "predicted": 8.804551124572754,
+        "ground_truth": 7.67,
+        "pct_error": 14.792061598080233
+      },
+      "debt_yield": {
+        "predicted": 14.972153663635254,
+        "ground_truth": 13.35,
+        "pct_error": 12.150963772548721
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10183",
+    "method": "ensemble_input",
+    "latency_ms": 30.272960662841797,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2833610773086548,
+        "ground_truth": 1.698,
+        "pct_error": 24.419253397605722
+      },
+      "ltv": {
+        "predicted": 68.25418853759766,
+        "ground_truth": 67.0,
+        "pct_error": 1.871923190444263
+      },
+      "cap_rate": {
+        "predicted": 7.230949401855469,
+        "ground_truth": 9.35,
+        "pct_error": 22.663642760904075
+      },
+      "debt_yield": {
+        "predicted": 10.70823860168457,
+        "ground_truth": 13.96,
+        "pct_error": 23.29341975870652
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10184",
+    "method": "ensemble_input",
+    "latency_ms": 31.34298324584961,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2461004257202148,
+        "ground_truth": 1.456,
+        "pct_error": 14.416179552183046
+      },
+      "ltv": {
+        "predicted": 71.70975494384766,
+        "ground_truth": 76.67,
+        "pct_error": 6.4696035687392
+      },
+      "cap_rate": {
+        "predicted": 6.986419677734375,
+        "ground_truth": 8.47,
+        "pct_error": 17.51570628412781
+      },
+      "debt_yield": {
+        "predicted": 9.474602699279785,
+        "ground_truth": 11.04,
+        "pct_error": 14.179323376088895
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10185",
+    "method": "ensemble_input",
+    "latency_ms": 30.600547790527344,
+    "matches": {
+      "dscr": {
+        "predicted": 1.8120499849319458,
+        "ground_truth": 1.523,
+        "pct_error": 18.97898784845344
+      },
+      "ltv": {
+        "predicted": 60.20999526977539,
+        "ground_truth": 57.14,
+        "pct_error": 5.372760360124939
+      },
+      "cap_rate": {
+        "predicted": 8.122347831726074,
+        "ground_truth": 8.01,
+        "pct_error": 1.4025946532593563
+      },
+      "debt_yield": {
+        "predicted": 13.765917778015137,
+        "ground_truth": 14.02,
+        "pct_error": 1.8122840369819033
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10186",
+    "method": "ensemble_input",
+    "latency_ms": 38.259267807006836,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0017056465148926,
+        "ground_truth": 0.647,
+        "pct_error": 54.823129291328065
+      },
+      "ltv": {
+        "predicted": 69.0043716430664,
+        "ground_truth": 71.11,
+        "pct_error": 2.961086143908864
+      },
+      "cap_rate": {
+        "predicted": 6.3621506690979,
+        "ground_truth": 4.04,
+        "pct_error": 57.478976957868824
+      },
+      "debt_yield": {
+        "predicted": 8.6102876663208,
+        "ground_truth": 5.69,
+        "pct_error": 51.3231575803304
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10187",
+    "method": "ensemble_input",
+    "latency_ms": 30.215740203857422,
+    "matches": {
+      "dscr": {
+        "predicted": 1.5661553144454956,
+        "ground_truth": 1.664,
+        "pct_error": 5.880089276112039
+      },
+      "ltv": {
+        "predicted": 61.384178161621094,
+        "ground_truth": 59.12,
+        "pct_error": 3.8298006793320307
+      },
+      "cap_rate": {
+        "predicted": 7.469690799713135,
+        "ground_truth": 7.52,
+        "pct_error": 0.6690053229636278
+      },
+      "debt_yield": {
+        "predicted": 11.9334135055542,
+        "ground_truth": 12.72,
+        "pct_error": 6.183856088410388
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10188",
+    "method": "ensemble_input",
+    "latency_ms": 30.146121978759766,
+    "matches": {
+      "dscr": {
+        "predicted": 2.0240068435668945,
+        "ground_truth": 1.881,
+        "pct_error": 7.602703007277753
+      },
+      "ltv": {
+        "predicted": 57.16279220581055,
+        "ground_truth": 62.07,
+        "pct_error": 7.90592523632907
+      },
+      "cap_rate": {
+        "predicted": 8.179445266723633,
+        "ground_truth": 9.98,
+        "pct_error": 18.04163059395158
+      },
+      "debt_yield": {
+        "predicted": 14.673002243041992,
+        "ground_truth": 16.08,
+        "pct_error": 8.74998605073387
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10189",
+    "method": "ensemble_input",
+    "latency_ms": 33.45131874084473,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8761404752731323,
+        "ground_truth": 0.669,
+        "pct_error": 30.962701834548923
+      },
+      "ltv": {
+        "predicted": 65.39810180664062,
+        "ground_truth": 73.03,
+        "pct_error": 10.450360390742675
+      },
+      "cap_rate": {
+        "predicted": 4.597700119018555,
+        "ground_truth": 4.54,
+        "pct_error": 1.2709277316862257
+      },
+      "debt_yield": {
+        "predicted": 6.976553916931152,
+        "ground_truth": 6.22,
+        "pct_error": 12.16324625291242
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10190",
+    "method": "ensemble_input",
+    "latency_ms": 29.282569885253906,
+    "matches": {
+      "dscr": {
+        "predicted": 0.7240192294120789,
+        "ground_truth": 1.631,
+        "pct_error": 55.608876185648136
+      },
+      "ltv": {
+        "predicted": 26.859039306640625,
+        "ground_truth": 65.0,
+        "pct_error": 58.67840106670673
+      },
+      "cap_rate": {
+        "predicted": 8.106614112854004,
+        "ground_truth": 9.12,
+        "pct_error": 11.111687359056967
+      },
+      "debt_yield": {
+        "predicted": 11.091094970703125,
+        "ground_truth": 14.03,
+        "pct_error": 20.947291726991267
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10191",
+    "method": "ensemble_input",
+    "latency_ms": 31.69393539428711,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4242197275161743,
+        "ground_truth": 1.903,
+        "pct_error": 25.15923659925516
+      },
+      "ltv": {
+        "predicted": 66.00374603271484,
+        "ground_truth": 62.0,
+        "pct_error": 6.4576548914755545
+      },
+      "cap_rate": {
+        "predicted": 6.528692722320557,
+        "ground_truth": 7.53,
+        "pct_error": 13.297573408757552
+      },
+      "debt_yield": {
+        "predicted": 9.692876815795898,
+        "ground_truth": 12.15,
+        "pct_error": 20.22323608398438
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10192",
+    "method": "ensemble_input",
+    "latency_ms": 34.928321838378906,
+    "matches": {
+      "dscr": {
+        "predicted": 0.9462880492210388,
+        "ground_truth": 0.949,
+        "pct_error": 0.28576931285154233
+      },
+      "ltv": {
+        "predicted": 63.53926086425781,
+        "ground_truth": 64.82,
+        "pct_error": 1.9758394565599826
+      },
+      "cap_rate": {
+        "predicted": 5.255206108093262,
+        "ground_truth": 4.4,
+        "pct_error": 19.436502456665032
+      },
+      "debt_yield": {
+        "predicted": 8.093376159667969,
+        "ground_truth": 6.79,
+        "pct_error": 19.19552517920425
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10193",
+    "method": "ensemble_input",
+    "latency_ms": 28.047800064086914,
+    "matches": {
+      "dscr": {
+        "predicted": 1.0231287479400635,
+        "ground_truth": 1.67,
+        "pct_error": 38.73480551257104
+      },
+      "ltv": {
+        "predicted": 35.75539016723633,
+        "ground_truth": 66.8,
+        "pct_error": 46.47396681551448
+      },
+      "cap_rate": {
+        "predicted": 6.687067985534668,
+        "ground_truth": 8.0,
+        "pct_error": 16.41165018081665
+      },
+      "debt_yield": {
+        "predicted": 15.30121898651123,
+        "ground_truth": 11.98,
+        "pct_error": 27.723029937489397
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10194",
+    "method": "ensemble_input",
+    "latency_ms": 31.343460083007812,
+    "matches": {
+      "dscr": {
+        "predicted": 1.2775458097457886,
+        "ground_truth": 1.395,
+        "pct_error": 8.41965521535566
+      },
+      "ltv": {
+        "predicted": 68.88746643066406,
+        "ground_truth": 75.26,
+        "pct_error": 8.467357918331043
+      },
+      "cap_rate": {
+        "predicted": 7.184200763702393,
+        "ground_truth": 9.31,
+        "pct_error": 22.83350414927613
+      },
+      "debt_yield": {
+        "predicted": 10.566457748413086,
+        "ground_truth": 12.37,
+        "pct_error": 14.579969697549824
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10195",
+    "method": "ensemble_input",
+    "latency_ms": 30.183076858520508,
+    "matches": {
+      "dscr": {
+        "predicted": 1.7101075649261475,
+        "ground_truth": 1.864,
+        "pct_error": 8.25603192456291
+      },
+      "ltv": {
+        "predicted": 64.59403991699219,
+        "ground_truth": 61.41,
+        "pct_error": 5.1848883194792235
+      },
+      "cap_rate": {
+        "predicted": 6.750633716583252,
+        "ground_truth": 7.05,
+        "pct_error": 4.246330261230467
+      },
+      "debt_yield": {
+        "predicted": 10.34927749633789,
+        "ground_truth": 11.48,
+        "pct_error": 9.849499160819772
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10196",
+    "method": "ensemble_input",
+    "latency_ms": 31.40568733215332,
+    "matches": {
+      "dscr": {
+        "predicted": 1.4525513648986816,
+        "ground_truth": 1.753,
+        "pct_error": 17.139112099333616
+      },
+      "ltv": {
+        "predicted": 66.74510192871094,
+        "ground_truth": 65.95,
+        "pct_error": 1.2056132353463755
+      },
+      "cap_rate": {
+        "predicted": 7.345949172973633,
+        "ground_truth": 9.6,
+        "pct_error": 23.47969611485799
+      },
+      "debt_yield": {
+        "predicted": 11.596457481384277,
+        "ground_truth": 14.55,
+        "pct_error": 20.299261296327995
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10197",
+    "method": "ensemble_input",
+    "latency_ms": 30.045032501220703,
+    "matches": {
+      "dscr": {
+        "predicted": 1.3054436445236206,
+        "ground_truth": 2.04,
+        "pct_error": 36.00766448413625
+      },
+      "ltv": {
+        "predicted": 67.04308319091797,
+        "ground_truth": 60.0,
+        "pct_error": 11.738471984863281
+      },
+      "cap_rate": {
+        "predicted": 6.363142967224121,
+        "ground_truth": 9.7,
+        "pct_error": 34.400587966761634
+      },
+      "debt_yield": {
+        "predicted": 10.34354305267334,
+        "ground_truth": 16.17,
+        "pct_error": 36.03251049676352
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10198",
+    "method": "ensemble_input",
+    "latency_ms": 31.05306625366211,
+    "matches": {
+      "dscr": {
+        "predicted": 0.8444560170173645,
+        "ground_truth": 0.942,
+        "pct_error": 10.354987577774464
+      },
+      "ltv": {
+        "predicted": 65.6877670288086,
+        "ground_truth": 65.37,
+        "pct_error": 0.4861052911252703
+      },
+      "cap_rate": {
+        "predicted": 4.64223575592041,
+        "ground_truth": 5.39,
+        "pct_error": 13.873177070122257
+      },
+      "debt_yield": {
+        "predicted": 6.559707164764404,
+        "ground_truth": 8.24,
+        "pct_error": 20.391903340237814
+      }
+    }
+  },
+  {
+    "scenario_id": "cre_10199",
+    "method": "ensemble_input",
+    "latency_ms": 30.31158447265625,
+    "matches": {
+      "dscr": {
+        "predicted": 1.354937195777893,
+        "ground_truth": 1.73,
+        "pct_error": 21.679930879890573
+      },
+      "ltv": {
+        "predicted": 67.53326416015625,
+        "ground_truth": 70.0,
+        "pct_error": 3.523908342633929
+      },
+      "cap_rate": {
+        "predicted": 7.220953941345215,
+        "ground_truth": 9.3,
+        "pct_error": 22.355333964029953
+      },
+      "debt_yield": {
+        "predicted": 10.984243392944336,
+        "ground_truth": 13.29,
+        "pct_error": 17.349560624948555
+      }
+    }
+  }
+]

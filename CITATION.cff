@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "Hybrid MoE: Integrating Deterministic Computation Experts into Sparse Mixture-of-Experts Transformers"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Kotha
+    given-names: Pavan Kumar
+    email: kothapavan1998@gmail.com
+repository-code: "https://github.com/pavan-kotha/hybrid-moe"
+license: Apache-2.0
+keywords:
+  - mixture-of-experts
+  - neurosymbolic
+  - deterministic-computation
+  - transformer
+  - commercial-real-estate
+  - financial-nlp
+  - hidden-state-probing
+  - moe-routing
+preferred-citation:
+  type: article
+  title: "Hybrid MoE: Integrating Deterministic Computation Experts into Sparse Mixture-of-Experts Transformers"
+  authors:
+    - family-names: Kotha
+      given-names: Pavan Kumar
+  year: 2025

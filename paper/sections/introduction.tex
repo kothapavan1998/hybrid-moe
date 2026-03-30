@@ -1,0 +1,88 @@
+\section{Introduction}
+\label{sec:intro}
+
+Large language models (LLMs) have achieved remarkable capabilities across
+language understanding, generation, and reasoning tasks. However, they
+fundamentally struggle with \emph{deterministic numerical computation}
+, specifically the reliable execution of mathematical formulas that require exact
+arithmetic on multi-digit numbers
+\citep{dziri2023faith}. This limitation is
+particularly consequential in professional domains such as financial
+underwriting, where metrics like the Debt Service Coverage Ratio (DSCR)
+or Loan-to-Value (LTV) must be computed with precision sufficient for
+legal and regulatory compliance.
+
+Current approaches to equipping LLMs with computational ability fall into
+three categories, each with significant drawbacks:
+
+\begin{itemize}
+\item \textbf{External tool calling} (ReAct \citep{yao2023react},
+Toolformer \citep{schick2023toolformer}): Each computation requires a
+separate inference pass and API round-trip. A chained calculation like
+computing Annual Debt Service and then DSCR requires 2+ full
+generation cycles.
+\item \textbf{Chain-of-Thought prompting} \citep{wei2022chain}: The model
+performs arithmetic in its generated text. This works for simple
+calculations but systematically fails on six-or-more-digit numbers
+and multi-step compound formulas \citep{dziri2023faith}.
+\item \textbf{Tool tokens} (ToolkenGPT \citep{hao2023toolkengpt}): Tools
+are represented as special vocabulary tokens. Argument extraction
+relies on prompting rather than learned representations, and
+integration occurs at the language model head rather than within the
+model's representational layers.
+\end{itemize}
+
+We observe that sparse Mixture-of-Experts (MoE) architectures
+\citep{shazeer2017outrageously,fedus2022switch,jiang2024mixtral} provide
+a natural mechanism for integrating heterogeneous computation: the expert
+routing mechanism already selects specialized processing modules on a
+per-token basis. If some of these experts were deterministic functions
+instead of neural feed-forward networks, the router could learn
+\emph{when} to invoke exact computation and the model could perform it
+\emph{within a single forward pass}.
+
+We introduce \textbf{Hybrid MoE}, an architecture that extends the
+expert pool of an MoE transformer with \emph{deterministic computation
+experts}, which are non-neural expert modules that execute exact domain
+computations. Each deterministic expert comprises three stages:
+\begin{enumerate}
+\item A \textbf{parameter extraction MLP} (learned) that reads the hidden
+state and outputs the numerical arguments required by the target
+function.
+\item A \textbf{deterministic computation} (exact) that executes the
+domain formula as a standard PyTorch function, maintaining
+differentiability through autograd.
+\item A \textbf{result projection MLP} (learned) that maps the scalar
+output back to the model's hidden dimension for re-injection into
+the residual stream.
+\end{enumerate}
+
+We implement Hybrid MoE on top of OpenAI's gpt-oss-20b, a 21-billion
+parameter MoE model with 32 experts per layer and top-4 routing. We
+extend the router from 32 to 36 experts by adding 4 deterministic
+experts for commercial real estate (CRE) underwriting metrics:
+DSCR, LTV, Capitalization Rate, and Debt Yield. The entire modification
+adds approximately 5 million trainable parameters while the base model
+remains fully frozen.
+
+Our contributions are:
+\begin{enumerate}
+\item \textbf{A novel heterogeneous expert architecture} that integrates
+deterministic Python functions as first-class experts in MoE
+routing, enabling exact computation within a single forward pass
+(\Cref{sec:method}).
+\item \textbf{Empirical demonstration} that financial numerical values
+can be recovered from transformer hidden states with 5-fold
+cross-validated $R^2$ up to 0.98, and that a learned router
+achieves 100\% accuracy in detecting computation-requiring inputs
+(\Cref{sec:experiments}).
+\item \textbf{A 173$\times$ speedup} over generation-based methods
+(40\,ms vs.\ 7{,}000\,ms per scenario), achieving 60--87\%
+accuracy within 20\% error across all four experts with guaranteed
+coverage ($N{=}200$), while generation baselines produce parseable
+answers for only 1--94\% of scenarios (\Cref{sec:experiments}).
+\item \textbf{Analysis of extraction robustness}, demonstrating that
+probe training instability (not hidden state quality) causes
+extraction failures on small datasets, and that 5-fold CV
+ensembles resolve this (\Cref{sec:analysis}).
+\end{enumerate}

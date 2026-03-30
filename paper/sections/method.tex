@@ -1,0 +1,157 @@
+\section{Method}
+\label{sec:method}
+
+\input{sections/figure_arch}
+
+\subsection{Background: MoE Routing}
+\label{sec:method:background}
+
+In a standard MoE transformer layer, an input hidden state
+$\mathbf{h} \in \mathbb{R}^d$ is processed by a router that selects
+$k$ experts from a pool of $N$ experts. The router computes logits
+$\mathbf{g} = \mathbf{W}_r \mathbf{h} + \mathbf{b}_r$ where
+$\mathbf{W}_r \in \mathbb{R}^{N \times d}$, selects the top-$k$
+indices, and normalizes the corresponding logit values into weights.
+In gpt-oss-20b, the model uses $N{=}32$ experts, $k{=}4$ (top-4),
+$d{=}2880$, and sigmoid normalization:
+\begin{equation}
+    w_i = \frac{\sigma(g_i)}{\sum_{j \in \text{top-}k} \sigma(g_j)},
+    \quad i \in \text{top-}k(\mathbf{g})
+\label{eq:routing}
+\end{equation}
+The output of the MoE layer is the weighted sum of expert outputs:
+$\mathbf{o} = \sum_{i \in \text{top-}k} w_i \cdot E_i(\mathbf{h})$,
+where each $E_i$ is a feed-forward network (typically SwiGLU).
+
+\subsection{Hybrid MoE Architecture}
+\label{sec:method:arch}
+
+We extend the expert pool from $N$ to $N + M$ experts, where the
+original $N{=}32$ neural experts remain frozen and $M{=}4$ new
+\emph{deterministic computation experts} are added
+(\Cref{fig:architecture}b). The router weight
+matrix is extended from $\mathbb{R}^{N \times d}$ to
+$\mathbb{R}^{(N+M) \times d}$:
+\begin{equation}
+    \mathbf{W}_r^{\text{ext}} =
+    \begin{bmatrix}
+        \mathbf{W}_r^{\text{orig}} & \text{(frozen)} \\
+        \mathbf{W}_r^{\text{new}} & \text{(trainable)}
+    \end{bmatrix},
+    \quad
+    \mathbf{b}_r^{\text{ext}} =
+    \begin{bmatrix}
+        \mathbf{b}_r^{\text{orig}} \\
+        \mathbf{b}_r^{\text{new}}
+    \end{bmatrix}
+\label{eq:extended_router}
+\end{equation}
+The new router columns $\mathbf{W}_r^{\text{new}} \in \mathbb{R}^{M \times d}$
+are initialized with small random values ($\sigma{=}0.01$), and the new
+biases $\mathbf{b}_r^{\text{new}}$ are initialized to $-2.0$ to prevent
+premature selection of computation experts before training.
+
+\subsection{Deterministic Expert Module}
+\label{sec:method:expert}
+
+Each deterministic expert $E_c$ replaces the standard FFN with a
+three-stage pipeline (\Cref{fig:architecture}c), maintaining the same
+interface $\mathbb{R}^d \to \mathbb{R}^d$:
+
+\paragraph{Stage 1: Parameter Extraction.}
+A learned MLP $f_\theta: \mathbb{R}^d \to \mathbb{R}^p$ maps the
+pooled hidden state to the $p$ numerical arguments required by the
+target function:
+\begin{equation}
+    \hat{\mathbf{x}} = f_\theta(\bar{\mathbf{h}})
+    = \text{MLP}_{\theta}(\bar{\mathbf{h}})
+\label{eq:extraction}
+\end{equation}
+where $\bar{\mathbf{h}}$ is the mean-pooled hidden state across the
+input sequence and $\hat{\mathbf{x}} \in \mathbb{R}^p$ contains the
+extracted argument values (e.g., NOI and Annual Debt Service for the
+DSCR expert). The extraction MLP consists of three linear layers with
+SiLU activations and dropout (architecture:
+$d \to 512 \to 128 \to p$).
+
+\paragraph{Stage 2: Deterministic Computation.}
+The extracted parameters are passed to an exact Python function
+$\mathcal{F}: \mathbb{R}^p \to \mathbb{R}^q$ implemented in PyTorch:
+\begin{equation}
+    \mathbf{y} = \mathcal{F}(\hat{\mathbf{x}})
+\label{eq:computation}
+\end{equation}
+Because $\mathcal{F}$ uses standard PyTorch operations (division,
+multiplication, \texttt{torch.pow}), the computation graph is preserved
+and gradients flow through the deterministic function via autograd.
+For example, the DSCR expert computes
+$\mathcal{F}(\hat{x}_1, \hat{x}_2) = \hat{x}_1 / \hat{x}_2$,
+where $\hat{x}_1$ is the extracted NOI and $\hat{x}_2$ is the
+extracted Annual Debt Service. When the extracted values are correct,
+the output is \emph{exactly} correct; there is no neural
+approximation.
+
+\paragraph{Stage 3: Result Projection.}
+A learned MLP $g_\phi: \mathbb{R}^q \to \mathbb{R}^d$ projects the
+computation result back to the hidden dimension:
+\begin{equation}
+    \mathbf{o}_c = \alpha \cdot g_\phi(\mathbf{y})
+\label{eq:projection}
+\end{equation}
+where $\alpha$ is a learnable scalar initialized to $0.01$ that
+controls the initial contribution of the deterministic expert to the
+residual stream. The projection MLP uses the architecture
+$q \to 256 \to 512 \to d$.
+
+\subsection{CRE Computation Experts}
+\label{sec:method:cre}
+
+We implement four deterministic experts for commercial real estate
+underwriting, each computing a standard industry metric:
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Expert} & \textbf{Formula} & \textbf{Inputs} & \textbf{Output} \\
+\midrule
+DSCR & $\text{NOI} / \text{ADS}$ & NOI, Annual Debt Service & Ratio \\
+LTV & $(\text{Loan} / \text{Value}) \times 100$ & Loan amount, Property value & Percentage \\
+Cap Rate & $(\text{NOI} / \text{Price}) \times 100$ & NOI, Purchase price & Percentage \\
+Debt Yield & $(\text{NOI} / \text{Loan}) \times 100$ & NOI, Loan amount & Percentage \\
+\bottomrule
+\end{tabular}
+\caption{Deterministic computation experts for CRE underwriting. Each
+implements an exact financial formula as a differentiable PyTorch
+function.}
+\label{tab:experts}
+\end{table}
+
+\subsection{Training Procedure}
+\label{sec:method:training}
+
+Training proceeds in two phases with the base model \textbf{fully
+frozen} throughout:
+
+\paragraph{Phase 1: Pre-computation.}
+We run all 3{,}000 training scenarios through the frozen gpt-oss-20b
+model and cache both mean-pooled and last-token hidden states at layers
+12, 16, and 20. This eliminates the need to run the 21B-parameter model
+during probe training.
+
+\paragraph{Phase 2: Probe training.}
+Using the cached hidden states, we train:
+(a)~\textbf{Extraction MLPs}, one per expert per input parameter,
+trained to regress from the mean-pooled hidden state to the target
+financial value in log-scale (using $\text{sign}(y) \cdot
+\log(1 + |y|)$ to handle the wide dynamic range of financial values
+from \$100K to \$200M). We use the Huber loss, AdamW optimizer
+($\text{lr}{=}10^{-3}$, weight decay 0.01), and cosine annealing
+over 300 epochs.
+(b)~\textbf{Router signal classifier}, a binary classifier trained
+to detect whether a given input requires deterministic computation,
+trained with BCE loss for 30 epochs.
+
+The total training involves ${\sim}5$M parameters and completes in
+under 3 minutes on a single GPU.
